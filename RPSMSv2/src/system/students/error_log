@@ -1,0 +1,853 @@
+[10-Mar-2024 21:34:29 America/New_York] PHP Notice:  Undefined variable: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 196
+[10-Mar-2024 21:34:29 America/New_York] PHP Notice:  Undefined variable: course in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 213
+[10-Mar-2024 21:34:29 America/New_York] PHP Notice:  Undefined variable: branch in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 217
+[10-Mar-2024 21:34:29 America/New_York] PHP Notice:  Undefined variable: fullName in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 231
+[10-Mar-2024 21:34:29 America/New_York] PHP Notice:  Undefined variable: initName in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 238
+[10-Mar-2024 21:34:29 America/New_York] PHP Notice:  Undefined variable: dob in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 243
+[10-Mar-2024 21:34:29 America/New_York] PHP Notice:  Undefined variable: age in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 247
+[10-Mar-2024 21:34:29 America/New_York] PHP Notice:  Undefined variable: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 259
+[10-Mar-2024 21:34:29 America/New_York] PHP Notice:  Undefined variable: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 275
+[10-Mar-2024 21:34:29 America/New_York] PHP Notice:  Undefined variable: nic in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 290
+[10-Mar-2024 21:34:29 America/New_York] PHP Notice:  Undefined variable: passNo in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 294
+[10-Mar-2024 21:34:29 America/New_York] PHP Notice:  Undefined variable: addr in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 299
+[10-Mar-2024 21:34:29 America/New_York] PHP Notice:  Undefined variable: tel in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 304
+[10-Mar-2024 21:34:29 America/New_York] PHP Notice:  Undefined variable: waNo in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 308
+[10-Mar-2024 21:34:29 America/New_York] PHP Notice:  Undefined variable: email in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 313
+[10-Mar-2024 21:34:39 America/New_York] PHP Notice:  Undefined variable: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 196
+[10-Mar-2024 21:34:39 America/New_York] PHP Notice:  Undefined variable: course in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 213
+[10-Mar-2024 21:34:39 America/New_York] PHP Notice:  Undefined variable: branch in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 217
+[10-Mar-2024 21:34:39 America/New_York] PHP Notice:  Undefined variable: fullName in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 231
+[10-Mar-2024 21:34:39 America/New_York] PHP Notice:  Undefined variable: initName in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 238
+[10-Mar-2024 21:34:39 America/New_York] PHP Notice:  Undefined variable: dob in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 243
+[10-Mar-2024 21:34:39 America/New_York] PHP Notice:  Undefined variable: age in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 247
+[10-Mar-2024 21:34:39 America/New_York] PHP Notice:  Undefined variable: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 259
+[10-Mar-2024 21:34:39 America/New_York] PHP Notice:  Undefined variable: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 275
+[10-Mar-2024 21:34:39 America/New_York] PHP Notice:  Undefined variable: nic in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 290
+[10-Mar-2024 21:34:39 America/New_York] PHP Notice:  Undefined variable: passNo in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 294
+[10-Mar-2024 21:34:39 America/New_York] PHP Notice:  Undefined variable: addr in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 299
+[10-Mar-2024 21:34:39 America/New_York] PHP Notice:  Undefined variable: tel in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 304
+[10-Mar-2024 21:34:39 America/New_York] PHP Notice:  Undefined variable: waNo in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 308
+[10-Mar-2024 21:34:39 America/New_York] PHP Notice:  Undefined variable: email in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 313
+[10-Mar-2024 21:34:59 America/New_York] PHP Notice:  Undefined variable: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 196
+[10-Mar-2024 21:34:59 America/New_York] PHP Notice:  Undefined variable: course in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 213
+[10-Mar-2024 21:34:59 America/New_York] PHP Notice:  Undefined variable: branch in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 217
+[10-Mar-2024 21:34:59 America/New_York] PHP Notice:  Undefined variable: fullName in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 231
+[10-Mar-2024 21:34:59 America/New_York] PHP Notice:  Undefined variable: initName in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 238
+[10-Mar-2024 21:34:59 America/New_York] PHP Notice:  Undefined variable: dob in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 243
+[10-Mar-2024 21:34:59 America/New_York] PHP Notice:  Undefined variable: age in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 247
+[10-Mar-2024 21:34:59 America/New_York] PHP Notice:  Undefined variable: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 259
+[10-Mar-2024 21:34:59 America/New_York] PHP Notice:  Undefined variable: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 275
+[10-Mar-2024 21:34:59 America/New_York] PHP Notice:  Undefined variable: nic in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 290
+[10-Mar-2024 21:34:59 America/New_York] PHP Notice:  Undefined variable: passNo in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 294
+[10-Mar-2024 21:34:59 America/New_York] PHP Notice:  Undefined variable: addr in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 299
+[10-Mar-2024 21:34:59 America/New_York] PHP Notice:  Undefined variable: tel in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 304
+[10-Mar-2024 21:34:59 America/New_York] PHP Notice:  Undefined variable: waNo in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 308
+[10-Mar-2024 21:34:59 America/New_York] PHP Notice:  Undefined variable: email in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 313
+[10-Mar-2024 22:00:32 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'payments WHERE userId = '2' AND PayId = '34' LIMIT 1' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/pay_details.php:25
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/pay_details.php(25): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/pay_details.php on line 25
+[10-Mar-2024 22:01:12 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'payments WHERE userId = '2' AND PayId = '34' LIMIT 1' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/pay_details.php:25
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/pay_details.php(25): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/pay_details.php on line 25
+[20-Mar-2024 03:03:01 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[20-Mar-2024 03:03:01 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND pay_state LIKE '%pend%'' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php:18
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 18
+[20-Mar-2024 03:03:10 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[20-Mar-2024 03:03:10 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND pay_state LIKE '%pend%'' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php:18
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 18
+[21-Mar-2024 14:53:01 America/New_York] PHP Warning:  move_uploaded_file(upload/65fc820d4872d2.71272249.png): failed to open stream: No such file or directory in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_pay.php on line 42
+[21-Mar-2024 14:53:01 America/New_York] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpg731vz' to 'upload/65fc820d4872d2.71272249.png' in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_pay.php on line 42
+[21-Mar-2024 14:56:26 America/New_York] PHP Warning:  move_uploaded_file(upload/65fc82da670273.19919209.png): failed to open stream: No such file or directory in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_pay.php on line 42
+[21-Mar-2024 14:56:26 America/New_York] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php6ktrPJ' to 'upload/65fc82da670273.19919209.png' in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_pay.php on line 42
+[24-Mar-2024 03:53:11 America/New_York] PHP Notice:  Undefined variable: _SESSION in /home/riyaduru/public_html/RPSMSv2/src/system/students/progress.php on line 5
+[24-Mar-2024 04:35:05 America/New_York] PHP Notice:  Undefined variable: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 165
+[24-Mar-2024 04:35:05 America/New_York] PHP Notice:  Undefined variable: course in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 181
+[24-Mar-2024 04:35:05 America/New_York] PHP Notice:  Undefined variable: Clss in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 185
+[24-Mar-2024 04:35:05 America/New_York] PHP Notice:  Undefined variable: branch in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 189
+[24-Mar-2024 04:35:05 America/New_York] PHP Notice:  Undefined variable: train in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 193
+[24-Mar-2024 04:35:05 America/New_York] PHP Notice:  Undefined variable: fullName in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 207
+[24-Mar-2024 04:35:05 America/New_York] PHP Notice:  Undefined variable: initName in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 214
+[24-Mar-2024 04:35:05 America/New_York] PHP Notice:  Undefined variable: dob in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 219
+[24-Mar-2024 04:35:05 America/New_York] PHP Notice:  Undefined variable: age in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 223
+[24-Mar-2024 04:35:05 America/New_York] PHP Notice:  Undefined variable: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 235
+[24-Mar-2024 04:35:05 America/New_York] PHP Notice:  Undefined variable: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 251
+[24-Mar-2024 04:35:05 America/New_York] PHP Notice:  Undefined variable: nic in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 266
+[24-Mar-2024 04:35:05 America/New_York] PHP Notice:  Undefined variable: passNo in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 270
+[24-Mar-2024 04:35:05 America/New_York] PHP Notice:  Undefined variable: addr in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 275
+[24-Mar-2024 04:35:05 America/New_York] PHP Notice:  Undefined variable: tel in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 280
+[24-Mar-2024 04:35:05 America/New_York] PHP Notice:  Undefined variable: waNo in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 284
+[24-Mar-2024 04:35:05 America/New_York] PHP Notice:  Undefined variable: email in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 289
+[24-Mar-2024 04:35:05 America/New_York] PHP Notice:  Undefined variable: stu in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 297
+[24-Mar-2024 05:04:44 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 11
+[24-Mar-2024 05:04:44 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 63
+[24-Mar-2024 05:04:44 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 63
+[24-Mar-2024 05:04:44 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 69
+[24-Mar-2024 05:04:44 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 71
+[24-Mar-2024 05:04:44 America/New_York] PHP Notice:  Undefined variable: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 165
+[24-Mar-2024 05:04:44 America/New_York] PHP Notice:  Undefined variable: course in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 181
+[24-Mar-2024 05:04:44 America/New_York] PHP Notice:  Undefined variable: Clss in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 185
+[24-Mar-2024 05:04:44 America/New_York] PHP Notice:  Undefined variable: branch in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 189
+[24-Mar-2024 05:04:44 America/New_York] PHP Notice:  Undefined variable: train in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 193
+[24-Mar-2024 05:04:44 America/New_York] PHP Notice:  Undefined variable: fullName in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 207
+[24-Mar-2024 05:04:44 America/New_York] PHP Notice:  Undefined variable: initName in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 214
+[24-Mar-2024 05:04:44 America/New_York] PHP Notice:  Undefined variable: dob in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 219
+[24-Mar-2024 05:04:44 America/New_York] PHP Notice:  Undefined variable: age in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 223
+[24-Mar-2024 05:04:44 America/New_York] PHP Notice:  Undefined variable: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 235
+[24-Mar-2024 05:04:44 America/New_York] PHP Notice:  Undefined variable: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 251
+[24-Mar-2024 05:04:44 America/New_York] PHP Notice:  Undefined variable: nic in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 266
+[24-Mar-2024 05:04:44 America/New_York] PHP Notice:  Undefined variable: passNo in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 270
+[24-Mar-2024 05:04:44 America/New_York] PHP Notice:  Undefined variable: addr in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 275
+[24-Mar-2024 05:04:44 America/New_York] PHP Notice:  Undefined variable: tel in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 280
+[24-Mar-2024 05:04:44 America/New_York] PHP Notice:  Undefined variable: waNo in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 284
+[24-Mar-2024 05:04:44 America/New_York] PHP Notice:  Undefined variable: email in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 289
+[24-Mar-2024 05:04:44 America/New_York] PHP Notice:  Undefined variable: stu in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 297
+[24-Mar-2024 05:07:00 America/New_York] PHP Notice:  Undefined variable: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 165
+[24-Mar-2024 05:07:00 America/New_York] PHP Notice:  Undefined variable: course in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 181
+[24-Mar-2024 05:07:00 America/New_York] PHP Notice:  Undefined variable: Clss in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 185
+[24-Mar-2024 05:07:00 America/New_York] PHP Notice:  Undefined variable: branch in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 189
+[24-Mar-2024 05:07:00 America/New_York] PHP Notice:  Undefined variable: train in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 193
+[24-Mar-2024 05:07:00 America/New_York] PHP Notice:  Undefined variable: fullName in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 207
+[24-Mar-2024 05:07:00 America/New_York] PHP Notice:  Undefined variable: initName in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 214
+[24-Mar-2024 05:07:00 America/New_York] PHP Notice:  Undefined variable: dob in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 219
+[24-Mar-2024 05:07:00 America/New_York] PHP Notice:  Undefined variable: age in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 223
+[24-Mar-2024 05:07:00 America/New_York] PHP Notice:  Undefined variable: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 235
+[24-Mar-2024 05:07:00 America/New_York] PHP Notice:  Undefined variable: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 251
+[24-Mar-2024 05:07:00 America/New_York] PHP Notice:  Undefined variable: nic in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 266
+[24-Mar-2024 05:07:00 America/New_York] PHP Notice:  Undefined variable: passNo in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 270
+[24-Mar-2024 05:07:00 America/New_York] PHP Notice:  Undefined variable: addr in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 275
+[24-Mar-2024 05:07:00 America/New_York] PHP Notice:  Undefined variable: tel in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 280
+[24-Mar-2024 05:07:00 America/New_York] PHP Notice:  Undefined variable: waNo in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 284
+[24-Mar-2024 05:07:00 America/New_York] PHP Notice:  Undefined variable: email in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 289
+[24-Mar-2024 05:07:00 America/New_York] PHP Notice:  Undefined variable: stu in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 297
+[24-Mar-2024 05:09:59 America/New_York] PHP Notice:  Undefined variable: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 165
+[24-Mar-2024 05:09:59 America/New_York] PHP Notice:  Undefined variable: course in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 181
+[24-Mar-2024 05:09:59 America/New_York] PHP Notice:  Undefined variable: Clss in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 185
+[24-Mar-2024 05:09:59 America/New_York] PHP Notice:  Undefined variable: branch in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 189
+[24-Mar-2024 05:09:59 America/New_York] PHP Notice:  Undefined variable: train in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 193
+[24-Mar-2024 05:09:59 America/New_York] PHP Notice:  Undefined variable: fullName in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 207
+[24-Mar-2024 05:09:59 America/New_York] PHP Notice:  Undefined variable: initName in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 214
+[24-Mar-2024 05:09:59 America/New_York] PHP Notice:  Undefined variable: dob in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 219
+[24-Mar-2024 05:09:59 America/New_York] PHP Notice:  Undefined variable: age in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 223
+[24-Mar-2024 05:09:59 America/New_York] PHP Notice:  Undefined variable: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 235
+[24-Mar-2024 05:09:59 America/New_York] PHP Notice:  Undefined variable: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 251
+[24-Mar-2024 05:09:59 America/New_York] PHP Notice:  Undefined variable: nic in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 266
+[24-Mar-2024 05:09:59 America/New_York] PHP Notice:  Undefined variable: passNo in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 270
+[24-Mar-2024 05:09:59 America/New_York] PHP Notice:  Undefined variable: addr in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 275
+[24-Mar-2024 05:09:59 America/New_York] PHP Notice:  Undefined variable: tel in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 280
+[24-Mar-2024 05:09:59 America/New_York] PHP Notice:  Undefined variable: waNo in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 284
+[24-Mar-2024 05:09:59 America/New_York] PHP Notice:  Undefined variable: email in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 289
+[24-Mar-2024 05:09:59 America/New_York] PHP Notice:  Undefined variable: stu in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 297
+[24-Mar-2024 07:26:12 America/New_York] PHP Notice:  Undefined variable: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 165
+[24-Mar-2024 07:26:12 America/New_York] PHP Notice:  Undefined variable: course in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 181
+[24-Mar-2024 07:26:12 America/New_York] PHP Notice:  Undefined variable: Clss in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 185
+[24-Mar-2024 07:26:12 America/New_York] PHP Notice:  Undefined variable: branch in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 189
+[24-Mar-2024 07:26:12 America/New_York] PHP Notice:  Undefined variable: train in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 193
+[24-Mar-2024 07:26:12 America/New_York] PHP Notice:  Undefined variable: fullName in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 207
+[24-Mar-2024 07:26:12 America/New_York] PHP Notice:  Undefined variable: initName in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 214
+[24-Mar-2024 07:26:12 America/New_York] PHP Notice:  Undefined variable: dob in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 219
+[24-Mar-2024 07:26:12 America/New_York] PHP Notice:  Undefined variable: age in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 223
+[24-Mar-2024 07:26:12 America/New_York] PHP Notice:  Undefined variable: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 235
+[24-Mar-2024 07:26:12 America/New_York] PHP Notice:  Undefined variable: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 251
+[24-Mar-2024 07:26:12 America/New_York] PHP Notice:  Undefined variable: nic in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 266
+[24-Mar-2024 07:26:12 America/New_York] PHP Notice:  Undefined variable: passNo in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 270
+[24-Mar-2024 07:26:12 America/New_York] PHP Notice:  Undefined variable: addr in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 275
+[24-Mar-2024 07:26:12 America/New_York] PHP Notice:  Undefined variable: tel in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 280
+[24-Mar-2024 07:26:12 America/New_York] PHP Notice:  Undefined variable: waNo in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 284
+[24-Mar-2024 07:26:12 America/New_York] PHP Notice:  Undefined variable: email in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 289
+[24-Mar-2024 07:26:12 America/New_York] PHP Notice:  Undefined variable: stu in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 297
+[24-Mar-2024 07:34:25 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_student.php on line 188
+[24-Mar-2024 07:34:25 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_student.php on line 188
+[24-Mar-2024 07:34:25 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_student.php on line 194
+[24-Mar-2024 07:34:25 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_student.php on line 196
+[24-Mar-2024 07:35:53 America/New_York] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_student.php on line 87
+[24-Mar-2024 07:36:21 America/New_York] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_student.php on line 87
+[24-Mar-2024 07:44:02 America/New_York] PHP Parse error:  syntax error, unexpected '}' in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_student.php on line 141
+[24-Mar-2024 07:44:28 America/New_York] PHP Parse error:  syntax error, unexpected '}' in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_student.php on line 141
+[24-Mar-2024 07:44:51 America/New_York] PHP Notice:  Undefined variable: SESSION in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_student.php on line 89
+[24-Mar-2024 07:44:51 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'userId' cannot be null' in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_student.php:107
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/add_student.php(107): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_student.php on line 107
+[24-Mar-2024 07:45:41 America/New_York] PHP Notice:  Undefined variable: SESSION in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_student.php on line 89
+[24-Mar-2024 07:45:41 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'userId' cannot be null' in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_student.php:107
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/add_student.php(107): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_student.php on line 107
+[24-Mar-2024 07:45:52 America/New_York] PHP Notice:  Undefined variable: SESSION in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_student.php on line 86
+[24-Mar-2024 07:45:52 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'userId' cannot be null' in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_student.php:105
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/add_student.php(105): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_student.php on line 105
+[24-Mar-2024 07:50:16 America/New_York] PHP Warning:  move_uploaded_file(upload/66001378c03f65.69326670.png): failed to open stream: No such file or directory in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_pay.php on line 42
+[24-Mar-2024 07:50:16 America/New_York] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phppHVffs' to 'upload/66001378c03f65.69326670.png' in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_pay.php on line 42
+[24-Mar-2024 09:19:11 America/New_York] PHP Warning:  move_uploaded_file(upload/6600284f585cb6.69448485.png): failed to open stream: No such file or directory in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_pay.php on line 42
+[24-Mar-2024 09:19:11 America/New_York] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpnfdq13' to 'upload/6600284f585cb6.69448485.png' in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_pay.php on line 42
+[24-Mar-2024 10:29:18 America/New_York] PHP Notice:  Undefined variable: _SESSION in /home/riyaduru/public_html/RPSMSv2/src/system/students/progress.php on line 5
+[26-Mar-2024 02:23:48 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[26-Mar-2024 02:23:48 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND pay_state LIKE '%pend%'' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php:18
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 18
+[26-Mar-2024 02:23:50 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/medic.php on line 9
+[26-Mar-2024 02:23:50 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/medic.php on line 46
+[26-Mar-2024 02:23:50 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/medic.php on line 46
+[26-Mar-2024 02:23:50 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/medic.php on line 52
+[26-Mar-2024 02:23:50 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/medic.php on line 54
+[26-Mar-2024 02:23:52 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/docs.php on line 9
+[26-Mar-2024 02:23:52 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/docs.php on line 46
+[26-Mar-2024 02:23:52 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/docs.php on line 46
+[26-Mar-2024 02:23:52 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/docs.php on line 52
+[26-Mar-2024 02:23:52 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/docs.php on line 54
+[26-Mar-2024 02:23:55 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[26-Mar-2024 02:23:55 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND pay_state LIKE '%pend%'' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php:18
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 18
+[26-Mar-2024 03:51:49 America/New_York] PHP Notice:  Undefined variable: _SESSION in /home/riyaduru/public_html/RPSMSv2/src/system/students/progress.php on line 5
+[26-Mar-2024 06:42:13 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/pay_details.php on line 119
+[26-Mar-2024 06:42:13 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/pay_details.php on line 119
+[26-Mar-2024 06:42:13 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/pay_details.php on line 125
+[26-Mar-2024 06:42:13 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/pay_details.php on line 127
+[26-Mar-2024 08:47:55 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/docs.php on line 9
+[26-Mar-2024 08:47:55 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/docs.php on line 46
+[26-Mar-2024 08:47:55 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/docs.php on line 46
+[26-Mar-2024 08:47:55 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/docs.php on line 52
+[26-Mar-2024 08:47:55 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/docs.php on line 54
+[26-Mar-2024 12:30:54 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/docs.php on line 9
+[26-Mar-2024 12:30:54 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/docs.php on line 46
+[26-Mar-2024 12:30:54 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/docs.php on line 46
+[26-Mar-2024 12:30:54 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/docs.php on line 52
+[26-Mar-2024 12:30:54 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/docs.php on line 54
+[27-Mar-2024 04:14:36 America/New_York] PHP Notice:  Undefined variable: _SESSION in /home/riyaduru/public_html/RPSMSv2/src/system/students/progress.php on line 5
+[28-Mar-2024 06:05:45 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[28-Mar-2024 06:05:45 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND pay_state LIKE '%pend%'' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php:18
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 18
+[28-Mar-2024 07:29:30 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[28-Mar-2024 07:29:30 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND pay_state LIKE '%pend%'' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php:18
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 18
+[28-Mar-2024 07:29:45 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[28-Mar-2024 07:29:45 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND pay_state LIKE '%pend%'' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php:18
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 18
+[28-Mar-2024 09:35:13 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[28-Mar-2024 09:35:13 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND pay_state LIKE '%pend%'' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php:18
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 18
+[28-Mar-2024 11:53:30 America/New_York] PHP Notice:  Undefined index: types in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_course.php on line 15
+[28-Mar-2024 11:53:30 America/New_York] PHP Notice:  Undefined index: types in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_course.php on line 21
+[28-Mar-2024 11:55:52 America/New_York] PHP Notice:  Undefined variable: _SESSION in /home/riyaduru/public_html/RPSMSv2/src/system/students/progress.php on line 5
+[28-Mar-2024 11:55:59 America/New_York] PHP Notice:  Undefined variable: _SESSION in /home/riyaduru/public_html/RPSMSv2/src/system/students/progress.php on line 5
+[28-Mar-2024 11:56:20 America/New_York] PHP Notice:  Undefined variable: _SESSION in /home/riyaduru/public_html/RPSMSv2/src/system/students/progress.php on line 5
+[28-Mar-2024 11:56:26 America/New_York] PHP Notice:  Undefined variable: _SESSION in /home/riyaduru/public_html/RPSMSv2/src/system/students/progress.php on line 5
+[28-Mar-2024 12:02:44 America/New_York] PHP Notice:  Undefined variable: _SESSION in /home/riyaduru/public_html/RPSMSv2/src/system/students/progress.php on line 5
+[28-Mar-2024 12:02:47 America/New_York] PHP Notice:  Undefined variable: _SESSION in /home/riyaduru/public_html/RPSMSv2/src/system/students/progress.php on line 5
+[28-Mar-2024 13:58:44 America/New_York] PHP Notice:  Undefined index: types in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_course.php on line 15
+[28-Mar-2024 13:58:44 America/New_York] PHP Notice:  Undefined index: types in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_course.php on line 21
+[28-Mar-2024 14:06:51 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_pay.php on line 118
+[28-Mar-2024 14:06:51 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_pay.php on line 118
+[28-Mar-2024 14:06:51 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_pay.php on line 124
+[28-Mar-2024 14:06:51 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_pay.php on line 126
+[28-Mar-2024 14:07:39 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 62
+[28-Mar-2024 14:07:39 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 62
+[28-Mar-2024 14:07:39 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 68
+[28-Mar-2024 14:07:39 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 70
+[28-Mar-2024 14:07:50 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 62
+[28-Mar-2024 14:07:50 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 62
+[28-Mar-2024 14:07:50 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 68
+[28-Mar-2024 14:07:50 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 70
+[28-Mar-2024 14:07:50 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/success.php on line 38
+[28-Mar-2024 14:07:50 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/success.php on line 38
+[28-Mar-2024 14:07:50 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/success.php on line 44
+[28-Mar-2024 14:07:50 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/success.php on line 46
+[28-Mar-2024 14:07:56 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[28-Mar-2024 14:07:56 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND pay_state LIKE '%pend%'' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php:18
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 18
+[28-Mar-2024 14:08:03 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 62
+[28-Mar-2024 14:08:03 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 62
+[28-Mar-2024 14:08:03 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 68
+[28-Mar-2024 14:08:03 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 70
+[28-Mar-2024 14:08:06 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 62
+[28-Mar-2024 14:08:06 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 62
+[28-Mar-2024 14:08:06 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 68
+[28-Mar-2024 14:08:06 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 70
+[28-Mar-2024 14:08:06 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/success.php on line 38
+[28-Mar-2024 14:08:06 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/success.php on line 38
+[28-Mar-2024 14:08:06 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/success.php on line 44
+[28-Mar-2024 14:08:06 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/success.php on line 46
+[28-Mar-2024 14:08:08 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[28-Mar-2024 14:08:08 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND pay_state LIKE '%pend%'' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php:18
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 18
+[28-Mar-2024 14:08:20 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 62
+[28-Mar-2024 14:08:20 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 62
+[28-Mar-2024 14:08:20 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 68
+[28-Mar-2024 14:08:20 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 70
+[28-Mar-2024 14:08:22 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_course.php on line 121
+[28-Mar-2024 14:08:22 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_course.php on line 121
+[28-Mar-2024 14:08:22 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_course.php on line 127
+[28-Mar-2024 14:08:22 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_course.php on line 129
+[28-Mar-2024 14:08:23 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_student.php on line 86
+[28-Mar-2024 14:08:23 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_student.php on line 186
+[28-Mar-2024 14:08:23 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_student.php on line 186
+[28-Mar-2024 14:08:23 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_student.php on line 192
+[28-Mar-2024 14:08:23 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_student.php on line 194
+[28-Mar-2024 14:08:24 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[28-Mar-2024 14:08:24 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND pay_state LIKE '%pend%'' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php:18
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 18
+[28-Mar-2024 14:10:50 America/New_York] PHP Notice:  Undefined variable: _SESSION in /home/riyaduru/public_html/RPSMSv2/src/system/students/progress.php on line 5
+[28-Mar-2024 22:05:57 America/New_York] PHP Notice:  Undefined index: types in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_course.php on line 15
+[28-Mar-2024 22:05:57 America/New_York] PHP Notice:  Undefined index: types in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_course.php on line 21
+[28-Mar-2024 23:43:02 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[28-Mar-2024 23:43:02 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND pay_state LIKE '%pend%'' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php:18
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 18
+[28-Mar-2024 23:55:31 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[28-Mar-2024 23:55:31 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND pay_state LIKE '%pend%'' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php:18
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 18
+[29-Mar-2024 00:35:32 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[29-Mar-2024 00:35:32 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND pay_state LIKE '%pend%'' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php:18
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 18
+[29-Mar-2024 00:51:54 America/New_York] PHP Notice:  Undefined variable: _SESSION in /home/riyaduru/public_html/RPSMSv2/src/system/students/progress.php on line 5
+[29-Mar-2024 02:18:38 America/New_York] PHP Notice:  Undefined variable: _SESSION in /home/riyaduru/public_html/RPSMSv2/src/system/students/progress.php on line 5
+[29-Mar-2024 02:19:14 America/New_York] PHP Notice:  Undefined variable: _SESSION in /home/riyaduru/public_html/RPSMSv2/src/system/students/progress.php on line 5
+[29-Mar-2024 02:53:17 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[29-Mar-2024 02:53:17 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND pay_state LIKE '%pend%'' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php:18
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 18
+[29-Mar-2024 04:39:29 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[29-Mar-2024 04:39:29 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND pay_state LIKE '%pend%'' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php:18
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 18
+[29-Mar-2024 04:41:04 America/New_York] PHP Notice:  Undefined variable: _SESSION in /home/riyaduru/public_html/RPSMSv2/src/system/students/progress.php on line 5
+[29-Mar-2024 04:41:07 America/New_York] PHP Notice:  Undefined variable: _SESSION in /home/riyaduru/public_html/RPSMSv2/src/system/students/progress.php on line 5
+[29-Mar-2024 10:31:02 America/New_York] PHP Notice:  Undefined index: types in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_course.php on line 15
+[29-Mar-2024 12:11:30 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/schedule.php on line 5
+[29-Mar-2024 12:11:30 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/schedule.php on line 63
+[29-Mar-2024 12:11:30 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/schedule.php on line 63
+[29-Mar-2024 12:11:30 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/schedule.php on line 69
+[29-Mar-2024 12:11:30 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/schedule.php on line 71
+[30-Mar-2024 00:13:20 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 62
+[30-Mar-2024 00:13:20 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 62
+[30-Mar-2024 00:13:20 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 68
+[30-Mar-2024 00:13:20 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 70
+[30-Mar-2024 00:13:39 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 62
+[30-Mar-2024 00:13:39 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 62
+[30-Mar-2024 00:13:39 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 68
+[30-Mar-2024 00:13:39 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 70
+[30-Mar-2024 00:57:48 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 62
+[30-Mar-2024 00:57:48 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 62
+[30-Mar-2024 00:57:48 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 68
+[30-Mar-2024 00:57:48 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 70
+[30-Mar-2024 00:58:00 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 62
+[30-Mar-2024 00:58:00 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 62
+[30-Mar-2024 00:58:00 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 68
+[30-Mar-2024 00:58:00 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 70
+[30-Mar-2024 00:58:02 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 62
+[30-Mar-2024 00:58:02 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 62
+[30-Mar-2024 00:58:02 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 68
+[30-Mar-2024 00:58:02 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 70
+[30-Mar-2024 00:58:11 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 62
+[30-Mar-2024 00:58:11 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 62
+[30-Mar-2024 00:58:11 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 68
+[30-Mar-2024 00:58:11 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 70
+[30-Mar-2024 00:58:11 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_pay.php on line 118
+[30-Mar-2024 00:58:11 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_pay.php on line 118
+[30-Mar-2024 00:58:11 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_pay.php on line 124
+[30-Mar-2024 00:58:11 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_pay.php on line 126
+[30-Mar-2024 00:58:58 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_pay.php on line 11
+[30-Mar-2024 00:58:58 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_pay.php on line 118
+[30-Mar-2024 00:58:58 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_pay.php on line 118
+[30-Mar-2024 00:58:58 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_pay.php on line 124
+[30-Mar-2024 00:58:58 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_pay.php on line 126
+[30-Mar-2024 00:59:05 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_pay.php on line 11
+[30-Mar-2024 00:59:05 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_pay.php on line 118
+[30-Mar-2024 00:59:05 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_pay.php on line 118
+[30-Mar-2024 00:59:05 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_pay.php on line 124
+[30-Mar-2024 00:59:05 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_pay.php on line 126
+[30-Mar-2024 00:59:23 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_pay.php on line 118
+[30-Mar-2024 00:59:23 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_pay.php on line 118
+[30-Mar-2024 00:59:23 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_pay.php on line 124
+[30-Mar-2024 00:59:23 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_pay.php on line 126
+[30-Mar-2024 01:15:02 America/New_York] PHP Notice:  Undefined variable: _SESSION in /home/riyaduru/public_html/RPSMSv2/src/system/students/progress.php on line 5
+[30-Mar-2024 01:20:52 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_pay.php on line 118
+[30-Mar-2024 01:20:52 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_pay.php on line 118
+[30-Mar-2024 01:20:52 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_pay.php on line 124
+[30-Mar-2024 01:20:52 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_pay.php on line 126
+[30-Mar-2024 01:20:53 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 62
+[30-Mar-2024 01:20:53 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 62
+[30-Mar-2024 01:20:53 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 68
+[30-Mar-2024 01:20:53 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 70
+[30-Mar-2024 01:20:58 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 62
+[30-Mar-2024 01:20:58 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 62
+[30-Mar-2024 01:20:58 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 68
+[30-Mar-2024 01:20:58 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 70
+[30-Mar-2024 01:21:00 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 62
+[30-Mar-2024 01:21:00 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 62
+[30-Mar-2024 01:21:00 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 68
+[30-Mar-2024 01:21:00 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_paysel.php on line 70
+[30-Mar-2024 01:21:01 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_course.php on line 121
+[30-Mar-2024 01:21:01 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_course.php on line 121
+[30-Mar-2024 01:21:01 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_course.php on line 127
+[30-Mar-2024 01:21:01 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_course.php on line 129
+[30-Mar-2024 01:21:01 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_student.php on line 86
+[30-Mar-2024 01:21:01 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_student.php on line 186
+[30-Mar-2024 01:21:01 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_student.php on line 186
+[30-Mar-2024 01:21:01 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_student.php on line 192
+[30-Mar-2024 01:21:01 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_student.php on line 194
+[30-Mar-2024 01:21:01 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[30-Mar-2024 01:21:01 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND pay_state LIKE '%pend%'' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php:18
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 18
+[30-Mar-2024 01:21:02 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/success.php on line 38
+[30-Mar-2024 01:21:02 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/success.php on line 38
+[30-Mar-2024 01:21:02 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/success.php on line 44
+[30-Mar-2024 01:21:02 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/success.php on line 46
+[30-Mar-2024 02:43:41 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/success.php on line 38
+[30-Mar-2024 02:43:41 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/success.php on line 38
+[30-Mar-2024 02:43:41 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/success.php on line 44
+[30-Mar-2024 02:43:41 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/success.php on line 46
+[30-Mar-2024 02:43:45 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[30-Mar-2024 02:43:45 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND pay_state LIKE '%pend%'' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php:18
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 18
+[30-Mar-2024 02:43:47 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/success.php on line 38
+[30-Mar-2024 02:43:47 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/success.php on line 38
+[30-Mar-2024 02:43:47 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/success.php on line 44
+[30-Mar-2024 02:43:47 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/success.php on line 46
+[30-Mar-2024 02:43:51 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[30-Mar-2024 02:43:51 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND pay_state LIKE '%pend%'' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php:18
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 18
+[30-Mar-2024 02:43:53 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[30-Mar-2024 02:43:53 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND pay_state LIKE '%pend%'' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php:18
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 18
+[30-Mar-2024 02:43:55 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/success.php on line 38
+[30-Mar-2024 02:43:55 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/success.php on line 38
+[30-Mar-2024 02:43:55 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/success.php on line 44
+[30-Mar-2024 02:43:55 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/success.php on line 46
+[30-Mar-2024 02:54:23 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[30-Mar-2024 02:54:23 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND pay_state LIKE '%pend%'' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php:18
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 18
+[30-Mar-2024 13:49:42 America/New_York] PHP Notice:  Undefined variable: _SESSION in /home/riyaduru/public_html/RPSMSv2/src/system/students/progress.php on line 5
+[30-Mar-2024 15:06:41 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[30-Mar-2024 15:06:41 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND pay_state LIKE '%pend%'' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php:18
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 18
+[31-Mar-2024 05:07:41 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/payment.php on line 9
+[31-Mar-2024 05:07:41 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/payment.php on line 47
+[31-Mar-2024 05:07:41 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/payment.php on line 47
+[31-Mar-2024 05:07:41 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/payment.php on line 53
+[31-Mar-2024 05:07:41 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/payment.php on line 55
+[31-Mar-2024 05:07:41 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/payment.php:166
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/payment.php(166): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/payment.php on line 166
+[31-Mar-2024 07:59:55 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[31-Mar-2024 07:59:55 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND pay_state LIKE '%pend%'' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php:18
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 18
+[31-Mar-2024 09:11:56 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/medic.php on line 9
+[31-Mar-2024 09:11:56 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/medic.php on line 46
+[31-Mar-2024 09:11:56 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/medic.php on line 46
+[31-Mar-2024 09:11:56 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/medic.php on line 52
+[31-Mar-2024 09:11:56 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/medic.php on line 54
+[01-Apr-2024 00:10:56 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[01-Apr-2024 00:10:56 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND pay_state LIKE '%pend%'' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php:18
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 18
+[01-Apr-2024 00:10:56 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[01-Apr-2024 00:10:56 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND pay_state LIKE '%pend%'' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php:18
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 18
+[01-Apr-2024 01:15:18 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[01-Apr-2024 01:15:18 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND pay_state LIKE '%pend%'' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php:18
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 18
+[01-Apr-2024 01:15:18 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[01-Apr-2024 01:15:18 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND pay_state LIKE '%pend%'' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php:18
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 18
+[01-Apr-2024 01:41:25 America/New_York] PHP Notice:  Undefined variable: _SESSION in /home/riyaduru/public_html/RPSMSv2/src/system/students/progress.php on line 5
+[01-Apr-2024 01:43:10 America/New_York] PHP Notice:  Undefined variable: _SESSION in /home/riyaduru/public_html/RPSMSv2/src/system/students/progress.php on line 5
+[03-Apr-2024 01:31:53 America/New_York] PHP Notice:  Undefined variable: _SESSION in /home/riyaduru/public_html/RPSMSv2/src/system/students/progress.php on line 5
+[03-Apr-2024 01:32:11 America/New_York] PHP Notice:  Undefined variable: _SESSION in /home/riyaduru/public_html/RPSMSv2/src/system/students/progress.php on line 5
+[03-Apr-2024 01:42:32 America/New_York] PHP Notice:  Undefined variable: _SESSION in /home/riyaduru/public_html/RPSMSv2/src/system/students/progress.php on line 5
+[03-Apr-2024 05:21:35 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[03-Apr-2024 05:21:35 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND pay_state LIKE '%pend%'' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php:18
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 18
+[03-Apr-2024 05:21:39 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[03-Apr-2024 05:21:39 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND pay_state LIKE '%pend%'' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php:18
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 18
+[03-Apr-2024 05:21:42 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[03-Apr-2024 05:21:42 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND pay_state LIKE '%pend%'' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php:18
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 18
+[03-Apr-2024 05:21:42 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[03-Apr-2024 05:21:42 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND pay_state LIKE '%pend%'' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php:18
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 18
+[03-Apr-2024 05:21:43 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[03-Apr-2024 05:21:43 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND pay_state LIKE '%pend%'' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php:18
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 18
+[03-Apr-2024 10:55:56 America/New_York] PHP Notice:  Undefined variable: _SESSION in /home/riyaduru/public_html/RPSMSv2/src/system/students/progress.php on line 5
+[03-Apr-2024 14:21:00 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[03-Apr-2024 14:21:00 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND pay_state LIKE '%pend%'' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php:18
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 18
+[04-Apr-2024 00:47:30 America/New_York] PHP Notice:  Undefined variable: _SESSION in /home/riyaduru/public_html/RPSMSv2/src/system/students/progress.php on line 5
+[04-Apr-2024 13:26:37 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 11
+[04-Apr-2024 13:26:37 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 63
+[04-Apr-2024 13:26:37 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 63
+[04-Apr-2024 13:26:37 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 69
+[04-Apr-2024 13:26:37 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 71
+[04-Apr-2024 13:26:53 America/New_York] PHP Notice:  Undefined variable: _SESSION in /home/riyaduru/public_html/RPSMSv2/src/system/students/progress.php on line 5
+[04-Apr-2024 13:27:04 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[04-Apr-2024 13:27:04 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND pay_state LIKE '%pend%'' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php:18
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 18
+[04-Apr-2024 13:29:21 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/schedule.php on line 5
+[04-Apr-2024 13:29:21 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/schedule.php on line 63
+[04-Apr-2024 13:29:21 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/schedule.php on line 63
+[04-Apr-2024 13:29:21 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/schedule.php on line 69
+[04-Apr-2024 13:29:21 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/schedule.php on line 71
+[04-Apr-2024 15:35:57 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[04-Apr-2024 15:35:57 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND pay_state LIKE '%pend%'' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php:18
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 18
+[04-Apr-2024 15:36:06 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[04-Apr-2024 15:36:06 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND pay_state LIKE '%pend%'' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php:18
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 18
+[04-Apr-2024 15:38:03 America/New_York] PHP Notice:  Undefined variable: _SESSION in /home/riyaduru/public_html/RPSMSv2/src/system/students/progress.php on line 5
+[04-Apr-2024 15:38:05 America/New_York] PHP Notice:  Undefined variable: _SESSION in /home/riyaduru/public_html/RPSMSv2/src/system/students/progress.php on line 5
+[06-Apr-2024 00:47:02 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[06-Apr-2024 00:47:02 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND pay_state LIKE '%pend%'' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php:18
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 18
+[06-Apr-2024 00:47:05 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[06-Apr-2024 00:47:05 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND pay_state LIKE '%pend%'' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php:18
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 18
+[08-Apr-2024 22:06:59 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[08-Apr-2024 22:06:59 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND pay_state LIKE '%pend%'' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php:18
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 18
+[13-Apr-2024 10:54:48 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[13-Apr-2024 10:54:48 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND pay_state LIKE '%pend%'' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php:18
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 18
+[15-Apr-2024 00:13:12 America/New_York] PHP Notice:  Undefined variable: _SESSION in /home/riyaduru/public_html/RPSMSv2/src/system/students/progress.php on line 5
+[15-Apr-2024 00:15:58 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_student.php on line 86
+[15-Apr-2024 00:15:58 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_student.php on line 186
+[15-Apr-2024 00:15:58 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_student.php on line 186
+[15-Apr-2024 00:15:58 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_student.php on line 192
+[15-Apr-2024 00:15:58 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_student.php on line 194
+[15-Apr-2024 00:15:59 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_student.php on line 86
+[15-Apr-2024 00:15:59 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_student.php on line 186
+[15-Apr-2024 00:15:59 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_student.php on line 186
+[15-Apr-2024 00:15:59 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_student.php on line 192
+[15-Apr-2024 00:15:59 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_student.php on line 194
+[15-Apr-2024 00:15:59 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_student.php on line 86
+[15-Apr-2024 00:15:59 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_student.php on line 186
+[15-Apr-2024 00:15:59 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_student.php on line 186
+[15-Apr-2024 00:15:59 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_student.php on line 192
+[15-Apr-2024 00:15:59 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_student.php on line 194
+[15-Apr-2024 00:19:42 America/New_York] PHP Notice:  Undefined index: reqTrain in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_course.php on line 31
+[15-Apr-2024 00:19:42 America/New_York] PHP Warning:  implode(): Invalid arguments passed in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_course.php on line 32
+[15-Apr-2024 00:20:14 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/success.php on line 38
+[15-Apr-2024 00:20:14 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/success.php on line 38
+[15-Apr-2024 00:20:14 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/success.php on line 44
+[15-Apr-2024 00:20:14 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/success.php on line 46
+[15-Apr-2024 00:20:15 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/success.php on line 38
+[15-Apr-2024 00:20:15 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/success.php on line 38
+[15-Apr-2024 00:20:15 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/success.php on line 44
+[15-Apr-2024 00:20:15 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/success.php on line 46
+[15-Apr-2024 00:20:16 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/success.php on line 38
+[15-Apr-2024 00:20:16 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/success.php on line 38
+[15-Apr-2024 00:20:16 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/success.php on line 44
+[15-Apr-2024 00:20:16 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/success.php on line 46
+[15-Apr-2024 00:22:13 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/payment.php on line 9
+[15-Apr-2024 00:22:13 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/payment.php on line 47
+[15-Apr-2024 00:22:13 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/payment.php on line 47
+[15-Apr-2024 00:22:13 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/payment.php on line 53
+[15-Apr-2024 00:22:13 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/payment.php on line 55
+[15-Apr-2024 00:22:13 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/payment.php:166
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/payment.php(166): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/payment.php on line 166
+[15-Apr-2024 00:22:14 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/payment.php on line 9
+[15-Apr-2024 00:22:14 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/payment.php on line 47
+[15-Apr-2024 00:22:14 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/payment.php on line 47
+[15-Apr-2024 00:22:14 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/payment.php on line 53
+[15-Apr-2024 00:22:14 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/payment.php on line 55
+[15-Apr-2024 00:22:14 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/payment.php:166
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/payment.php(166): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/payment.php on line 166
+[15-Apr-2024 00:22:15 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/payment.php on line 9
+[15-Apr-2024 00:22:15 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/payment.php on line 47
+[15-Apr-2024 00:22:15 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/payment.php on line 47
+[15-Apr-2024 00:22:15 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/payment.php on line 53
+[15-Apr-2024 00:22:15 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/payment.php on line 55
+[15-Apr-2024 00:22:15 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/payment.php:166
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/payment.php(166): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/payment.php on line 166
+[15-Apr-2024 17:01:48 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/docs.php on line 9
+[15-Apr-2024 17:01:48 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/docs.php on line 46
+[15-Apr-2024 17:01:48 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/docs.php on line 46
+[15-Apr-2024 17:01:48 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/docs.php on line 52
+[15-Apr-2024 17:01:48 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/docs.php on line 54
+[15-Apr-2024 17:01:51 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/docs.php on line 9
+[15-Apr-2024 17:01:51 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/docs.php on line 46
+[15-Apr-2024 17:01:51 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/docs.php on line 46
+[15-Apr-2024 17:01:51 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/docs.php on line 52
+[15-Apr-2024 17:01:51 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/docs.php on line 54
+[15-Apr-2024 17:01:52 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/docs.php on line 9
+[15-Apr-2024 17:01:52 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/docs.php on line 46
+[15-Apr-2024 17:01:52 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/docs.php on line 46
+[15-Apr-2024 17:01:52 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/docs.php on line 52
+[15-Apr-2024 17:01:52 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/docs.php on line 54
+[15-Apr-2024 17:01:52 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/docs.php on line 9
+[15-Apr-2024 17:01:52 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/docs.php on line 46
+[15-Apr-2024 17:01:52 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/docs.php on line 46
+[15-Apr-2024 17:01:52 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/docs.php on line 52
+[15-Apr-2024 17:01:52 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/docs.php on line 54
+[16-Apr-2024 14:11:26 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/docs.php on line 9
+[16-Apr-2024 14:11:26 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/docs.php on line 46
+[16-Apr-2024 14:11:26 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/docs.php on line 46
+[16-Apr-2024 14:11:26 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/docs.php on line 52
+[16-Apr-2024 14:11:26 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/docs.php on line 54
+[17-Apr-2024 01:20:56 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/cls_details.php on line 12
+[17-Apr-2024 01:20:56 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/cls_details.php on line 65
+[17-Apr-2024 01:20:56 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/cls_details.php on line 65
+[17-Apr-2024 01:20:56 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/cls_details.php on line 71
+[17-Apr-2024 01:20:56 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/cls_details.php on line 73
+[17-Apr-2024 04:11:05 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/cls_details.php on line 12
+[17-Apr-2024 04:11:05 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/cls_details.php on line 65
+[17-Apr-2024 04:11:05 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/cls_details.php on line 65
+[17-Apr-2024 04:11:05 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/cls_details.php on line 71
+[17-Apr-2024 04:11:05 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/cls_details.php on line 73
+[17-Apr-2024 22:01:40 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 11
+[17-Apr-2024 22:01:40 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 63
+[17-Apr-2024 22:01:40 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 63
+[17-Apr-2024 22:01:40 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 69
+[17-Apr-2024 22:01:40 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 71
+[18-Apr-2024 22:41:34 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[18-Apr-2024 22:41:34 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND pay_state LIKE '%pend%'' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php:18
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 18
+[18-Apr-2024 22:41:34 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[18-Apr-2024 22:41:34 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND pay_state LIKE '%pend%'' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php:18
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 18
+[19-Apr-2024 14:19:00 America/New_York] PHP Notice:  Undefined variable: _SESSION in /home/riyaduru/public_html/RPSMSv2/src/system/students/progress.php on line 5
+[19-Apr-2024 14:27:49 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 11
+[19-Apr-2024 14:27:49 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 63
+[19-Apr-2024 14:27:49 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 63
+[19-Apr-2024 14:27:49 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 69
+[19-Apr-2024 14:27:49 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/profile.php on line 71
+[19-Apr-2024 14:28:06 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[19-Apr-2024 14:28:06 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND pay_state LIKE '%pend%'' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php:18
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 18
+[19-Apr-2024 20:19:36 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[19-Apr-2024 20:19:36 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND pay_state LIKE '%pend%'' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php:18
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 18
+[19-Apr-2024 21:29:42 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[19-Apr-2024 21:29:42 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND pay_state LIKE '%pend%'' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php:18
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 18
+[20-Apr-2024 10:31:28 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/cls_details.php on line 12
+[20-Apr-2024 10:31:28 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/cls_details.php on line 65
+[20-Apr-2024 10:31:28 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/cls_details.php on line 65
+[20-Apr-2024 10:31:28 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/cls_details.php on line 71
+[20-Apr-2024 10:31:28 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/cls_details.php on line 73
+[22-Apr-2024 06:52:59 America/New_York] PHP Notice:  Undefined variable: _SESSION in /home/riyaduru/public_html/RPSMSv2/src/system/students/progress.php on line 5
+[22-Apr-2024 22:35:46 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[22-Apr-2024 22:35:46 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND pay_state LIKE '%pend%'' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php:18
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 18
+[22-Apr-2024 22:35:55 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/payment.php on line 9
+[22-Apr-2024 22:35:55 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/payment.php on line 47
+[22-Apr-2024 22:35:55 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/payment.php on line 47
+[22-Apr-2024 22:35:55 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/payment.php on line 53
+[22-Apr-2024 22:35:55 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/payment.php on line 55
+[22-Apr-2024 22:35:55 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/payment.php:166
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/payment.php(166): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/payment.php on line 166
+[24-Apr-2024 09:53:41 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[24-Apr-2024 09:53:41 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND pay_state LIKE '%pend%'' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php:18
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 18
+[30-Apr-2024 11:26:54 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/docs.php on line 9
+[30-Apr-2024 11:26:54 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/docs.php on line 46
+[30-Apr-2024 11:26:54 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/docs.php on line 46
+[30-Apr-2024 11:26:54 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/docs.php on line 52
+[30-Apr-2024 11:26:54 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/docs.php on line 54
+[30-Apr-2024 11:27:00 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/docs.php on line 9
+[30-Apr-2024 11:27:00 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/docs.php on line 46
+[30-Apr-2024 11:27:00 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/docs.php on line 46
+[30-Apr-2024 11:27:00 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/docs.php on line 52
+[30-Apr-2024 11:27:00 America/New_York] PHP Notice:  Undefined index: gen in /home/riyaduru/public_html/RPSMSv2/src/system/students/docs.php on line 54
+[30-Apr-2024 11:27:51 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[30-Apr-2024 11:27:51 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND pay_state LIKE '%pend%'' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php:18
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 18
+[30-Apr-2024 11:27:53 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[30-Apr-2024 11:27:53 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND pay_state LIKE '%pend%'' at line 1' in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php:18
+Stack trace:
+#0 /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 18
+[08-May-2024 04:43:01 America/New_York] PHP Warning:  move_uploaded_file(upload/663b3b15ece5c3.67327915.jpg): failed to open stream: No such file or directory in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_pay.php on line 42
+[08-May-2024 04:43:01 America/New_York] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpWygCsN' to 'upload/663b3b15ece5c3.67327915.jpg' in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_pay.php on line 42
+[21-May-2024 09:05:17 America/New_York] PHP Warning:  require_once(../phpconfigs/session_manager.php): failed to open stream: No such file or directory in /home/riyaduru/public_html/RPSMSv2/src/system/students/docs.php on line 5
+[21-May-2024 09:05:17 America/New_York] PHP Fatal error:  require_once(): Failed opening required '../phpconfigs/session_manager.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/riyaduru/public_html/RPSMSv2/src/system/students/docs.php on line 5
+[21-May-2024 09:10:33 America/New_York] PHP Warning:  require_once(../phpconfigs/session_manager.php): failed to open stream: No such file or directory in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_student.php on line 4
+[21-May-2024 09:10:33 America/New_York] PHP Fatal error:  require_once(): Failed opening required '../phpconfigs/session_manager.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/riyaduru/public_html/RPSMSv2/src/system/students/add_student.php on line 4
+[21-May-2024 22:08:12 America/New_York] PHP Notice:  Undefined index: validity in /home/riyaduru/public_html/RPSMSv2/src/system/phpconfigs/expier.php on line 13
+[21-May-2024 22:08:12 America/New_York] PHP Notice:  Undefined index: validity in /home/riyaduru/public_html/RPSMSv2/src/system/students/Tcards.php on line 113
+[21-May-2024 22:09:23 America/New_York] PHP Notice:  Undefined index: validity in /home/riyaduru/public_html/RPSMSv2/src/system/students/Tcards.php on line 113
+[21-May-2024 22:18:28 America/New_York] PHP Parse error:  syntax error, unexpected 'background' (T_STRING), expecting ',' or ';' in /home/riyaduru/public_html/RPSMSv2/src/system/students/Tcards.php on line 144
+[21-May-2024 22:19:03 America/New_York] PHP Parse error:  syntax error, unexpected 'background' (T_STRING), expecting ',' or ';' in /home/riyaduru/public_html/RPSMSv2/src/system/students/Tcards.php on line 144
+[21-May-2024 22:19:04 America/New_York] PHP Parse error:  syntax error, unexpected 'background' (T_STRING), expecting ',' or ';' in /home/riyaduru/public_html/RPSMSv2/src/system/students/Tcards.php on line 144
+[21-May-2024 22:19:43 America/New_York] PHP Parse error:  syntax error, unexpected 'background' (T_STRING), expecting ',' or ';' in /home/riyaduru/public_html/RPSMSv2/src/system/students/Tcards.php on line 144
+[21-May-2024 22:19:45 America/New_York] PHP Parse error:  syntax error, unexpected 'background' (T_STRING), expecting ',' or ';' in /home/riyaduru/public_html/RPSMSv2/src/system/students/Tcards.php on line 144
+[22-May-2024 00:38:01 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/Tcards.php on line 5
+[22-May-2024 00:38:01 America/New_York] PHP Notice:  Undefined index: fname in /home/riyaduru/public_html/RPSMSv2/src/system/students/Tcards.php on line 6
+[22-May-2024 00:38:01 America/New_York] PHP Notice:  Undefined index: lname in /home/riyaduru/public_html/RPSMSv2/src/system/students/Tcards.php on line 6
+[22-May-2024 02:21:52 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[22-May-2024 03:11:59 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[22-May-2024 05:02:17 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[22-May-2024 08:48:59 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[22-May-2024 12:08:36 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[23-May-2024 11:07:27 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[24-May-2024 00:53:32 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[24-May-2024 03:01:54 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[24-May-2024 05:18:09 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[24-May-2024 09:12:37 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/schedule.php on line 5
+[24-May-2024 09:12:38 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/schedule.php on line 5
+[24-May-2024 09:12:39 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
+[24-May-2024 11:02:50 America/New_York] PHP Notice:  Undefined index: uid in /home/riyaduru/public_html/RPSMSv2/src/system/students/dashboard.php on line 5
