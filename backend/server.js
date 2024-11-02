@@ -3,11 +3,21 @@ require("dotenv").config();
 
 //import express
 const express = require("express");
+const cors = require('cors');
 const { default: mongoose } = require("mongoose");
 const userRoutes = require("./routes/user");
 
 //express app variable
 const app = express();
+
+// Use CORS middleware
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
 
 //middleware
 app.use(express.json());
