@@ -1,14 +1,20 @@
 import "./App.css";
-// import { Button } from "./components/ui/button";
-import { LoginForm } from "./components/ui/Login";
-import { Toaster } from "./components/ui/toaster";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { LoginForm } from "@/components/ui/Login";
+import { Toaster } from "@/components/ui/toaster";
+import { AuthContextProvider } from "@/context/AuthContext";
 
 function App() {
   return (
-    <>
-      <LoginForm></LoginForm>
-      <Toaster></Toaster>
-    </>
+    <AuthContextProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<LoginForm />} />
+          {/* Define additional routes as needed */}
+        </Routes>
+      </BrowserRouter>
+      <Toaster />
+    </AuthContextProvider>
   );
 }
 

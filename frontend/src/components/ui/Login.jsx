@@ -1,9 +1,8 @@
-import { useState } from 'react';
-import { useForm } from 'react-hook-form';
-import axios from 'axios';
-import { Loader2 } from 'lucide-react';
-
-import { Button } from '@/components/ui/button';
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import axios from "axios";
+import { Loader2 } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
@@ -11,47 +10,50 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
-import { useToast } from '@/hooks/use-toast';
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { useToast } from "@/hooks/use-toast";
+import { useAuthContext } from "@/hooks/useAuthContext";
 
 export function LoginForm() {
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
+  const { dispatch } = useAuthContext(); // Get dispatch from AuthContext
 
   const form = useForm({
     defaultValues: {
-      email: '',
-      password: '',
+      email: "",
+      password: "",
     },
   });
 
   const validateForm = (values) => {
     const errors = {};
-    
+
     if (!values.email) {
-      errors.email = 'Email is required';
+      errors.email = "Email is required";
     } else if (!/\S+@\S+\.\S+/.test(values.email)) {
-      errors.email = 'Invalid email address';
+      errors.email = "Invalid email address";
     }
-    
+
     if (!values.password) {
-      errors.password = 'Password is required';
+      errors.password = "Password is required";
     } else if (values.password.length < 6) {
-      errors.password = 'Password must be at least 6 characters';
+      errors.password = "Password must be at least 6 characters";
     }
-    
+
     return errors;
   };
 
   async function onSubmit(values) {
     const errors = validateForm(values);
-    
+    console.log("Submitting values:", values);
+
     if (Object.keys(errors).length > 0) {
-      Object.keys(errors).forEach(key => {
+      Object.keys(errors).forEach((key) => {
         form.setError(key, {
-          type: 'manual',
-          message: errors[key]
+          type: "manual",
+          message: errors[key],
         });
       });
       return;
@@ -59,22 +61,37 @@ export function LoginForm() {
 
     try {
       setIsLoading(true);
-      const response = await axios.post('http://localhost:5000/api/auth/login', values);
-      
-      localStorage.setItem('token', response.data.token);
-      
+      const response = await axios.post(
+        "http://localhost:4000/api/user/login",
+        values,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      // Save token to localStorage
+      localStorage.setItem("token", response.data.token);
+
+      // Update AuthContext with user data
+      dispatch({ type: "LOGIN", payload: response.data });
+
+      // Show success toast
       toast({
-        title: 'Success!',
-        description: 'You have successfully logged in.',
+        variant: "success",
+        title: "LogIn Success",
+        description: "You have successfully logged in.",
       });
-      
-      console.log('Login successful:', response.data);
-      
+
+      console.log("Login successful:", response.data);
     } catch (error) {
+      console.error("Axios error:", error);
       toast({
-        variant: 'destructive',
-        title: 'Error',
-        description: error.response?.data?.message || 'Failed to login. Please try again.',
+        variant: "destructive",
+        title: "Error",
+        description:
+          error.response?.data?.message || "Failed to login. Please try again.",
       });
     } finally {
       setIsLoading(false);
@@ -135,6 +152,7 @@ export function LoginForm() {
               type="submit"
               className="w-full"
               disabled={isLoading}
+              variant="login"
             >
               {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
               Sign in
