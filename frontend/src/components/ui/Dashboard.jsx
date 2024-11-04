@@ -11,10 +11,63 @@ import {
   DropdownMenuItem,
 } from "@/components/ui/dropdown-menu";
 
+import { useState, useRef, useEffect } from "react";
+
+// Import your content components
+import Home from "./Home";
+// import Orders from "./Orders";
+// import Products from "./Products";
+// import Customers from "./Customers";
+// import Analytics from "./Analytics";
+
 export function Dashboard() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState("Home"); // Track active nav item
+  const sidebarRef = useRef(null);
+
+  // Toggle sidebar visibility
+  const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
+
+  // Close sidebar when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+        setIsSidebarOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  // Render content based on active tab
+  const renderContent = () => {
+    switch (activeTab) {
+      case "Home":
+        return <Home />;
+      case "Orders":
+        return <Orders />;
+      case "Products":
+        return <Products />;
+      case "Customers":
+        return <Customers />;
+      case "Analytics":
+        return <Analytics />;
+      default:
+        return <Home />;
+    }
+  };
+
   return (
     <div className="flex min-h-screen">
-      <div className="hidden lg:block lg:w-[280px] lg:shrink-0 lg:border-r lg:bg-gray-100/40 lg:dark:bg-gray-800/40">
+      {/* Sidebar */}
+      <div
+        ref={sidebarRef}
+        className={`fixed inset-y-0 left-0 z-20 w-[280px] transform bg-white dark:bg-gray-900 lg:static lg:block lg:w-[280px] lg:translate-x-0 lg:bg-gray-100/40 lg:dark:bg-gray-800/40 ${
+          isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+        } transition-transform lg:shrink-0 lg:border-r`}
+      >
         <div className="flex h-full max-h-screen flex-col">
           <div className="flex h-[60px] items-center border-b px-6">
             <Link to="#" className="flex items-center gap-2 font-semibold">
@@ -24,48 +77,55 @@ export function Dashboard() {
           </div>
           <div className="flex-1 overflow-auto py-2">
             <nav className="grid items-start px-4 text-sm font-medium">
-              <Link
-                to="#"
+              <button
+                onClick={() => setActiveTab("Home")}
                 className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
               >
                 <HomeIcon className="h-4 w-4" />
                 Home
-              </Link>
-              <Link
-                to="#"
+              </button>
+              <button
+                onClick={() => setActiveTab("Orders")}
                 className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
               >
                 <ShoppingCartIcon className="h-4 w-4" />
                 Orders
-              </Link>
-              <Link
-                to="#"
-                className="flex items-center gap-3 rounded-lg bg-gray-100 px-3 py-2 text-gray-900 transition-all hover:text-gray-900 dark:bg-gray-800 dark:text-gray-50 dark:hover:text-gray-50"
+              </button>
+              <button
+                onClick={() => setActiveTab("Products")}
+                className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
               >
                 <PackageIcon className="h-4 w-4" />
                 Products
-              </Link>
-              <Link
-                to="#"
+              </button>
+              <button
+                onClick={() => setActiveTab("Customers")}
                 className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
               >
                 <UsersIcon className="h-4 w-4" />
                 Customers
-              </Link>
-              <Link
-                to="#"
+              </button>
+              <button
+                onClick={() => setActiveTab("Analytics")}
                 className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
               >
                 <LineChartIcon className="h-4 w-4" />
                 Analytics
-              </Link>
+              </button>
             </nav>
           </div>
         </div>
       </div>
+
+      {/* Main Content */}
       <div className="flex-1">
         <header className="flex h-14 lg:h-[60px] items-center gap-4 border-b bg-gray-100/40 px-6 dark:bg-gray-800/40">
-          <Button variant="outline" size="icon" className="lg:hidden">
+          <Button
+            variant="outline"
+            size="icon"
+            className="lg:hidden"
+            onClick={toggleSidebar}
+          >
             <MenuIcon className="h-6 w-6" />
             <span className="sr-only">Toggle navigation menu</span>
           </Button>
@@ -109,9 +169,7 @@ export function Dashboard() {
             </DropdownMenuContent>
           </DropdownMenu>
         </header>
-        <main className="flex-1 p-4 md:p-6">
-          <h1 className="font-semibold text-lg md:text-2xl">Products</h1>
-        </main>
+        <main className="flex-1 p-4 md:p-6">{renderContent()}</main>
       </div>
     </div>
   );
