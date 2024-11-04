@@ -1,5 +1,5 @@
-// Import statements for react-router-dom
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -12,9 +12,16 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 export function Dashboard() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
   return (
     <div className="flex min-h-screen">
-      <div className="hidden lg:block lg:w-[280px] lg:shrink-0 lg:border-r lg:bg-gray-100/40 lg:dark:bg-gray-800/40">
+      {/* Sidebar */}
+      <div
+        className={`${
+          isSidebarOpen ? "block" : "hidden"
+        } lg:block fixed inset-0 lg:static lg:w-[280px] lg:shrink-0 lg:border-r lg:bg-gray-100/40 lg:dark:bg-gray-800/40 z-10`}
+      >
         <div className="flex h-full max-h-screen flex-col">
           <div className="flex h-[60px] items-center border-b px-6">
             <Link to="#" className="flex items-center gap-2 font-semibold">
@@ -63,9 +70,16 @@ export function Dashboard() {
           </div>
         </div>
       </div>
+
+      {/* Main Content */}
       <div className="flex-1">
         <header className="flex h-14 lg:h-[60px] items-center gap-4 border-b bg-gray-100/40 px-6 dark:bg-gray-800/40">
-          <Button variant="outline" size="icon" className="lg:hidden">
+          <Button
+            variant="outline"
+            size="icon"
+            className="lg:hidden"
+            onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+          >
             <MenuIcon className="h-6 w-6" />
             <span className="sr-only">Toggle navigation menu</span>
           </Button>
@@ -116,6 +130,7 @@ export function Dashboard() {
     </div>
   );
 }
+
 
 // Reusable icon dashboards
 function HomeIcon(props) {
