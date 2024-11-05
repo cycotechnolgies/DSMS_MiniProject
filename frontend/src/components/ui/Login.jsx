@@ -14,11 +14,14 @@ import {
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
 import { useAuthContext } from "@/hooks/useAuthContext";
+import { useNavigate } from 'react-router-dom';
 
 export function LoginForm() {
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
-  const { dispatch } = useAuthContext(); // Get dispatch from AuthContext
+  const { dispatch } = useAuthContext();
+  const navigate = useNavigate();
+
 
   const form = useForm({
     defaultValues: {
@@ -84,9 +87,10 @@ export function LoginForm() {
         description: "You have successfully logged in.",
       });
 
+      navigate('/dashboard');
+
       console.log("Login successful:", response.data);
     } catch (error) {
-      console.error("Axios error:", error);
       toast({
         variant: "destructive",
         title: "Error",
@@ -99,7 +103,7 @@ export function LoginForm() {
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gray-50">
+    <div className="flex min-h-screen items-center justify-center bg-gradient-to-bl from-cyan-200 via-slate-50 to-cyan-200">
       <div className="w-full max-w-md space-y-8 rounded-2xl bg-white p-8 shadow-lg">
         <div className="text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900">
