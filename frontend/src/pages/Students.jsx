@@ -2,18 +2,27 @@ import React, { useState } from "react";
 
 import Sidebar from "../partials/Sidebar";
 import Header from "../partials/Header";
-import FilterButton from "../components/DropdownFilter";
-import Datepicker from "../components/Datepicker";
-import DashboardCard01 from "../partials/dashboard/DashboardCard01";
-import DashboardCard02 from "../partials/dashboard/DashboardCard02";
-import DashboardCard03 from "../partials/dashboard/DashboardCard03";
 
 function Students() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [students, setStudents] = useState([]);
+  const [formData, setFormData] = useState({ name: "", email: "", age: "" });
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setStudents((prevStudents) => [...prevStudents, formData]);
+    setFormData({ name: "", email: "", age: "" }); // Clear form
+    closeModal();
+  };
 
   return (
     <div className="flex h-screen overflow-hidden">
@@ -48,20 +57,44 @@ function Students() {
               </div>
             </div>
 
-            {/* Page Content */}
+            {/* Students Table */}
+            <div className="overflow-x-auto mt-8">
+              <table className="min-w-full bg-white dark:bg-gray-800">
+                <thead>
+                  <tr>
+                    <th className="py-2 px-4 border-b text-left text-sm font-semibold text-gray-700 dark:text-gray-300">Name</th>
+                    <th className="py-2 px-4 border-b text-left text-sm font-semibold text-gray-700 dark:text-gray-300">Email</th>
+                    <th className="py-2 px-4 border-b text-left text-sm font-semibold text-gray-700 dark:text-gray-300">Age</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {students.map((student, index) => (
+                    <tr key={index} className="border-b">
+                      <td className="py-2 px-4 text-sm text-gray-800 dark:text-gray-200">{student.name}</td>
+                      <td className="py-2 px-4 text-sm text-gray-800 dark:text-gray-200">{student.email}</td>
+                      <td className="py-2 px-4 text-sm text-gray-800 dark:text-gray-200">{student.age}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
 
             {/* Modal */}
             {isModalOpen && (
               <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
                 <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg w-full max-w-lg">
                   <h2 className="text-lg font-semibold mb-4">Add New Student</h2>
-                  <form>
+                  <form onSubmit={handleSubmit}>
                     <div className="mb-4">
                       <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
                         Name
                       </label>
                       <input
                         type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        required
                         className="mt-1 block w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm dark:bg-gray-700 dark:text-gray-200"
                       />
                     </div>
@@ -71,6 +104,10 @@ function Students() {
                       </label>
                       <input
                         type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
                         className="mt-1 block w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm dark:bg-gray-700 dark:text-gray-200"
                       />
                     </div>
@@ -80,6 +117,10 @@ function Students() {
                       </label>
                       <input
                         type="number"
+                        name="age"
+                        value={formData.age}
+                        onChange={handleChange}
+                        required
                         className="mt-1 block w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm dark:bg-gray-700 dark:text-gray-200"
                       />
                     </div>
