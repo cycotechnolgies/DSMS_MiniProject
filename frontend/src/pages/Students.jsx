@@ -8,9 +8,14 @@ function Students() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [students, setStudents] = useState([]);
   const [formData, setFormData] = useState({ name: "", email: "", age: "" });
+  const [editIndex, setEditIndex] = useState(null);
 
   const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setFormData({ name: "", email: "", age: "" });
+    setEditIndex(null);
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -19,9 +24,27 @@ function Students() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setStudents((prevStudents) => [...prevStudents, formData]);
-    setFormData({ name: "", email: "", age: "" }); // Clear form
+    if (editIndex !== null) {
+      // Update existing student
+      const updatedStudents = [...students];
+      updatedStudents[editIndex] = formData;
+      setStudents(updatedStudents);
+      setEditIndex(null);
+    } else {
+      // Add new student
+      setStudents((prevStudents) => [...prevStudents, formData]);
+    }
     closeModal();
+  };
+
+  const handleEdit = (index) => {
+    setEditIndex(index);
+    setFormData(students[index]);
+    openModal();
+  };
+
+  const handleDelete = (index) => {
+    setStudents(students.filter((_, i) => i !== index));
   };
 
   return (
@@ -47,7 +70,7 @@ function Students() {
 
               {/* Right: Actions */}
               <div className="grid grid-flow-col sm:auto-cols-max justify-start sm:justify-end gap-2">
-                {/* Add view button */}
+                {/* Add student button */}
                 <button
                   onClick={openModal}
                   className="btn bg-green-600 text-white hover:bg-green-800 dark:bg-green-100 dark:text-green-800 dark:hover:bg-green-200"
@@ -65,6 +88,7 @@ function Students() {
                     <th className="py-2 px-4 border-b text-left text-sm font-semibold text-gray-700 dark:text-gray-300">Name</th>
                     <th className="py-2 px-4 border-b text-left text-sm font-semibold text-gray-700 dark:text-gray-300">Email</th>
                     <th className="py-2 px-4 border-b text-left text-sm font-semibold text-gray-700 dark:text-gray-300">Age</th>
+                    <th className="py-2 px-4 border-b text-left text-sm font-semibold text-gray-700 dark:text-gray-300">Actions</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -73,6 +97,20 @@ function Students() {
                       <td className="py-2 px-4 text-sm text-gray-800 dark:text-gray-200">{student.name}</td>
                       <td className="py-2 px-4 text-sm text-gray-800 dark:text-gray-200">{student.email}</td>
                       <td className="py-2 px-4 text-sm text-gray-800 dark:text-gray-200">{student.age}</td>
+                      <td className="py-2 px-4 text-sm text-gray-800 dark:text-gray-200">
+                        <button
+                          onClick={() => handleEdit(index)}
+                          className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-600 mr-4"
+                        >
+                          Edit
+                        </button>
+                        <button
+                          onClick={() => handleDelete(index)}
+                          className="text-red-600 hover:text-red-800 dark:text-red-400 dark:hover:text-red-600"
+                        >
+                          Delete
+                        </button>
+                      </td>
                     </tr>
                   ))}
                 </tbody>
@@ -83,7 +121,9 @@ function Students() {
             {isModalOpen && (
               <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
                 <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg w-full max-w-lg">
-                  <h2 className="text-lg font-semibold mb-4">Add New Student</h2>
+                  <h2 className="text-lg font-semibold mb-4">
+                    {editIndex !== null ? "Edit Student" : "Add New Student"}
+                  </h2>
                   <form onSubmit={handleSubmit}>
                     <div className="mb-4">
                       <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
@@ -136,7 +176,7 @@ function Students() {
                         type="submit"
                         className="px-4 py-2 bg-green-600 text-white hover:bg-green-800 rounded"
                       >
-                        Save
+                        {editIndex !== null ? "Update" : "Save"}
                       </button>
                     </div>
                   </form>
