@@ -2,11 +2,13 @@ import React, { useState } from "react";
 
 import Sidebar from "../partials/Sidebar";
 import Header from "../partials/Header";
+import FilterButton from "../components/DropdownFilter";
+import Datepicker from "../components/Datepicker";
 import DashboardCard01 from "../partials/dashboard/DashboardCard01";
 import DashboardCard02 from "../partials/dashboard/DashboardCard02";
 import DashboardCard03 from "../partials/dashboard/DashboardCard03";
 
-function Dashboard() {
+function Students() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
@@ -29,14 +31,35 @@ function Dashboard() {
                   Dashboard
                 </h1>
               </div>
+
+              {/* Right: Actions */}
+              <div className="grid grid-flow-col sm:auto-cols-max justify-start sm:justify-end gap-2">
+                {/* Filter button */}
+                <FilterButton align="right" />
+                {/* Datepicker built with flatpickr */}
+                <Datepicker align="right" />
+                {/* Add view button */}
+                <button className="btn bg-gray-900 text-gray-100 hover:bg-gray-800 dark:bg-gray-100 dark:text-gray-800 dark:hover:bg-white">
+                  <svg
+                    className="fill-current shrink-0 xs:hidden"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                  >
+                    <path d="M15 7H9V1c0-.6-.4-1-1-1S7 .4 7 1v6H1c-.6 0-1 .4-1 1s.4 1 1 1h6v6c0 .6.4 1 1 1s1-.4 1-1V9h6c.6 0 1-.4 1-1s-.4-1-1-1z" />
+                  </svg>
+                  <span className="max-xs:sr-only">Add View</span>
+                </button>
+              </div>
             </div>
 
             {/* Cards */}
             <div className="grid grid-cols-12 gap-6">
+              {/* Line chart (Acme Plus) */}
               <DashboardCard01 />
-
+              {/* Line chart (Acme Advanced) */}
               <DashboardCard02 />
-
+              {/* Line chart (Acme Professional) */}
               <DashboardCard03 />
             </div>
           </div>
@@ -46,4 +69,4 @@ function Dashboard() {
   );
 }
 
-export default Dashboard;
+export default Students;
