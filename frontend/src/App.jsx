@@ -13,6 +13,8 @@ import './charts/ChartjsConfig';
 import Dashboard from './pages/Dashboard';
 import Students from './pages/Students';
 import Staff from './pages/Staff';
+import Billing from './pages/Billing';
+
 
 function App() {
 
@@ -30,6 +32,7 @@ function App() {
         <Route exact path="/" element={<Dashboard />} />
         <Route exact path="/students" element={<Students />} />
         <Route exact path="/Staff" element={<Staff />} />
+        <Route exact path="/Billing" element={<Billing />} />
       </Routes>
     </>
   );
