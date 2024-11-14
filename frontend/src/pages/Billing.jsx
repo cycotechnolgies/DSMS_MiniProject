@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Sidebar from "../partials/Sidebar";
 import Header from "../partials/Header";
-import creditCardImage from "./credit_card_PNG22.jpg"; // Adjust the path if needed
+import creditCardImage from "../images/credit_card_PNG22.jpg"; // Adjust the path if needed
 
 function Billing() {
   const [sidebarOpen, setSidebarOpen] = useState(false);

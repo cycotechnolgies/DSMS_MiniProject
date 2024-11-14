@@ -14,6 +14,8 @@ import Dashboard from './pages/Dashboard';
 import Students from './pages/Students';
 import Staff from './pages/Staff';
 import Billing from './pages/Billing';
+import Profile from './pages/Profile';
+import Medical from './pages/Medical';
 
 
 function App() {
@@ -33,6 +35,8 @@ function App() {
         <Route exact path="/students" element={<Students />} />
         <Route exact path="/Staff" element={<Staff />} />
         <Route exact path="/Billing" element={<Billing />} />
+        <Route exact path="/Profile" element={<Profile />} />
+        <Route exact path="/Medical" element={<Medical />} />
       </Routes>
     </>
   );
