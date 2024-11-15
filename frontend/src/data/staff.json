@@ -1,0 +1,35 @@
+[
+    {
+      "id": 1,
+      "name": "Eranda Nimasara",
+      "email": "eranda@gmail.com",
+      "phone": "0771234567",
+      "age": "30",
+      "address": "Colombo, Sri Lanka"
+    },
+    {
+      "id": 2,
+      "name": "Minidu Oshan",
+      "email": "minidu@gmail.com",
+      "phone": "0779876543",
+      "age": "25",
+      "address": "Kandy, Sri Lanka"
+    },
+    {
+      "id": 3,
+      "name": "Shammi Nethupul",
+      "email": "shammi@gmail.com",
+      "phone": "0775678901",
+      "age": "28",
+      "address": "Galle, Sri Lanka"
+    },
+    {
+      "id": 4,
+      "name": "Shavishka Chamath",
+      "email": "shavishka@gmail.com",
+      "phone": "0782345678",
+      "age": "35",
+      "address": "Negombo, Sri Lanka"
+    }
+  ]
+  

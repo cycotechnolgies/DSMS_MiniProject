@@ -1,52 +1,28 @@
 [
   {
-    "id": 1,
-    "name": "Eranda Nimasara",
-    "email": "eranda@gmail.com"
+    "firstname": "Eranda",
+    "lastname": "Nimsara",
+    "fullname": "Eranda Nimsara",
+    "Initname": "E. Nimsara",
+    "dob": "1990-01-01",
+    "age": "34",
+    "nic": "123456789V",
+    "mobile": "0771234567",
+    "address": "123 Main Street",
+    "whatsapp": "0771234567",
+    "email": "eranda@example.com"
   },
   {
-    "id": 2,
-    "name": "Minidu Oshan",
-    "email": "minidu@gmail.com"
-  },
-  {
-    "id": 3,
-    "name": "Lakmina Sandaruwan",
-    "email": "Lakmina@gmail.com"
-  },
-  {
-    "id": 4,
-    "name": "Shavishka Chamath",
-    "email": "shavishka@gmail.com"
-  },
-  {
-    "id": 5,
-    "name": "Supuni piris",
-    "email": "Supuni@gmail.com"
-  },
-  {
-    "id": 6,
-    "name": "Chanuli Perera",
-    "email": "chanu@gmail.com"
-  },
-  {
-    "id": 7,
-    "name": "Chandi Uthpala",
-    "email": "chandi@gmail.com"
-  },
-  {
-    "id": 8,
-    "name": "Isuru Tharanga",
-    "email": "isuru@gmail.com"
-  },
-  {
-    "id": 9,
-    "name": "Kasun Prabodha",
-    "email": "kasun@gmail.com"
-  },
-  {
-    "id": 10,
-    "name": "Pasan Saumya",
-    "email": "pasan@gmail.com"
+    "firstname": "lakmina",
+    "lastname": "sadaruwan",
+    "fullname": "Lakmina sadaruwan",
+    "Initname": "L. sadaruwan",
+    "dob": "1992-02-15",
+    "age": "32",
+    "nic": "987654321V",
+    "mobile": "0779876543",
+    "address": "456 Elm Street",
+    "whatsapp": "0779876543",
+    "email": "jane.smith@example.com"
   }
 ]
