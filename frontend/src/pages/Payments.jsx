@@ -1,21 +1,33 @@
 import React, { useState } from "react";
-
 import Sidebar from "../partials/Sidebar";
 import Header from "../partials/Header";
-import { Pencil, Trash } from "lucide-react";
 
 function Payments() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [students, setStudents] = useState([]);
-  const [formData, setFormData] = useState({ name: "", email: "", age: "" });
-  const [editIndex, setEditIndex] = useState(null);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    age: "",
+    studentId: "",
+    branch: "",
+    paymentAmount: "",
+    paymentReason: "",
+  });
+  const [payments, setPayments] = useState([]); // State to store the payments
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => {
     setIsModalOpen(false);
-    setFormData({ name: "", email: "", age: "" });
-    setEditIndex(null);
+    setFormData({
+      name: "",
+      email: "",
+      age: "",
+      studentId: "",
+      branch: "",
+      paymentAmount: "",
+      paymentReason: "",
+    });
   };
 
   const handleChange = (e) => {
@@ -25,27 +37,19 @@ function Payments() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (editIndex !== null) {
-      // Update existing student
-      const updatedStudents = [...students];
-      updatedStudents[editIndex] = formData;
-      setStudents(updatedStudents);
-      setEditIndex(null);
-    } else {
-      // Add new student
-      setStudents((prevStudents) => [...prevStudents, formData]);
-    }
-    closeModal();
-  };
+    // Add new payment to the payments list
+    setPayments((prevPayments) => [...prevPayments, formData]);
 
-  const handleEdit = (index) => {
-    setEditIndex(index);
-    setFormData(students[index]);
-    openModal();
-  };
-
-  const handleDelete = (index) => {
-    setStudents(students.filter((_, i) => i !== index));
+    // Reset form after submit
+    setFormData({
+      name: "",
+      email: "",
+      age: "",
+      studentId: "",
+      branch: "",
+      paymentAmount: "",
+      paymentReason: "",
+    });
   };
 
   return (
@@ -68,134 +72,144 @@ function Payments() {
                   Payments
                 </h1>
               </div>
-
-              {/* Right: Actions */}
-              <div className="grid grid-flow-col sm:auto-cols-max justify-start sm:justify-end gap-2">
-                {/* Add student button */}
-                <button
-                  onClick={openModal}
-                  className="btn bg-green-600 text-white hover:bg-green-800 dark:bg-green-100 dark:text-green-800 dark:hover:bg-green-200"
-                >
-                  Add Payments
-                </button>
-              </div>
             </div>
 
-            {/* Students Table */}
-            <div className="overflow-x-auto mt-8">
-              <table className="min-w-full bg-white dark:bg-gray-800">
-                <thead>
-                  <tr>
-                    <th className="py-2 px-4 border-b text-left text-sm font-semibold text-gray-700 dark:text-gray-300">
+            {/* Payment Form */}
+            <div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6">
+              <form onSubmit={handleSubmit}>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div className="mb-4">
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+                      Student ID
+                    </label>
+                    <input
+                      type="text"
+                      name="studentId"
+                      value={formData.studentId}
+                      onChange={handleChange}
+                      placeholder="Enter Student ID"
+                      required
+                      className="mt-1 block w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm dark:bg-gray-700 dark:text-gray-200"
+                    />
+                  </div>
+
+                  <div className="mb-4">
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
                       Name
-                    </th>
-                    <th className="py-2 px-4 border-b text-left text-sm font-semibold text-gray-700 dark:text-gray-300">
-                      Email
-                    </th>
-                    <th className="py-2 px-4 border-b text-left text-sm font-semibold text-gray-700 dark:text-gray-300">
-                      Age
-                    </th>
-                    <th className="py-2 px-4 border-b text-left text-sm font-semibold text-gray-700 dark:text-gray-300">
-                      Actions
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {students.map((student, index) => (
-                    <tr key={index} className="border-b">
-                      <td className="py-2 px-4 text-sm text-gray-800 dark:text-gray-200">
-                        {student.name}
-                      </td>
-                      <td className="py-2 px-4 text-sm text-gray-800 dark:text-gray-200">
-                        {student.email}
-                      </td>
-                      <td className="py-2 px-4 text-sm text-gray-800 dark:text-gray-200">
-                        {student.age}
-                      </td>
-                      <td className="py-2 px-4 text-sm text-gray-800 dark:text-gray-200">
-                        <button
-                          onClick={() => handleEdit(index)}
-                          className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-600 mr-4"
-                        >
-                          <Pencil />
-                        </button>
-                        <button
-                          onClick={() => handleDelete(index)}
-                          className="text-red-600 hover:text-red-800 dark:text-red-400 dark:hover:text-red-600"
-                        >
-                          <Trash />
-                        </button>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+                    </label>
+                    <input
+                      type="text"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      placeholder="Enter Student Name"
+                      required
+                      className="mt-1 block w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm dark:bg-gray-700 dark:text-gray-200"
+                    />
+                  </div>
+
+                  <div className="mb-4">
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+                      Branch
+                    </label>
+                    <input
+                      type="text"
+                      name="branch"
+                      value={formData.branch}
+                      onChange={handleChange}
+                      placeholder="Enter Branch"
+                      required
+                      className="mt-1 block w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm dark:bg-gray-700 dark:text-gray-200"
+                    />
+                  </div>
+
+                  <div className="mb-4">
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+                      Payment Amount
+                    </label>
+                    <input
+                      type="number"
+                      name="paymentAmount"
+                      value={formData.paymentAmount}
+                      onChange={handleChange}
+                      placeholder="Enter Payment Amount"
+                      required
+                      className="mt-1 block w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm dark:bg-gray-700 dark:text-gray-200"
+                    />
+                  </div>
+
+                  <div className="mb-4">
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+                      Payment Reason
+                    </label>
+                    <input
+                      type="text"
+                      name="paymentReason"
+                      value={formData.paymentReason}
+                      onChange={handleChange}
+                      placeholder="Enter Payment Reason"
+                      required
+                      className="mt-1 block w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm dark:bg-gray-700 dark:text-gray-200"
+                    />
+                  </div>
+                </div>
+
+                <div className="flex justify-end">
+                  <button
+                    type="submit"
+                    className="px-4 py-2 bg-green-600 text-white hover:bg-green-800 rounded"
+                  >
+                    Submit Payment
+                  </button>
+                </div>
+              </form>
             </div>
 
-            {/* Modal */}
-            {isModalOpen && (
-              <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-                <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg w-full max-w-lg">
-                  <h2 className="text-lg font-semibold mb-4">
-                    {editIndex !== null ? "Edit Student" : "Add New Student"}
-                  </h2>
-                  <form onSubmit={handleSubmit}>
-                    <div className="mb-4">
-                      <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+            {/* Payments Table */}
+            {payments.length > 0 && (
+              <div className="overflow-x-auto bg-white dark:bg-gray-800 shadow-lg rounded-lg mt-8">
+                <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                  <thead className="bg-gray-100 dark:bg-gray-700">
+                    <tr>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Student ID
+                      </th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                         Name
-                      </label>
-                      <input
-                        type="text"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                        className="mt-1 block w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm dark:bg-gray-700 dark:text-gray-200"
-                      />
-                    </div>
-                    <div className="mb-4">
-                      <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
-                        Email
-                      </label>
-                      <input
-                        type="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                        className="mt-1 block w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm dark:bg-gray-700 dark:text-gray-200"
-                      />
-                    </div>
-                    <div className="mb-4">
-                      <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
-                        Age
-                      </label>
-                      <input
-                        type="number"
-                        name="age"
-                        value={formData.age}
-                        onChange={handleChange}
-                        required
-                        className="mt-1 block w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm dark:bg-gray-700 dark:text-gray-200"
-                      />
-                    </div>
-                    <div className="flex justify-end">
-                      <button
-                        type="button"
-                        onClick={closeModal}
-                        className="mr-2 px-4 py-2 bg-gray-300 hover:bg-gray-400 rounded text-gray-800 dark:bg-gray-600 dark:hover:bg-gray-700 dark:text-gray-200"
-                      >
-                        Cancel
-                      </button>
-                      <button
-                        type="submit"
-                        className="px-4 py-2 bg-green-600 text-white hover:bg-green-800 rounded"
-                      >
-                        {editIndex !== null ? "Update" : "Save"}
-                      </button>
-                    </div>
-                  </form>
-                </div>
+                      </th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Branch
+                      </th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Payment Amount
+                      </th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Payment Reason
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-700">
+                    {payments.map((payment, index) => (
+                      <tr key={index}>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-200">
+                          {payment.studentId}
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-200">
+                          {payment.name}
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-200">
+                          {payment.branch}
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-200">
+                          {payment.paymentAmount}
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-200">
+                          {payment.paymentReason}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
               </div>
             )}
           </div>

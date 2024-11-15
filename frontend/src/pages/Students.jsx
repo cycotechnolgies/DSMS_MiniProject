@@ -1,45 +1,20 @@
 import React, { useState } from "react";
 import Sidebar from "../partials/Sidebar";
 import Header from "../partials/Header";
+import StudentTable from "../partials/StudentTable";
 import studentData from "../data/sample.json"; // Import JSON data
 
 function Students() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [students, setStudents] = useState(studentData); // Initialize with JSON data
-  const [formData, setFormData] = useState({
-    firstname: "",
-    lastname: "",
-    fullname: "",
-    Initname: "",
-    dob: "",
-    age: "",
-    nic: "",
-    mobile: "",
-    address: "",
-    whatsapp: "",
-    email: ""
-  });
+  const [students, setStudents] = useState(studentData); // Set initial state with JSON data
+  const [formData, setFormData] = useState({ name: "", email: "", age: "" });
   const [editIndex, setEditIndex] = useState(null);
-  const [selectedStudent, setSelectedStudent] = useState(null); // To store the selected student's full details
 
   const openModal = () => setIsModalOpen(true);
-
   const closeModal = () => {
     setIsModalOpen(false);
-    setFormData({
-      firstname: "",
-      lastname: "",
-      fullname: "",
-      Initname: "",
-      dob: "",
-      age: "",
-      nic: "",
-      mobile: "",
-      address: "",
-      whatsapp: "",
-      email: ""
-    });
+    setFormData({ name: "", email: "", age: "" });
     setEditIndex(null);
   };
 
@@ -53,11 +28,12 @@ function Students() {
     if (editIndex !== null) {
       // Update existing student
       const updatedStudents = [...students];
-      updatedStudents[editIndex] = { ...formData };
+      updatedStudents[editIndex] = formData;
       setStudents(updatedStudents);
+      setEditIndex(null);
     } else {
       // Add new student
-      setStudents((prevStudents) => [...prevStudents, { ...formData }]);
+      setStudents((prevStudents) => [...prevStudents, formData]);
     }
     closeModal();
   };
@@ -72,126 +48,146 @@ function Students() {
     setStudents(students.filter((_, i) => i !== index));
   };
 
-  const handleSelectStudent = (student) => {
-    setSelectedStudent(student); // Set selected student to show full details
-  };
-
-  const handleDeselectStudent = () => {
-    setSelectedStudent(null); // Deselect student to hide details
-  };
-
   return (
     <div className="flex h-screen overflow-hidden">
+      {/* Sidebar */}
       <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
+
+      {/* Content area */}
       <div className="relative flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
+        {/* Site header */}
         <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
+
         <main className="grow">
           <div className="px-4 sm:px-6 lg:px-8 py-8 w-full max-w-9xl mx-auto">
+            {/* Dashboard actions */}
             <div className="sm:flex sm:justify-between sm:items-center mb-8">
-              <h1 className="text-2xl md:text-3xl text-gray-800 font-bold">
+              <h1 className="text-2xl md:text-3xl text-gray-800 dark:text-gray-100 font-bold">
                 Students
               </h1>
               <button
                 onClick={openModal}
-                className="btn bg-green-600 font-semibold text-white hover:bg-green-800"
+                className="btn bg-green-600 font-semibold text-white hover:bg-green-800 dark:bg-green-100 dark:text-green-800 dark:hover:bg-green-200"
               >
                 Add Student
               </button>
             </div>
 
-            {/* List of Students with names */}
-            <div className="space-y-6">
-              {students.map((student, index) => (
-                <div
-                  key={index}
-                  className="border p-4 rounded-lg shadow-md bg-white"
-                >
-                  <div className="flex justify-between items-center">
-                    <h3
-                      onClick={() => handleSelectStudent(student)}
-                      className="cursor-pointer text-xl font-semibold text-blue-500"
-                    >
-                      {student.fullname}
-                    </h3>
-                    <div className="flex gap-2">
-                      <button
-                        onClick={() => handleEdit(index)}
-                        className="btn bg-blue-500 text-white px-4 py-2 rounded"
-                      >
-                        Edit
-                      </button>
-                      <button
-                        onClick={() => handleDelete(index)}
-                        className="btn bg-red-500 text-white px-4 py-2 rounded"
-                      >
-                        Delete
-                      </button>
-                    </div>
-                  </div>
-                  {/* Show student details only if selected */}
-                  {selectedStudent === student && (
-                    <div className="mt-4 space-y-4">
-                      {Object.keys(student).map((key, i) => (
-                        <div key={i}>
-                          <strong className="block">{key.charAt(0).toUpperCase() + key.slice(1)}:</strong>
-                          <p>{student[key]}</p>
-                        </div>
-                      ))}
-                      <button
-                        onClick={handleDeselectStudent}
-                        className="btn bg-gray-300 text-black hover:bg-gray-500 mt-4"
-                      >
-                        Hide Details
-                      </button>
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
+            {/* Students Table */}
+            <StudentTable
+              students={students}
+              onEdit={handleEdit}
+              onDelete={handleDelete}
+            />
 
-            {/* Modal for Adding/Editing Student */}
+            {/* Modal */}
             {isModalOpen && (
               <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-                <div className="bg-white p-6 rounded-lg shadow-lg w-full md:w-1/2">
+                <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg w-full md:m-4 m-2">
                   <div className="flex justify-between items-baseline">
-                    <h2 className="text-lg font-semibold">
+                    <h2 className="text-lg font-semibold mb-4">
                       {editIndex !== null ? "Edit Student" : "Add New Student"}
                     </h2>
                     <button
                       type="button"
+                      className="bg-gray-400 rounded-md px-2 text-white"
                       onClick={closeModal}
-                      className="text-red-500"
                     >
-                      Close
+                      X
                     </button>
                   </div>
-                  <form onSubmit={handleSubmit}>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                      {Object.keys(formData).map((field, index) => (
-                        <div key={index}>
-                          <label className="block font-semibold text-sm">
-                            {field.charAt(0).toUpperCase() + field.slice(1)}
-                          </label>
+                  <div>
+                    <form onSubmit={handleSubmit}>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                        <input
+                          type="text"
+                          name="Fullname"
+                          placeholder="Full Name"
+                          className="rounded-md"
+                          value={formData.Fullname}
+                          onChange={handleChange}
+                          required
+                        />
+                        <input
+                          type="text"
+                          name="Initname"
+                          placeholder="Name with Initial"
+                          className="rounded-md"
+                          value={formData.Initname}
+                          onChange={handleChange}
+                          required
+                        />
+                      </div>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                           <input
                             type="text"
-                            name={field}
-                            className="rounded-md border w-full p-2"
-                            value={formData[field]}
+                            name="address"
+                            placeholder="Address"
+                            className="rounded-md"
+                            value={formData.address}
+                            onChange={handleChange}
+                            required
+                          />
+                          <input
+                            type="email"
+                            name="email"
+                            placeholder="Email"
+                            className="rounded-md"
+                            value={formData.email}
                             onChange={handleChange}
                             required
                           />
                         </div>
-                      ))}
-                    </div>
-                    <div className="flex justify-end">
-                      <button
-                        type="submit"
-                        className="btn bg-green-600 text-white hover:bg-green-800"
-                      >
-                        {editIndex !== null ? "Update" : "Save"}
-                      </button>
-                    </div>
-                  </form>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                          <input
+                            type="text"
+                            name="address"
+                            placeholder="Address"
+                            className="rounded-md"
+                            value={formData.address}
+                            onChange={handleChange}
+                            required
+                          />
+                          <input
+                            type="email"
+                            name="email"
+                            placeholder="Email"
+                            className="rounded-md"
+                            value={formData.email}
+                            onChange={handleChange}
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                        <input
+                          type="text"
+                          name="address"
+                          placeholder="Address"
+                          className="rounded-md"
+                          value={formData.address}
+                          onChange={handleChange}
+                          required
+                        />
+                        <input
+                          type="email"
+                          name="email"
+                          placeholder="Email"
+                          className="rounded-md"
+                          value={formData.email}
+                          onChange={handleChange}
+                          required
+                        />
+                      </div>
+
+                      <div className="md:col-span-2 flex justify-end items-center gap-4">
+                        <button type="submit">
+                          {editIndex !== null ? "Update" : "Save"}
+                        </button>
+                      </div>
+                    </form>
+                  </div>
                 </div>
               </div>
             )}
