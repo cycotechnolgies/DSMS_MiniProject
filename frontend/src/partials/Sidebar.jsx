@@ -1,6 +1,16 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Form, NavLink, useLocation } from "react-router-dom";
-import {CarTaxiFront, CircleGauge, User, UserCog } from "lucide-react";
+import {
+  CarTaxiFront,
+  CircleGauge,
+  User,
+  UserCog,
+  BadgeDollarSign,
+  HeartPulse,
+  BookOpenCheck,
+  CassetteTape,
+  CalendarCheck2,
+} from "lucide-react";
 
 function Sidebar({ sidebarOpen, setSidebarOpen, variant = "default" }) {
   const location = useLocation();
@@ -92,7 +102,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen, variant = "default" }) {
           </button>
           {/* Logo */}
           <NavLink end to="/" className="block">
-            <div className="bg-black text-white flex justify-center items-center p-2 rounded-full gap-2">
+            <div className="bg-black text-white flex justify-center items-center p-2 rounded-full gap-2 dark:bg-blue-600">
               <CarTaxiFront />
               <span className="font-bold pr-2">DSMS</span>
             </div>
@@ -112,10 +122,10 @@ function Sidebar({ sidebarOpen, setSidebarOpen, variant = "default" }) {
                       end
                       to="/"
                       className={({ isActive }) =>
-                        "block transition duration-150 truncate " +
+                        "block transition duration-150 truncate" +
                         (isActive
-                          ? "text-violet-500"
-                          : "text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200")
+                          ? "text-white dark:text-white font-semibold dark:font-semibold bg-blue-600 px-4 py-2 rounded-full"
+                          : "text-gray-500/90 dark:text-white hover:text-blue-600 dark:hover:text-blue-400")
                       }
                     >
                       <span className="text-sm flex gap-4 font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
@@ -128,10 +138,10 @@ function Sidebar({ sidebarOpen, setSidebarOpen, variant = "default" }) {
                       end
                       to="/students"
                       className={({ isActive }) =>
-                        "block transition duration-150 truncate " +
+                        "block transition duration-150 truncate" +
                         (isActive
-                          ? "text-violet-500"
-                          : "text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200")
+                          ? "text-white dark:text-white font-semibold dark:font-semibold bg-blue-600 px-4 py-2 rounded-full"
+                          : "text-gray-500/90 dark:text-white hover:text-blue-600 dark:hover:text-blue-400")
                       }
                     >
                       <span className="text-sm flex gap-4 font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
@@ -145,15 +155,100 @@ function Sidebar({ sidebarOpen, setSidebarOpen, variant = "default" }) {
                       end
                       to="/Staff"
                       className={({ isActive }) =>
-                        "block transition duration-150 truncate " +
+                        "block transition duration-150 truncate" +
                         (isActive
-                          ? "text-violet-500"
-                          : "text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200")
+                          ? "text-white dark:text-white font-semibold dark:font-semibold bg-blue-600 px-4 py-2 rounded-full"
+                          : "text-gray-500/90 dark:text-white hover:text-blue-600 dark:hover:text-blue-400")
                       }
                     >
                       <span className="text-sm flex gap-4 font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
-                      <UserCog />
+                        <UserCog />
                         Staff
+                      </span>
+                    </NavLink>
+                  </li>
+                  <li className="mb-4 last:mb-0">
+                    <NavLink
+                      end
+                      to="/payment"
+                      className={({ isActive }) =>
+                        "block transition duration-150 truncate" +
+                        (isActive
+                          ? "text-white dark:text-white font-semibold dark:font-semibold bg-blue-600 px-4 py-2 rounded-full"
+                          : "text-gray-500/90 dark:text-white hover:text-blue-600 dark:hover:text-blue-400")
+                      }
+                    >
+                      <span className="text-sm flex gap-4 font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
+                        <BadgeDollarSign />
+                        Payments
+                      </span>
+                    </NavLink>
+                  </li>
+                  <li className="mb-4 last:mb-0">
+                    <NavLink
+                      end
+                      to="/medical"
+                      className={({ isActive }) =>
+                        "block transition duration-150 truncate" +
+                        (isActive
+                          ? "text-white dark:text-white font-semibold dark:font-semibold bg-blue-600 px-4 py-2 rounded-full"
+                          : "text-gray-500/90 dark:text-white hover:text-blue-600 dark:hover:text-blue-400")
+                      }
+                    >
+                      <span className="text-sm flex gap-4 font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
+                        <HeartPulse />
+                        Medical
+                      </span>
+                    </NavLink>
+                  </li>
+                  <li className="mb-4 last:mb-0">
+                    <NavLink
+                      end
+                      to="/renew"
+                      className={({ isActive }) =>
+                        "block transition duration-150 truncate" +
+                        (isActive
+                          ? "text-white dark:text-white font-semibold dark:font-semibold bg-blue-600 px-4 py-2 rounded-full"
+                          : "text-gray-500/90 dark:text-white hover:text-blue-600 dark:hover:text-blue-400")
+                      }
+                    >
+                      <span className="text-sm flex gap-4 font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
+                        <CassetteTape />
+                        Renewal
+                      </span>
+                    </NavLink>
+                  </li>
+                  <li className="mb-4 last:mb-0">
+                    <NavLink
+                      end
+                      to="/exams"
+                      className={({ isActive }) =>
+                        "block transition duration-150 truncate" +
+                        (isActive
+                          ? "text-white dark:text-white font-semibold dark:font-semibold bg-blue-600 px-4 py-2 rounded-full"
+                          : "text-gray-500/90 dark:text-white hover:text-blue-600 dark:hover:text-blue-400")
+                      }
+                    >
+                      <span className="text-sm flex gap-4 font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
+                        <BookOpenCheck />
+                        Exams
+                      </span>
+                    </NavLink>
+                  </li>
+                  <li className="mb-4 last:mb-0">
+                    <NavLink
+                      end
+                      to="/class"
+                      className={({ isActive }) =>
+                        "block transition duration-150 truncate" +
+                        (isActive
+                          ? "text-white dark:text-white font-semibold dark:font-semibold bg-blue-600 px-4 py-2 rounded-full"
+                          : "text-gray-500/90 dark:text-white hover:text-blue-600 dark:hover:text-blue-400")
+                      }
+                    >
+                      <span className="text-sm flex gap-4 font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
+                        <CalendarCheck2 />
+                        Class
                       </span>
                     </NavLink>
                   </li>

@@ -4,7 +4,7 @@ import Sidebar from "../partials/Sidebar";
 import Header from "../partials/Header";
 import { Pencil, Trash } from "lucide-react";
 
-function Staff() {
+function Schedules() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [students, setStudents] = useState([]);
@@ -65,7 +65,7 @@ function Staff() {
               {/* Left: Title */}
               <div className="mb-4 sm:mb-0">
                 <h1 className="text-2xl md:text-3xl text-gray-800 dark:text-gray-100 font-bold">
-                  Staff
+                  Schedules
                 </h1>
               </div>
 
@@ -76,7 +76,7 @@ function Staff() {
                   onClick={openModal}
                   className="btn bg-green-600 text-white hover:bg-green-800 dark:bg-green-100 dark:text-green-800 dark:hover:bg-green-200"
                 >
-                  Add Staff
+                  Add Schedules
                 </button>
               </div>
             </div>
@@ -205,4 +205,4 @@ function Staff() {
   );
 }
 
-export default Staff;
+export default Schedules;
