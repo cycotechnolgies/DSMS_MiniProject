@@ -1,11 +1,12 @@
 import React, { useState } from "react";
+import validator from "validator";
+import toast, { Toaster } from "react-hot-toast";
 
 import Sidebar from "../../partials/Sidebar";
 import Header from "../../partials/Header";
 
 function addStaff() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-
   
 
   return (
@@ -31,7 +32,7 @@ function addStaff() {
             </div>
           </div>
           {/* Form Content */}
-
+          
         </main>
       </div>
     </div>

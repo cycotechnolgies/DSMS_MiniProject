@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
+import toast, { Toaster } from "react-hot-toast";
 
 import "./css/style.css";
 
@@ -16,6 +17,7 @@ import Medical from "./pages/Medical";
 import Renewal from "./pages/Renewal";
 import StudentTable from "./partials/StudentTable";
 import AddStaff from "./pages/forms/addStaff";
+import HomePage from "./pages/HomePage";
 
 function App() {
   const location = useLocation();
@@ -28,8 +30,10 @@ function App() {
 
   return (
     <>
+      <Toaster />
       <Routes>
         {/* Main Routes */}
+        <Route exact path="/home" element={<HomePage />} />
         <Route exact path="/" element={<Dashboard />} />
         <Route exact path="/students" element={<Students />} />
         <Route exact path="/table" element={<StudentTable />} />

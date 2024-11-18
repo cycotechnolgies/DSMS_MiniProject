@@ -5,6 +5,7 @@ import AboutSection from "../partials/homepage/AboutSection";
 import MissionVision from "../partials/homepage/MissionVision";
 import CoreValues from "../partials/homepage/CoreValues";
 import TeamSection from "../partials/homepage/TeamSection";
+import Gallery from "../partials/homepage/Gallery";
 
 const HomePage = () => {
   return (
@@ -12,6 +13,7 @@ const HomePage = () => {
       <Header />
       <main className="container mx-auto px-4 py-12">
         <AboutSection />
+        {/* <Gallery /> */}
         <MissionVision />
         <CoreValues />
         <TeamSection />
