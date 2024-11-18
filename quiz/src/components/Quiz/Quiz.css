@@ -1,0 +1,110 @@
+/* Container Styles */
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  text-align: center; /* Center align content within the container */
+}
+
+/* Heading Styles */
+h1 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 22px;
+  margin-top: 20px;
+  color: #444;
+}
+
+/* List Styles */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* List Item Styles */
+li {
+  background-color: #fff;
+  margin: 10px 0;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  text-align: left; /* Left-align the content within each list item */
+}
+
+/* Ensure the <li> tags are left-aligned */
+ul {
+  padding-left: 0; /* Remove default left padding of <ul> */
+  text-align: left; /* Left-align all <li> elements */
+}
+
+li:hover {
+  background-color: #f1f1f1;
+}
+
+/* Button Styles */
+button {
+  display: inline-block;
+  width: 120px;
+  margin: 10px 10px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Disabled Button Styles */
+button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+/* Index Counter Styles */
+.index {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #666;
+}
+
+/* Correct Answer Styling */
+.correct {
+  background: #e6ffed; /* Light green background */
+  border-color: #2ecc71; /* Green border */
+  color: #2ecc71; /* Green text color */
+}
+
+/* Wrong Answer Styling */
+.wrong {
+  background: #ffe6e6; /* Light red background */
+  border-color: #ff4c4c; /* Red border */
+  color: #ff4c4c; /* Red text color */
+}
+
+.timer, .total-timer {
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+
+.question-image {
+  width: 150px; /* Set your desired width */
+  height: 150px; /* Set your desired height */
+  object-fit: cover; /* Ensures the image fills the specified size without distortion */
+  border-radius: 8px; /* Optional: Rounds the edges of the image */
+}
