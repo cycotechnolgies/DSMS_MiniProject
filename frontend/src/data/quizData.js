@@ -8,7 +8,7 @@ export const data=[
         option4:"4. Narrow Bridge ahead",
         Answer:2,
         imageId:1,
-        url: "C:/Users/HP/Desktop/quiz-app/client/src/components/Quiz/roadnarrowsaheadsign.png", 
+        url: "../images/quiz/roadnarrowsaheadsign.png", 
         alt: "Road_narrows_ahead" ,
     },
     {
@@ -20,7 +20,7 @@ export const data=[
         option4:"4. Road narrows ahead.",
         Answer:1,
         imageId:2,
-        url: "C:/Users/HP/Desktop/quiz-app/client/src/components/Quiz/slipperyroadaheadsign.webp", 
+        url: "../images/quiz/slipperyroadaheadsign.webp", 
         alt: "Slippery_Road_ahead" ,
     },
     {
@@ -32,7 +32,7 @@ export const data=[
         option4:"4. Unprotected Railway crossing ahead.",
         Answer:3, 
         imageId:3,
-        url: "C:/Users/HP/Desktop/quiz-app/client/src/components/Quiz/railwaycrossingsign.jpeg", 
+        url: "../images/quiz/railwaycrossingsign.jpeg", 
         alt: "Unprotected_Railway_crossing" ,
     },
     {
@@ -44,7 +44,7 @@ export const data=[
         option4:"4. Traffic approching from front stop.",
         Answer:1,
         imageId:4, 
-        url: "C:/Users/HP/Desktop/quiz-app/client/src/components/Quiz/policeofficersign.png", 
+        url: "../images/quiz/policeofficersign.png", 
         alt: "Traffic_police_officer" ,
     },
     {
@@ -56,7 +56,7 @@ export const data=[
         option4:"4. Y junction ahead.",
         Answer:4,
         imageId:5,
-        url: "C:/Users/HP/Desktop/quiz-app/client/src/components/Quiz/yjunctionsign.webp", 
+        url: "../images/quiz/yjunctionsign.webp", 
         alt: "Y_junction_ahead" ,
     },
     {
@@ -68,7 +68,7 @@ export const data=[
         option4:"4. Slippery Road for cars ahead.",
         Answer:3,
         imageId:6,
-        url: "C:/Users/HP/Desktop/quiz-app/client/src/components/Quiz/steepdeclinesign.png", 
+        url: "../images/quiz/steepdeclinesign.png", 
         alt: "Dangerous_decline_ahead" ,
     },
     {

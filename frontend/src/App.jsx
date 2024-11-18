@@ -18,6 +18,8 @@ import Renewal from "./pages/Renewal";
 import StudentTable from "./partials/StudentTable";
 import AddStaff from "./pages/forms/addStaff";
 import HomePage from "./pages/HomePage";
+import QuizHome from "./components/Quiz/QuizHome";
+import Quiz from "./components/Quiz/Quiz";
 
 function App() {
   const location = useLocation();
@@ -43,6 +45,7 @@ function App() {
         <Route exact path="/medical" element={<Medical />} />
         <Route exact path="/renew" element={<Renewal />} />
         <Route exact path="/class" element={<Schedules />} />
+        {/* <Route exact path="/quiz" element={<Quiz />} /> */}
 
         {/* Sub Routes for FORMS */}
         <Route exact path="/Staff/add" element={<AddStaff />} />
