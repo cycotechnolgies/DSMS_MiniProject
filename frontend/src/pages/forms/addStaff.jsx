@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import Sidebar from "../partials/Sidebar";
-import Header from "../partials/Header";
-import StaffTable from "../partials/StaffTable";
-import staffData from "../data/sample.json";
 
-function Staff() {
+import Sidebar from "../../partials/Sidebar";
+import Header from "../../partials/Header";
+
+function addStaff() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [Staffs, setStaff] = useState(staffData);
+
+  
 
   return (
     <div className="flex h-screen overflow-hidden">
@@ -15,25 +15,27 @@ function Staff() {
 
       {/* Content area */}
       <div className="relative flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
-        {/* Site header */}
+        {/*  Site header */}
         <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
 
         <main className="grow">
           <div className="px-4 sm:px-6 lg:px-8 py-8 w-full max-w-9xl mx-auto">
             {/* Dashboard actions */}
             <div className="sm:flex sm:justify-between sm:items-center mb-8">
-              <h1 className="text-2xl md:text-3xl text-gray-800 dark:text-gray-100 font-bold">
-                Staff
-              </h1>
+              {/* Left: Title */}
+              <div className="mb-4 sm:mb-0">
+                <h1 className="text-2xl md:text-3xl text-gray-800 dark:text-gray-100 font-bold">
+                  Add Staff
+                </h1>
+              </div>
             </div>
-
-            {/* Staff Table */}
-            <StaffTable Staffs={Staffs} />
           </div>
+          {/* Form Content */}
+
         </main>
       </div>
     </div>
   );
 }
 
-export default Staff;
+export default addStaff;

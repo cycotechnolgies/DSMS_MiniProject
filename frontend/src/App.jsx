@@ -15,6 +15,7 @@ import Exams from "./pages/Exams";
 import Medical from "./pages/Medical";
 import Renewal from "./pages/Renewal";
 import StudentTable from "./partials/StudentTable";
+import AddStaff from "./pages/forms/addStaff";
 
 function App() {
   const location = useLocation();
@@ -28,6 +29,7 @@ function App() {
   return (
     <>
       <Routes>
+        {/* Main Routes */}
         <Route exact path="/" element={<Dashboard />} />
         <Route exact path="/students" element={<Students />} />
         <Route exact path="/table" element={<StudentTable />} />
@@ -37,6 +39,9 @@ function App() {
         <Route exact path="/medical" element={<Medical />} />
         <Route exact path="/renew" element={<Renewal />} />
         <Route exact path="/class" element={<Schedules />} />
+
+        {/* Sub Routes for FORMS */}
+        <Route exact path="/Staff/add" element={<AddStaff />} />
       </Routes>
     </>
   );
