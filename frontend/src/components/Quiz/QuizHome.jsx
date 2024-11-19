@@ -1,6 +1,6 @@
 // Home.js
 import React from "react";
-import "./Home.css";
+// import "./Home.css";
 
 function QuizHome({ startQuiz }) {
   return (

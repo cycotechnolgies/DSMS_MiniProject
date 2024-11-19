@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import "./Quiz.css";
+// import "./Quiz.css";
 import { data } from "../../data/quizData.js";
 import Home from "./QuizHome.jsx"; // Update to the new file extension
 
