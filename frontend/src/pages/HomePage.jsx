@@ -3,6 +3,7 @@ import Header from "../partials/homepage/Header";
 import Footer from "../partials/homepage/Footer";
 import AboutSection from "../partials/homepage/AboutSection";
 import MissionVision from "../partials/homepage/MissionVision";
+import AboutUs from "../partials/homepage/AboutUs";
 import CoreValues from "../partials/homepage/CoreValues";
 import TeamSection from "../partials/homepage/TeamSection";
 import Gallery from "../partials/homepage/Gallery";
@@ -13,7 +14,8 @@ const HomePage = () => {
       <Header />
       <main className="container mx-auto px-4 py-12">
         <AboutSection />
-        {/* <Gallery /> */}
+        <AboutUs/>
+        <Gallery /> 
         <MissionVision />
         <CoreValues />
         <TeamSection />
