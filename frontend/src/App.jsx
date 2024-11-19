@@ -29,14 +29,10 @@ function App() {
   return (
     <>
       <Routes>
+        <Route exact path="/login" element={<Navigate to="/login" replace />} />
         <Route
           exact
           path="/"
-          element={<Navigate to="/login" replace />}
-        />
-        <Route
-          exact
-          path="/dashboard"
           element={isAuthenticated ? <Dashboard /> : <Navigate to="/login" />}
         />
         <Route exact path="/login" element={<Login />} />
