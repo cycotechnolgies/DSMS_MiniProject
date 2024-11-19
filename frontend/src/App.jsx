@@ -37,6 +37,7 @@ function App() {
         /> */}
 
         <Route exact path="/" element={<Dashboard />} />
+        <Route exact path="/home" element={<HomePage />} />
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/students" element={<Students />} />
         <Route exact path="/table" element={<StudentTable />} />
