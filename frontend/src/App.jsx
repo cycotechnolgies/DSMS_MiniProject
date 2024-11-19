@@ -29,12 +29,14 @@ function App() {
   return (
     <>
       <Routes>
-        <Route exact path="/login" element={<Navigate to="/login" replace />} />
+        {/* <Route exact path="/login" element={<Navigate to="/login" replace />} />
         <Route
           exact
           path="/login"
-          element={isAuthenticated ? <Dashboard /> : <Navigate to="/login" />}
-        />
+          element={isAuthenticated ? <Dashboard /> : <Navigate to="/" />}
+        /> */}
+
+        <Route exact path="/" element={<Dashboard />} />
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/students" element={<Students />} />
         <Route exact path="/table" element={<StudentTable />} />
