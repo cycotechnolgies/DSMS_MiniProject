@@ -32,7 +32,7 @@ function App() {
         <Route exact path="/login" element={<Navigate to="/login" replace />} />
         <Route
           exact
-          path="/"
+          path="/login"
           element={isAuthenticated ? <Dashboard /> : <Navigate to="/login" />}
         />
         <Route exact path="/login" element={<Login />} />
