@@ -1,12 +1,9 @@
 import React, { useEffect } from "react";
-import { Routes, Route, useLocation } from "react-router-dom";
-import toast, { Toaster } from "react-hot-toast";
+import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 
 import "./css/style.css";
-
 import "./charts/ChartjsConfig";
 
-// Import pages
 import Dashboard from "./pages/Dashboard";
 import Students from "./pages/Students";
 import Staff from "./pages/Staff";
@@ -16,10 +13,7 @@ import Exams from "./pages/Exams";
 import Medical from "./pages/Medical";
 import Renewal from "./pages/Renewal";
 import StudentTable from "./partials/StudentTable";
-import AddStaff from "./pages/forms/addStaff";
-import HomePage from "./pages/HomePage";
-import QuizHome from "./components/Quiz/QuizHome";
-import Quiz from "./components/Quiz/Quiz";
+import Login from "./pages/Login";
 
 function App() {
   const location = useLocation();
@@ -28,27 +22,32 @@ function App() {
     document.querySelector("html").style.scrollBehavior = "auto";
     window.scroll({ top: 0 });
     document.querySelector("html").style.scrollBehavior = "";
-  }, [location.pathname]); // triggered on route change
+  }, [location.pathname]);
+
+  const isAuthenticated = localStorage.getItem("isAuthenticated") === "true";
 
   return (
     <>
-      <Toaster />
       <Routes>
-        {/* Main Routes */}
-        <Route exact path="/home" element={<HomePage />} />
-        <Route exact path="/" element={<Dashboard />} />
+        <Route
+          exact
+          path="/"
+          element={<Navigate to="/login" replace />}
+        />
+        <Route
+          exact
+          path="/dashboard"
+          element={isAuthenticated ? <Dashboard /> : <Navigate to="/login" />}
+        />
+        <Route exact path="/login" element={<Login />} />
         <Route exact path="/students" element={<Students />} />
         <Route exact path="/table" element={<StudentTable />} />
-        <Route exact path="/Staff" element={<Staff />} />
+        <Route exact path="/staff" element={<Staff />} />
         <Route exact path="/exams" element={<Exams />} />
-        <Route exact path="/payment" element={<Payments />} />
+        <Route exact path="/Payments" element={<Payments />} />
         <Route exact path="/medical" element={<Medical />} />
         <Route exact path="/renew" element={<Renewal />} />
         <Route exact path="/class" element={<Schedules />} />
-        {/* <Route exact path="/quiz" element={<Quiz />} /> */}
-
-        {/* Sub Routes for FORMS */}
-        <Route exact path="/Staff/add" element={<AddStaff />} />
       </Routes>
     </>
   );
