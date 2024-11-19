@@ -120,7 +120,7 @@ const StaffTable = ({ Staffs, onEdit, onDelete }) => {
           />
         </div>
         <Link
-          to="/staff/add"
+          to="/staff/enroll"
           className="bg-green-600 px-4 py-2 text-white font-semibold md:mx-4 rounded-lg"
         >
           Add Staff
