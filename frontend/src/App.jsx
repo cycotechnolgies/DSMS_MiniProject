@@ -3,7 +3,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
 
 import "./css/style.css";
-
+//add quiz
 import "./charts/ChartjsConfig";
 
 // Import pages
