@@ -16,6 +16,7 @@ import StudentTable from "./partials/StudentTable";
 import Login from "./pages/Login";
 import HomePage from "./pages/HomePage";
 import AddStaff from "./pages/forms/addStaff";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   const location = useLocation();
@@ -30,6 +31,7 @@ function App() {
 
   return (
     <>
+      <Toaster />
       <Routes>
         {/* <Route exact path="/login" element={<Navigate to="/login" replace />} />
         <Route

@@ -1,17 +1,16 @@
 const mongoose = require("mongoose");
-const bcrypt = require("bcrypt");
-const validator = require("validator");
 
-const Schema = mongoose.Schema;
-
-const userSchema = new Schema({
-  email: {
-    type: String,
-    require: true,
-    unique: true,
-  },
-  password: {
-    type: String,
-    require: true,
-  },
+const staffSchema = new mongoose.Schema({
+  firstName: String,
+  lastName: String,
+  birthday: Date,
+  nic: { type: String, unique: true },
+  contactNo: String,
+  whatsappNo: String,
+  address: String,
+  email: { type: String, unique: true },
+  password: String,
+  userType: String,
 });
+
+module.exports = mongoose.model("Staff", staffSchema);

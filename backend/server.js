@@ -7,6 +7,7 @@ const cors = require("cors");
 const { default: mongoose } = require("mongoose");
 const userRoutes = require("./routes/user");
 const eventRoutes = require("./routes/events");
+const staffRoutes = require("./routes/staff");
 
 //express app variable
 const app = express();
@@ -20,8 +21,6 @@ app.use(
   })
 );
 
-app.use(bodyParser.json());
-
 //middleware
 app.use(express.json());
 
@@ -33,6 +32,7 @@ app.use((req, res, next) => {
 //routes
 app.use("/api/user", userRoutes);
 app.use("/api/events", eventRoutes);
+app.use("/api/staff", staffRoutes);
 
 //db connection
 mongoose
