@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "name": "Eranda Nimasara",
+    "email": "eranda@gmail.com"
+  },
+  {
+    "id": 2,
+    "name": "Minidu Oshan",
+    "email": "minidu@gmail.com"
+  },
+  {
+    "id": 3,
+    "name": "Lakmina Sandaruwan",
+    "email": "Lakmina@gmail.com"
+  },
+  {
+    "id": 4,
+    "name": "Shavishka Chamath",
+    "email": "shavishka@gmail.com"
+  },
+  {
+    "id": 5,
+    "name": "Supuni piris",
+    "email": "Supuni@gmail.com"
+  },
+  {
+    "id": 6,
+    "name": "Chanuli Perera",
+    "email": "chanu@gmail.com"
+  },
+  {
+    "id": 7,
+    "name": "Chandi Uthpala",
+    "email": "chandi@gmail.com"
+  },
+  {
+    "id": 8,
+    "name": "Isuru Tharanga",
+    "email": "isuru@gmail.com"
+  },
+  {
+    "id": 9,
+    "name": "Kasun Prabodha",
+    "email": "kasun@gmail.com"
+  },
+  {
+    "id": 10,
+    "name": "Pasan Saumya",
+    "email": "pasan@gmail.com"
+  }
+]
