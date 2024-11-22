@@ -1,8 +1,8 @@
 // Home.js
-import React from 'react';
-import './Home.css';
+import React from "react";
+// import "./Home.css";
 
-function Home({ startQuiz }) {
+function QuizHome({ startQuiz }) {
   return (
     <div className="home-container">
       <h1>Quiz Application</h1>
@@ -17,4 +17,4 @@ function Home({ startQuiz }) {
   );
 }
 
-export default Home;
+export default QuizHome;

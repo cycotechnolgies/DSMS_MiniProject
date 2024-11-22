@@ -5,7 +5,7 @@ import toast, { Toaster } from "react-hot-toast";
 import Sidebar from "../../partials/Sidebar";
 import Header from "../../partials/Header";
 
-function addStaff() {
+function AddStaff() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   
 
@@ -39,4 +39,4 @@ function addStaff() {
   );
 }
 
-export default addStaff;
+export default AddStaff;
