@@ -24,17 +24,20 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const StaffTable = ({ Staffs, onEdit, onDelete }) => {
+const StaffTable = ({ Staffs }) => {
   //fuction given by tanstack table to create columns in table - Commented by CYCO
   const columnHelper = createColumnHelper();
+  console.log("data", Staffs);
+  console.log("ids", Staffs.id);
+
+  
 
   //column accessors - Commented by CYCO
   const columns = [
-    //write accesor for each column you need to display on table - Commented by CYCO
-    columnHelper.accessor("id", {
-      cell: (info) => info.getValue(),
-      header: () => <span className="flex items-center">ID</span>,
-    }),
+    // columnHelper.accessor("id", {
+    //   cell: (info) => info.getValue(),
+    //   header: () => <span className="flex items-center">ID</span>,
+    // }),
     columnHelper.accessor("name", {
       cell: (info) => info.getValue(),
       header: () => <span className="flex items-center">Name</span>,
@@ -43,26 +46,33 @@ const StaffTable = ({ Staffs, onEdit, onDelete }) => {
       cell: (info) => info.getValue(),
       header: () => <span className="flex items-center">Email</span>,
     }),
-    //action buttons ( this is a default column for this table dont change it) - Commented by CYCO
+    columnHelper.accessor("nic", {
+      cell: (info) => info.getValue(),
+      header: () => <span className="flex items-center">NIC No.</span>,
+    }),
+    columnHelper.accessor("contactNo", {
+      cell: (info) => info.getValue(),
+      header: () => <span className="flex items-center">Contact No</span>,
+    }),
     columnHelper.display({
       id: "actions",
       header: () => <span className="flex items-center">Actions</span>,
       cell: ({ row }) => (
         <div className="flex space-x-2 justify-start">
-          <button
-            onClick={() => onView(row.original)}
-            className="text-blue-500 hover:text-blue-700"
-            aria-label="View"
-          >
-            <Eye className="w-5 h-5" />
-          </button>
-          <button
-            onClick={() => onEdit(row.index)}
+          <Link
+            to={`/view-staff/${row.original.id}`}
             className="text-blue-500 hover:text-blue-700"
             aria-label="Edit"
           >
+            <Eye className="w-5 h-5" />
+          </Link>
+          <Link
+            to={`/edit-staff/${row.original.id}`}
+            className="text-green-500 hover:text-green-700"
+            aria-label="Edit"
+          >
             <Pencil className="w-5 h-5" />
-          </button>
+          </Link>
           <button
             onClick={() => onDelete(row.index)}
             className="text-red-500 hover:text-red-700"

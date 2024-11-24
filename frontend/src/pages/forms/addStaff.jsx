@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom"; // For route params and navigation
 import validator from "validator";
 import toast, { Toaster } from "react-hot-toast";
 import axios from "axios";
@@ -9,58 +10,98 @@ import Header from "../../partials/Header";
 
 function AddStaff() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const { id } = useParams(); // Get ID from URL
+  const navigate = useNavigate(); // For navigation after successful edit
 
   const {
     register,
     handleSubmit,
     setError,
     reset,
+    setValue,
     formState: { errors },
   } = useForm();
 
+  // Fetch staff details if `id` is present
+  useEffect(() => {
+    const fetchStaffDetails = async () => {
+      if (id) {
+        setIsLoading(true);
+        try {
+          const response = await axios.get(
+            `http://localhost:4000/api/user/get-user/${id}`
+          );
+          const staff = response.data;
+          if (staff.birthday) {
+            const formattedDate = new Date(staff.birthday)
+              .toISOString()
+              .split("T")[0]; // Extract YYYY-MM-DD from ISO string
+            setValue("birthday", formattedDate);
+          }
+
+          // Set other fields
+          for (const key in staff) {
+            if (key !== "birthday") {
+              setValue(key, staff[key]);
+            }
+          }
+        } catch (error) {
+          console.error("Error fetching staff details:", error);
+          toast.error("Failed to load staff details");
+        } finally {
+          setIsLoading(false);
+        }
+      }
+    };
+
+    fetchStaffDetails();
+  }, [id, setValue]);
+
   const onSubmit = async (data) => {
-    console.log("Form Data:", data); // Debugging log
-
+    setIsLoading(true);
     try {
-      // Email validation
-      if (!validator.isEmail(data.email)) {
-        console.error("Invalid email format");
-        setError("email", { message: "Invalid email format" });
-        return;
+      if (id) {
+        // Edit staff logic
+        const response = await axios.put(
+          `http://localhost:4000/api/user/edit-user/${id}`,
+          data
+        );
+        toast.success(response.data.message || "Staff updated successfully");
+        navigate("/staff");
+      } else {
+        // Add staff logic
+        if (!validator.isEmail(data.email)) {
+          setError("email", { message: "Invalid email format" });
+          return;
+        }
+
+        if (data.password !== data.confirmPassword) {
+          setError("confirmPassword", { message: "Passwords do not match" });
+          return;
+        }
+
+        if (!validator.isMobilePhone(data.contactNo, "si-LK")) {
+          setError("contactNo", {
+            message: "Invalid Sri Lankan contact number",
+          });
+          return;
+        }
+
+        const response = await axios.post(
+          "http://localhost:4000/api/user/add",
+          data
+        );
+        toast.success(response.data.message || "Staff added successfully");
+        reset();
       }
-
-      // Password match validation
-      if (data.password !== data.confirmPassword) {
-        console.error("Passwords do not match");
-        setError("confirmPassword", { message: "Passwords do not match" });
-        return;
-      }
-
-      // Contact number validation
-      if (!validator.isMobilePhone(data.contactNo, "si-LK")) {
-        console.error("Invalid Sri Lankan contact number");
-        setError("contactNo", { message: "Invalid Sri Lankan contact number" });
-        return;
-      }
-
-      console.log("Validated and sending request...");
-
-      // Send data to the backend
-      const response = await axios.post(
-        "http://localhost:4000/api/staff",
-        data
-      );
-      console.log("API Response:", response.data);
-
-      // Display success message
-      toast.success(response.data.message || "Staff added successfully");
-      reset(); // Clear the form
     } catch (error) {
-      // Handle API errors
-      console.error("API Error:", error.response || error);
       const errorMessage =
-        error.response?.data?.message || "An error occurred while adding staff";
+        error.response?.data?.message ||
+        "An error occurred during the operation";
       toast.error(errorMessage);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -71,13 +112,12 @@ function AddStaff() {
 
       {/* Content area */}
       <div className="relative flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
-        {/* Site header */}
         <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
 
         <main className="grow">
           <div className="px-4 sm:px-6 lg:px-8 py-8 w-full mx-auto">
             <h1 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
-              Add Staff
+              {id ? "Edit Staff" : "Add Staff"}
             </h1>
 
             <form
@@ -85,7 +125,6 @@ function AddStaff() {
               noValidate
               className="space-y-4"
             >
-              {/* Form Fields */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {/* First Name */}
                 <div>
@@ -206,6 +245,7 @@ function AddStaff() {
                     </p>
                   )}
                 </div>
+
                 {/* Address */}
                 <div>
                   <label className="block text-gray-700 font-medium mb-1">
@@ -266,47 +306,53 @@ function AddStaff() {
                     </p>
                   )}
                 </div>
-              </div>
 
-              {/* Password Fields */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-gray-700 font-medium mb-1">
-                    Password
-                  </label>
-                  <input
-                    type="password"
-                    {...register("password", {
-                      required: "Password is required",
-                    })}
-                    className="w-full p-2 border border-gray-300 rounded"
-                    placeholder="Enter password"
-                  />
-                  {errors.password && (
-                    <p className="text-red-500 text-sm mt-1">
-                      {errors.password.message}
-                    </p>
-                  )}
-                </div>
+                {/* Password */}
+                {!id && ( // Show password fields only in add mode
+                  <>
+                    <div>
+                      <label className="block text-gray-700 font-medium mb-1">
+                        Password
+                      </label>
+                      <input
+                        type="password"
+                        {...register("password", {
+                          required: "Password is required",
+                          minLength: {
+                            value: 8,
+                            message: "Password must be at least 8 characters",
+                          },
+                        })}
+                        className="w-full p-2 border border-gray-300 rounded"
+                        placeholder="Enter password"
+                      />
+                      {errors.password && (
+                        <p className="text-red-500 text-sm mt-1">
+                          {errors.password.message}
+                        </p>
+                      )}
+                    </div>
 
-                <div>
-                  <label className="block text-gray-700 font-medium mb-1">
-                    Confirm Password
-                  </label>
-                  <input
-                    type="password"
-                    {...register("confirmPassword", {
-                      required: "Confirm password is required",
-                    })}
-                    className="w-full p-2 border border-gray-300 rounded"
-                    placeholder="Re-enter password"
-                  />
-                  {errors.confirmPassword && (
-                    <p className="text-red-500 text-sm mt-1">
-                      {errors.confirmPassword.message}
-                    </p>
-                  )}
-                </div>
+                    <div>
+                      <label className="block text-gray-700 font-medium mb-1">
+                        Confirm Password
+                      </label>
+                      <input
+                        type="password"
+                        {...register("confirmPassword", {
+                          required: "Confirm password is required",
+                        })}
+                        className="w-full p-2 border border-gray-300 rounded"
+                        placeholder="Confirm password"
+                      />
+                      {errors.confirmPassword && (
+                        <p className="text-red-500 text-sm mt-1">
+                          {errors.confirmPassword.message}
+                        </p>
+                      )}
+                    </div>
+                  </>
+                )}
               </div>
 
               {/* Buttons */}
@@ -320,9 +366,14 @@ function AddStaff() {
                 </button>
                 <button
                   type="submit"
-                  className="bg-green-600 text-white py-2 px-4 rounded hover:bg-green-700"
+                  disabled={isLoading}
+                  className={`${
+                    isLoading
+                      ? "bg-gray-400"
+                      : "bg-green-600 hover:bg-green-700"
+                  } text-white py-2 px-4 rounded`}
                 >
-                  Submit
+                  {isLoading ? "Submitting..." : "Submit"}
                 </button>
               </div>
             </form>
