@@ -1,4 +1,3 @@
-
 import PropTypes from 'prop-types';
 
 function Home({ startQuiz }) {
@@ -41,6 +40,7 @@ function Home({ startQuiz }) {
     </div>
   );
 }
+
 Home.propTypes = {
   startQuiz: PropTypes.func.isRequired,
 };

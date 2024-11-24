@@ -1,4 +1,4 @@
-export const data = [
+export const  quizData= [
   {
     id: 1,
     question: "This road sign depicts",
@@ -122,4 +122,4 @@ export const data = [
   },
 ];
 
-export default data;
+
