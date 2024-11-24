@@ -16,7 +16,12 @@ import StudentTable from "./partials/StudentTable";
 import Login from "./pages/Login";
 import HomePage from "./pages/HomePage";
 import AddStaff from "./pages/forms/addStaff";
+
+import Quiz from './components/Quiz/Quiz';
+
+
 import { Toaster } from "react-hot-toast";
+
 
 function App() {
   const location = useLocation();
@@ -53,7 +58,11 @@ function App() {
         <Route exact path="/class" element={<Schedules />} />
         {/* other routes */}
         <Route exact path="/staff/enroll" element={<AddStaff />} />
+
+        <Route exact path="/quiz" element={<Quiz />} />
+
         <Route path="/edit-staff/:id" element={<AddStaff />} />
+
       </Routes>
     </>
   );
