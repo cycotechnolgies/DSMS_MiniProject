@@ -11,9 +11,8 @@ import Header from "../../partials/Header";
 function AddStaff() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const { id } = useParams(); // Get ID from URL
-  const navigate = useNavigate(); // For navigation after successful edit
-
+  const { id } = useParams();
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -23,7 +22,6 @@ function AddStaff() {
     formState: { errors },
   } = useForm();
 
-  // Fetch staff details if `id` is present
   useEffect(() => {
     const fetchStaffDetails = async () => {
       if (id) {
@@ -36,7 +34,7 @@ function AddStaff() {
           if (staff.birthday) {
             const formattedDate = new Date(staff.birthday)
               .toISOString()
-              .split("T")[0]; // Extract YYYY-MM-DD from ISO string
+              .split("T")[0];
             setValue("birthday", formattedDate);
           }
 
@@ -93,7 +91,7 @@ function AddStaff() {
           data
         );
         toast.success(response.data.message || "Staff added successfully");
-        reset();
+        navigate("/staff");
       }
     } catch (error) {
       const errorMessage =
