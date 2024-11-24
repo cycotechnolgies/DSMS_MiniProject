@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Home({ startQuiz }) {
+function QuizHome({ startQuiz }) {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-indigo-900 via-purple-800 to-pink-700 text-gray-800">
       <div className="bg-white shadow-2xl rounded-3xl p-10 max-w-2xl w-full text-center space-y-8">
@@ -44,4 +44,4 @@ function Home({ startQuiz }) {
   );
 }
 
-export default Home;
+export default QuizHome;

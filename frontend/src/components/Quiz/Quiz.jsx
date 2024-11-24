@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import  { useState, useEffect, useRef } from 'react';
 import { quizData } from '../../data/quizData';
 import Home from './Home';
@@ -13,6 +14,24 @@ import pedestrianCrossingSign from '../../assets/pedestriancrossingaheadsign.png
 import noParkingSign from '../../assets/noparking.png';
 import rightBendSign from '../../assets/rightbend.png';
 import roundaboutSign from '../../assets/roundabout.png';
+=======
+import React, { useState, useEffect, useRef } from 'react';
+// import './Quiz.css';
+import quizData from '../../data/quizData.js';
+import QuizHome from "./QuizHome.jsx"; 
+
+// Image imports
+import roadNarrowsSign from '../../images/quiz/roadnarrowsaheadsign.png';
+import slipperyRoadSign from '../../images/quiz/slipperyroadaheadsign.webp';
+import railwayCrossingSign from '../../images/quiz/railwaycrossingsign.jpeg';
+import policeOfficerSign from '../../images/quiz/policeofficersign.png';
+import yJunctionSign from '../../images/quiz/yjunctionsign.webp';
+import steepDeclineSign from '../../images/quiz/steepdeclinesign.png';
+import pedestrianCrossingSign from '../../images/quiz/pedestriancrossingaheadsign.png';
+import noParkingSign from '../../images/quiz/noparking.png';
+import rightBendSign from '../../images/quiz/rightbend.png';
+import roundaboutSign from '../../images/quiz/roundabout.png';
+>>>>>>> 193d5ba4661d5f1267747ac3f6a3fed2372f005b
 
 function Quiz() {
   const INITIAL_TIME = 180; // 3 minutes
@@ -142,8 +161,16 @@ function Quiz() {
   return (
     <div className="quiz-app bg-gray-100 min-h-screen p-6 flex justify-center items-center">
       {isQuizStarted ? (
+<<<<<<< HEAD
         <div className="quiz-container bg-white shadow-lg rounded-lg p-6 w-full max-w-3xl relative">
           <h1 className="text-3xl font-bold text-center text-indigo-600 mb-6">Driving School Quiz</h1>
+=======
+        <div className="container bg-white shadow-lg rounded-lg p-8 max-w-3xl w-full">
+          <h1 className="text-2xl font-bold text-center mb-4">
+            Driving School Quiz Test
+          </h1>
+          <hr className="border-gray-300 mb-4" />
+>>>>>>> 193d5ba4661d5f1267747ac3f6a3fed2372f005b
           {result ? (
             
             <div className="text-center">
@@ -159,8 +186,13 @@ function Quiz() {
               
             </div>
           ) : (
+<<<<<<< HEAD
             <div>
               <h3 className="text-xl font-medium text-gray-800 mb-4">
+=======
+            <>
+              <h3 className="text-lg font-semibold mb-4">
+>>>>>>> 193d5ba4661d5f1267747ac3f6a3fed2372f005b
                 {index + 1}. {Question.question}
               </h3>
               {imageMap[Question.imageId] && (
@@ -170,6 +202,7 @@ function Quiz() {
                   className="w-40 max-w-md mx-auto rounded-lg shadow-lg mb-6"
                 />
               )}
+<<<<<<< HEAD
               <ul className="space-y-4">
                 {['option1', 'option2', 'option3', 'option4'].map((option, i) => (
                   <li
@@ -181,6 +214,21 @@ function Quiz() {
                     {Question[option]}
                   </li>
                 ))}
+=======
+              <ul className="space-y-2 mb-4">
+                {["option1", "option2", "option3", "option4"].map(
+                  (option, i) => (
+                    <li
+                      key={i}
+                      ref={optionRefs[i]}
+                      className="cursor-pointer p-2 border rounded hover:bg-gray-200"
+                      onClick={(e) => checkAns(e, i + 1)}
+                    >
+                      {Question[option]}
+                    </li>
+                  )
+                )}
+>>>>>>> 193d5ba4661d5f1267747ac3f6a3fed2372f005b
               </ul>
               <div className="mt-6 text-sm font-medium text-gray-600">
                  Total Time Left: <span className="text-indigo-600">{formatTime(totalTimeLeft)}</span>
@@ -190,11 +238,19 @@ function Quiz() {
                 <button
                   onClick={handlePrevious}
                   disabled={index === 0}
+<<<<<<< HEAD
                   className={`px-6 py-2 ${
                     index === 0
                       ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
                       : 'bg-indigo-500 text-white hover:scale-105 transform transition'
                   } font-medium rounded-full shadow`}
+=======
+                  className={`px-4 py-2 rounded ${
+                    index === 0
+                      ? "bg-gray-300 cursor-not-allowed"
+                      : "bg-blue-500 text-white hover:bg-blue-600"
+                  } transition`}
+>>>>>>> 193d5ba4661d5f1267747ac3f6a3fed2372f005b
                 >
                   Previous
                 </button>
@@ -202,11 +258,19 @@ function Quiz() {
                   <button
                     onClick={handleNext}
                     disabled={!lock}
+<<<<<<< HEAD
                     className={`px-6 py-2 ${
                       !lock
                         ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
                         : 'bg-indigo-500 text-white hover:scale-105 transform transition'
                     } font-medium rounded-full shadow`}
+=======
+                    className={`px-4 py-2 rounded ${
+                      !lock
+                        ? "bg-gray-300 cursor-not-allowed"
+                        : "bg-blue-500 text-white hover:bg-blue-600"
+                    } transition`}
+>>>>>>> 193d5ba4661d5f1267747ac3f6a3fed2372f005b
                   >
                     Next
                   </button>
@@ -226,7 +290,7 @@ function Quiz() {
           )}
         </div>
       ) : (
-        <Home startQuiz={startQuiz} />
+        <QuizHome startQuiz={startQuiz} />
       )}
     </div>
   );
