@@ -4,6 +4,7 @@ const {
   getStaffUsers,
   getUser,
   editUser,
+  deleteUser,
 } = require("../controller/userController");
 
 const router = express.Router();
@@ -16,5 +17,7 @@ router.get("/staff", getStaffUsers);
 router.get("/get-user/:id", getUser);
 
 router.put("/edit-user/:id", editUser);
+
+router.delete("/del-user/:id", deleteUser);
 
 module.exports = router;
