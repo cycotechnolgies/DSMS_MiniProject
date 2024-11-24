@@ -7,7 +7,6 @@ const cors = require("cors");
 const { default: mongoose } = require("mongoose");
 const userRoutes = require("./routes/user");
 const eventRoutes = require("./routes/events");
-const staffRoutes = require("./routes/staff");
 
 //express app variable
 const app = express();
@@ -30,9 +29,9 @@ app.use((req, res, next) => {
 });
 
 //routes
-app.use("/api/user", userRoutes);
+// app.use("/api/user", userRoutes);
 app.use("/api/events", eventRoutes);
-app.use("/api/staff", staffRoutes);
+app.use("/api/user", userRoutes);
 
 //db connection
 mongoose

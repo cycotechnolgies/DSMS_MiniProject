@@ -51,7 +51,9 @@ function App() {
         <Route exact path="/medical" element={<Medical />} />
         <Route exact path="/renew" element={<Renewal />} />
         <Route exact path="/class" element={<Schedules />} />
+        {/* other routes */}
         <Route exact path="/staff/enroll" element={<AddStaff />} />
+        <Route path="/edit-staff/:id" element={<AddStaff />} />
       </Routes>
     </>
   );
