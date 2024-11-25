@@ -20,8 +20,6 @@ app.use(
   })
 );
 
-app.use(bodyParser.json());
-
 //middleware
 app.use(express.json());
 
@@ -31,8 +29,9 @@ app.use((req, res, next) => {
 });
 
 //routes
-app.use("/api/user", userRoutes);
+// app.use("/api/user", userRoutes);
 app.use("/api/events", eventRoutes);
+app.use("/api/user", userRoutes);
 
 //db connection
 mongoose

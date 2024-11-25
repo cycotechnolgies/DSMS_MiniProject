@@ -29,7 +29,7 @@ function Calendar() {
         const newEvent = { title: result.value, start: info.dateStr };
 
         axios
-          .post("http://localhost:5000/api/events", newEvent)
+          .post("http://localhost:4000/api/events", newEvent)
           .then((response) => {
             setEvents([...events, response.data]);
             Swal.fire("Success", "Event added successfully!", "success");

@@ -1,5 +1,4 @@
-import React from "react";
-//used tanstack table library for make tables - Commented by CYCO
+import React, { useState } from "react";
 import {
   createColumnHelper,
   flexRender,
@@ -9,8 +8,6 @@ import {
   getSortedRowModel,
   useReactTable,
 } from "@tanstack/react-table";
-
-//used lucid-react icons as Icon library - Commented by CYCO
 import {
   ArrowUpDown,
   ChevronLeft,
@@ -23,18 +20,44 @@ import {
   Trash2,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
+import axios from "axios";
 
-const StaffTable = ({ Staffs, onEdit, onDelete }) => {
-  //fuction given by tanstack table to create columns in table - Commented by CYCO
+const StaffTable = ({ Staffs }) => {
+  // Make Staffs stateful
+  const [staffs, setStaffs] = useState(Staffs);
+
   const columnHelper = createColumnHelper();
 
-  //column accessors - Commented by CYCO
+  // Handle Delete function
+  const handleDelete = (del_id) => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "Do you want to delete this staff member? This action cannot be undone.",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonText: "Yes, delete it!",
+      cancelButtonText: "Cancel",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        axios
+          .delete(`http://localhost:4000/api/user/del-user/${del_id}`)
+          .then(() => {
+            setStaffs(staffs.filter((staff) => staff.id !== del_id)); // Update state
+            Swal.fire(
+              "Deleted!",
+              "The staff member has been deleted.",
+              "success"
+            );
+          })
+          .catch(() =>
+            Swal.fire("Error", "Failed to delete the staff member!", "error")
+          );
+      }
+    });
+  };
+
   const columns = [
-    //write accesor for each column you need to display on table - Commented by CYCO
-    columnHelper.accessor("id", {
-      cell: (info) => info.getValue(),
-      header: () => <span className="flex items-center">ID</span>,
-    }),
     columnHelper.accessor("name", {
       cell: (info) => info.getValue(),
       header: () => <span className="flex items-center">Name</span>,
@@ -43,28 +66,35 @@ const StaffTable = ({ Staffs, onEdit, onDelete }) => {
       cell: (info) => info.getValue(),
       header: () => <span className="flex items-center">Email</span>,
     }),
-    //action buttons ( this is a default column for this table dont change it) - Commented by CYCO
+    columnHelper.accessor("nic", {
+      cell: (info) => info.getValue(),
+      header: () => <span className="flex items-center">NIC No.</span>,
+    }),
+    columnHelper.accessor("contactNo", {
+      cell: (info) => info.getValue(),
+      header: () => <span className="flex items-center">Contact No</span>,
+    }),
     columnHelper.display({
       id: "actions",
       header: () => <span className="flex items-center">Actions</span>,
       cell: ({ row }) => (
         <div className="flex space-x-2 justify-start">
-          <button
-            onClick={() => onView(row.original)}
+          <Link
+            to={`/view-staff/${row.original.id}`}
             className="text-blue-500 hover:text-blue-700"
             aria-label="View"
           >
             <Eye className="w-5 h-5" />
-          </button>
-          <button
-            onClick={() => onEdit(row.index)}
-            className="text-blue-500 hover:text-blue-700"
+          </Link>
+          <Link
+            to={`/edit-staff/${row.original.id}`}
+            className="text-green-500 hover:text-green-700"
             aria-label="Edit"
           >
             <Pencil className="w-5 h-5" />
-          </button>
+          </Link>
           <button
-            onClick={() => onDelete(row.index)}
+            onClick={() => handleDelete(row.original.id)} // Updated function call
             className="text-red-500 hover:text-red-700"
             aria-label="Delete"
           >
@@ -75,45 +105,36 @@ const StaffTable = ({ Staffs, onEdit, onDelete }) => {
     }),
   ];
 
-  //States - Commented by CYCO
-  const [sorting, setSorting] = React.useState();
-  const [globalFilter, setGlobalFilter] = React.useState();
+  const [sorting, setSorting] = useState();
+  const [globalFilter, setGlobalFilter] = useState();
 
-  //table model - Commented by CYCO
   const table = useReactTable({
-    data: Staffs, //StaffTable is the data set pass from StaffTable page - Commented by CYCO
+    data: staffs, // Updated to use state
     columns,
     getCoreRowModel: getCoreRowModel(),
-
     initialState: {
-      pagination: { pageSize: 5 }, // Set initial page size
+      pagination: { pageSize: 5 },
     },
-
     state: {
       sorting,
       globalFilter,
     },
-
-    //sorting - Commented by CYCO
     onSortingChange: setSorting,
     getSortedRowModel: getSortedRowModel(),
-
-    //filtering - Commented by CYCO
     onGlobalFilterChange: setGlobalFilter,
     getFilteredRowModel: getFilteredRowModel(),
-
     getPaginationRowModel: getPaginationRowModel(),
   });
 
   return (
     <>
-      {/* searchBar */}
-      <div className="flex md:flex-row flex-col-reverse justify-end items-end md:justify-between  md:items-center gap-4 mb-4">
+      {/* SearchBar */}
+      <div className="flex md:flex-row flex-col-reverse justify-end items-end md:justify-between md:items-center gap-4 mb-4">
         <div className="flex md:justify-start justify-end items-center md:gap-2 md:mx-4">
           <Search />
           <input
             type="text"
-            className="bg-white border dark:border-gray-200 border-gray-400 rounded-lg dark:bg-gray-900 md:my-4 md:mx-4 "
+            className="bg-white border dark:border-gray-200 border-gray-400 rounded-lg dark:bg-gray-900 md:my-4 md:mx-4"
             value={globalFilter ?? ""}
             onChange={(e) => setGlobalFilter(e.target.value)}
             placeholder="Search Staff"
@@ -126,8 +147,8 @@ const StaffTable = ({ Staffs, onEdit, onDelete }) => {
           Add Staff
         </Link>
       </div>
+      {/* DataTable */}
       <div className="overflow-x-auto bg-white dark:bg-gray-900 shadow-md rounded-md">
-        {/* DataTable */}
         <table className="min-w-full divide-y divide-gray-200">
           <thead className="bg-gray-200 dark:bg-gray-600">
             {table.getHeaderGroups().map((headerGroup) => (
@@ -140,8 +161,8 @@ const StaffTable = ({ Staffs, onEdit, onDelete }) => {
                     <div
                       {...{
                         className: header.column.getCanSort()
-                          ? "cursor-pointer select-none flex item-center gap-2"
-                          : "flex item-center gap-2",
+                          ? "cursor-pointer select-none flex items-center gap-2"
+                          : "flex items-center gap-2",
                         onClick: header.column.getToggleSortingHandler(),
                       }}
                     >
@@ -172,7 +193,6 @@ const StaffTable = ({ Staffs, onEdit, onDelete }) => {
           </tbody>
         </table>
       </div>
-      <hr className="border border-white mt-4 " />
       {/* Pagination */}
       <div className="py-4 px-2 bg-gray-200 dark:bg-gray-900 flex md:flex-row flex-col justify-between items-center gap-4">
         <div>
@@ -180,11 +200,8 @@ const StaffTable = ({ Staffs, onEdit, onDelete }) => {
           <select
             name="ipp"
             className="bg-gray-200 dark:bg-gray-900 rounded-lg mx-2"
-            id=""
             value={table.getState().pagination.pageSize}
-            onChange={(e) => {
-              table.setPageSize(Number(e.target.value));
-            }}
+            onChange={(e) => table.setPageSize(Number(e.target.value))}
           >
             {[5, 10, 20, 30].map((pageSize) => (
               <option key={pageSize} value={pageSize}>
@@ -194,21 +211,18 @@ const StaffTable = ({ Staffs, onEdit, onDelete }) => {
           </select>
         </div>
         <div className="flex justify-around items-center">
-          {/* first page */}
           <button
             onClick={() => table.firstPage()}
             disabled={!table.getCanPreviousPage()}
           >
             <ChevronsLeft />
           </button>
-          {/* forward pages */}
           <button
             onClick={() => table.previousPage()}
             disabled={!table.getCanPreviousPage()}
           >
             <ChevronLeft />
           </button>
-          {/* pages */}
           <span>
             <input
               min={1}
@@ -223,14 +237,12 @@ const StaffTable = ({ Staffs, onEdit, onDelete }) => {
             />
             <span>of {table.getPageCount()}</span>
           </span>
-          {/* Backword pages */}
           <button
             onClick={() => table.nextPage()}
             disabled={!table.getCanNextPage()}
           >
             <ChevronRight />
           </button>
-          {/* Last page */}
           <button
             onClick={() => table.lastPage()}
             disabled={!table.getCanNextPage()}

@@ -16,6 +16,11 @@ import StudentTable from "./partials/StudentTable";
 import Login from "./pages/Login";
 import HomePage from "./pages/HomePage";
 import AddStaff from "./pages/forms/addStaff";
+import Profiles from "./pages/Profile";
+
+import Quiz from "./components/Quiz/Quiz";
+
+import { Toaster } from "react-hot-toast";
 
 function App() {
   const location = useLocation();
@@ -30,6 +35,7 @@ function App() {
 
   return (
     <>
+      <Toaster />
       <Routes>
         {/* <Route exact path="/login" element={<Navigate to="/login" replace />} />
         <Route
@@ -49,7 +55,13 @@ function App() {
         <Route exact path="/medical" element={<Medical />} />
         <Route exact path="/renew" element={<Renewal />} />
         <Route exact path="/class" element={<Schedules />} />
+        {/* other routes */}
         <Route exact path="/staff/enroll" element={<AddStaff />} />
+
+        <Route exact path="/quiz" element={<Quiz />} />
+        <Route exact path="/profile" element={<Profiles />} />
+
+        <Route path="/edit-staff/:id" element={<AddStaff />} />
       </Routes>
     </>
   );
