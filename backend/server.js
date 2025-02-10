@@ -7,6 +7,7 @@ const cors = require("cors");
 const { default: mongoose } = require("mongoose");
 const userRoutes = require("./routes/user");
 const eventRoutes = require("./routes/events");
+const path = require("path");
 
 //express app variable
 const app = express();
@@ -28,10 +29,11 @@ app.use((req, res, next) => {
   next();
 });
 
+
 //routes
-// app.use("/api/user", userRoutes);
 app.use("/api/events", eventRoutes);
 app.use("/api/user", userRoutes);
+app.use("/images", express.static(path.join(__dirname, "public/images")));
 
 //db connection
 mongoose

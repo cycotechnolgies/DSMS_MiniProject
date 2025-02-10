@@ -1,4 +1,5 @@
 const User = require("../models/userModel");
+const path = require("path");
 
 const addUser = async (req, res) => {
   try {
@@ -53,4 +54,40 @@ const deleteUser = async (req, res) => {
   }
 };
 
-module.exports = { addUser, getStaffUsers, getUser, editUser, deleteUser };
+const updateProfilePic = async (req, res) => {
+  try {
+    const userId = req.params.id;
+
+    if (!req.file) {
+      return res.status(400).json({ message: "No file uploaded!" });
+    }
+
+    const imageUrl = `/images/${req.file.filename}`;
+
+    const updatedUser = await User.findByIdAndUpdate(
+      userId,
+      { profilePic: imageUrl },
+      { new: true }
+    );
+
+    if (!updatedUser) {
+      return res.status(404).json({ message: "User not found! ", userId });
+    }
+
+    res.json({
+      message: "Profile picture updated successfully!",
+      userId,
+      imageUrl,
+      user: updatedUser,
+    });
+  } catch (error) {
+    res.status(500).json({
+      message: "Error updating profile picture!",
+      error: error.message,
+    });
+  }
+};
+
+
+
+module.exports = { addUser, getStaffUsers, getUser, editUser, deleteUser, updateProfilePic };

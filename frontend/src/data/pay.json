@@ -1,0 +1,21 @@
+[
+  {
+    "id": 1,
+    "paid_by": "Eranda Nimasara",
+    "amount": "1500",
+    "status": "Paid"
+  },
+  {
+    "id": 2,
+    "paid_by": "Minidu Oshan",
+    "amount": "8500",
+    "status": "Pending"
+  },
+  {
+    "id": 3,
+    "paid_by": "Shavishka Chamath",
+    "amount": "1000",
+    "status": "Canceled"
+  }
+  
+]

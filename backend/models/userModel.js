@@ -11,9 +11,10 @@ const userSchema = new mongoose.Schema(
     address: String,
     email: { type: String, unique: true },
     password: String,
+    profilePic: {type: String, default: null},
     userType: String,
   },
-  { collection: "users" } // Explicitly set the collection name
+  { collection: "users" }
 );
 
 module.exports = mongoose.model("User", userSchema);
