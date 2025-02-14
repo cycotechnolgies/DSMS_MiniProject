@@ -1,10 +1,17 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import examData from "../data/exams.json";
 import ExamTable from "../components/ExamTable";
 
 const Exams = () => {
-	const[Exams, setExams] = useState(examData);
+	const [Exams, setExams] = useState(examData);
+	const navigate = useNavigate(); // ✅ Use React Router navigation
+
+	// ✅ Function to start a new exam and navigate to quiz page
+	const handleNewExam = () => {
+		navigate('/quiz'); // ✅ Navigates to quiz page
+	};
+
 	return (
 		<>
 			<div className='flex h-screen overflow-hidden'>
@@ -16,8 +23,12 @@ const Exams = () => {
 									Exams
 								</h1>
 							</div>
-							<button className='px-4 py-2 rounded-md bg-green-600 font-semibold text-white hover:bg-green-800'>
-								<Link to='/exam/new'>New Exam</Link>
+							{/* ✅ Updated Button */}
+							<button 
+								onClick={handleNewExam} 
+								className='px-4 py-2 rounded-md bg-green-600 font-semibold text-white hover:bg-green-800'
+							>
+								New Exam
 							</button>
 						</div>
 						{/* Pass the fetched Exams to the table */}

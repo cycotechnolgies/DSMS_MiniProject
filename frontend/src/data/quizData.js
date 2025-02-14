@@ -1,4 +1,4 @@
-export const  quizData= [
+export const quizData = [
   {
     id: 1,
     question: "This road sign depicts",
@@ -8,7 +8,7 @@ export const  quizData= [
     option4: "4. Narrow Bridge ahead",
     Answer: 2,
     imageId: 1,
-    url: "../images/quiz/roadnarrowsaheadsign.png",
+    url: `${process.env.PUBLIC_URL}/images/quiz/roadnarrowsaheadsign.png`,
     alt: "Road_narrows_ahead",
   },
   {
@@ -16,11 +16,11 @@ export const  quizData= [
     question: "This road sign depicts",
     option1: "1. Slippery Road ahead.",
     option2: "2. Road with bends ahead.",
-    option3: "3. Dengerous junction ahead.",
+    option3: "3. Dangerous junction ahead.",
     option4: "4. Road narrows ahead.",
     Answer: 1,
     imageId: 2,
-    url: "../images/quiz/slipperyroadaheadsign.webp",
+    url: "/images/quiz/slipperyroadaheadsign.webp",
     alt: "Slippery_Road_ahead",
   },
   {
@@ -32,20 +32,19 @@ export const  quizData= [
     option4: "4. Unprotected Railway crossing ahead.",
     Answer: 3,
     imageId: 3,
-    url: "../images/quiz/railwaycrossingsign.jpeg",
+    url: "/images/quiz/railwaycrossingsign.jpeg",
     alt: "Unprotected_Railway_crossing",
   },
   {
     id: 4,
-    question:
-      "What is the command shown in the picture by the traffic police officer?",
-    option1: "1. Traffic approching both from front and behind stop.",
+    question: "What is the command shown by the traffic police officer?",
+    option1: "1. Traffic approaching both from front and behind stop.",
     option2: "2. Traffic from behind stop.",
     option3: "3. Stop.",
-    option4: "4. Traffic approching from front stop.",
+    option4: "4. Traffic approaching from front stop.",
     Answer: 1,
     imageId: 4,
-    url: "../images/quiz/policeofficersign.png",
+    url: "/images/quiz/policeofficersign.png",
     alt: "Traffic_police_officer",
   },
   {
@@ -57,7 +56,7 @@ export const  quizData= [
     option4: "4. Y junction ahead.",
     Answer: 4,
     imageId: 5,
-    url: "../images/quiz/yjunctionsign.webp",
+    url: "/images/quiz/yjunctionsign.webp",
     alt: "Y_junction_ahead",
   },
   {
@@ -69,7 +68,7 @@ export const  quizData= [
     option4: "4. Slippery Road for cars ahead.",
     Answer: 3,
     imageId: 6,
-    url: "../images/quiz/steepdeclinesign.png",
+    url: "/images/quiz/steepdeclinesign.png",
     alt: "Dangerous_decline_ahead",
   },
   {
@@ -81,7 +80,7 @@ export const  quizData= [
     option4: "4. Pedestrian crossing ahead.",
     Answer: 3,
     imageId: 7,
-    url: "C:/Users/HP/Desktop/quiz-app/client/src/assets/pedestriancrossingaheadsign.png",
+    url: "/images/quiz/pedestriancrossingaheadsign.png",
     alt: "pedestrian_crossing_ahead_sign",
   },
   {
@@ -93,7 +92,7 @@ export const  quizData= [
     option4: "4. No parking.",
     Answer: 4,
     imageId: 8,
-    url: "C:/Users/HP/Desktop/quiz-app/client/src/assets/noparking.png",
+    url: "/images/quiz/noparking.png",
     alt: "no_parking_sign",
   },
   {
@@ -105,8 +104,8 @@ export const  quizData= [
     option4: "4. Hair pin bend to right ahead.",
     Answer: 3,
     imageId: 9,
-    url: "C:/Users/HP/Desktop/quiz-app/client/src/assets/rightbend.png",
-    alt: "right_tbend_sign",
+    url: "/images/quiz/rightbend.png",
+    alt: "right_bend_sign",
   },
   {
     id: 10,
@@ -117,9 +116,7 @@ export const  quizData= [
     option4: "4. Roundabout ahead.",
     Answer: 4,
     imageId: 10,
-    url: "C:/Users/HP/Desktop/quiz-app/client/src/assets/roundabout.png",
+    url: "/images/quiz/roundabout.png",
     alt: "roundabout_sign",
   },
 ];
-
-
