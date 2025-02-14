@@ -20,6 +20,7 @@ import Exams from './pages/Exams';
 import Renewal from "./pages/Renewal";
 import Signup from './pages/Signup';
 import PageNotFound from "./pages/PageNotFound";
+import QuizPage from './pages/QuizPage';
 
 //Forms
 import AddStaff from './pages/forms/addStaff'
@@ -85,6 +86,11 @@ function App() {
 									<Route
 										path='/exams'
 										element={<Exams />}
+									/>
+
+									<Route
+										path='/quiz'
+										element={<QuizPage />}
 									/>
 
 									{/* 404 page */}
