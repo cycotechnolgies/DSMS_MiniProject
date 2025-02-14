@@ -19,7 +19,8 @@ function Staff() {
 
 				// Transform data to fit table structure
 				const formattedData = data.map((staff) => ({
-					id: staff.userId,
+					id: staff._id.$oid || staff._id,
+					uid: staff.userId,
 					name: `${staff.firstName} ${staff.lastName}`,
 					email: staff.email,
 					contactNo: staff.contactNo,

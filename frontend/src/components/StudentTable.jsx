@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios"; 
 //used tanstack table library for make tables - Commented by CYCO
 import {
 	createColumnHelper,
@@ -24,7 +25,9 @@ import {
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
-const StudentTable = ({ students, onEdit, onDelete }) => {
+const StudentTable = ({ students }) => {
+	const [studentData, setStudentData] = useState(students); 
+
 	//fuction given by tanstack table to create columns in table - Commented by CYCO
 	const columnHelper = createColumnHelper();
 
@@ -32,7 +35,7 @@ const StudentTable = ({ students, onEdit, onDelete }) => {
 	const handleDelete = (del_id) => {
 		Swal.fire({
 			title: "Are you sure?",
-			text: "Do you want to delete this staff member? This action cannot be undone.",
+			text: "Do you want to delete this student? This action cannot be undone.",
 			icon: "warning",
 			showCancelButton: true,
 			confirmButtonText: "Yes, delete it!",
@@ -42,15 +45,15 @@ const StudentTable = ({ students, onEdit, onDelete }) => {
 				axios
 					.delete(`http://localhost:4000/api/user/del-user/${del_id}`)
 					.then(() => {
-						setStaffs(staffs.filter((staff) => staff.id !== del_id)); // Update state
+						setStudentData(studentData.filter((student) => student.id !== del_id));
 						Swal.fire(
 							"Deleted!",
-							"The staff member has been deleted.",
+							"The student has been deleted.",
 							"success",
-						);
+						).then(() => window.location.reload());
 					})
 					.catch(() =>
-						Swal.fire("Error", "Failed to delete the staff member!", "error"),
+						Swal.fire("Error", "Failed to delete the student!", "error").then(() => window.location.reload()),
 					);
 			}
 		});
@@ -59,7 +62,7 @@ const StudentTable = ({ students, onEdit, onDelete }) => {
 	//column accessors - Commented by CYCO
 	const columns = [
 		//write accesor for each column you need to display on table - Commented by CYCO
-		columnHelper.accessor("id", {
+		columnHelper.accessor("uid", {
 			cell: (info) => info.getValue(),
 			header: () => <span className='flex items-center'>ID</span>,
 		}),
@@ -94,7 +97,7 @@ const StudentTable = ({ students, onEdit, onDelete }) => {
 						<Pencil className='w-5 h-5' />
 					</Link>
 					<button
-						onClick={() => handleDelete(row.original.id)} // Updated function call
+						onClick={() => handleDelete(row.original.id)}
 						className='text-red-500 hover:text-red-700'
 						aria-label='Delete'>
 						<Trash2 className='w-5 h-5' />
@@ -110,12 +113,12 @@ const StudentTable = ({ students, onEdit, onDelete }) => {
 
 	//table model - Commented by CYCO
 	const table = useReactTable({
-		data: students, //student is the data set pass from student page - Commented by CYCO
+		data: studentData,
 		columns,
 		getCoreRowModel: getCoreRowModel(),
 
 		initialState: {
-			pagination: { pageSize: 5 }, // Set initial page size
+			pagination: { pageSize: 5 }, 
 		},
 
 		state: {

@@ -43,4 +43,4 @@ userSchema.virtual("formattedDob").get(function () {
   return this.birthday ? new Date(this.birthday).toISOString().split("T")[0] : null;
 });
 
-module.exports = mongoose.model("User", userSchema);
+module.exports = mongoose.models.User || mongoose.model("User", userSchema);

@@ -43,64 +43,67 @@ const StaffTable = ({ Staffs }) => {
         axios
           .delete(`http://localhost:4000/api/user/del-user/${del_id}`)
           .then(() => {
-            setStaffs(staffs.filter((staff) => staff.id !== del_id)); // Update state
+            setStaffs(staffs.filter((staff) => staff.id !== del_id));
             Swal.fire(
               "Deleted!",
               "The staff member has been deleted.",
               "success"
-            );
+            ).then(() => window.location.reload());
           })
           .catch(() =>
-            Swal.fire("Error", "Failed to delete the staff member!", "error")
+            Swal.fire("Error", "Failed to delete the staff member!", "error").then(() => window.location.reload())
           );
       }
     });
   };
 
   const columns = [
-		columnHelper.accessor("id", {
+    columnHelper.accessor("uid", {
 			cell: (info) => info.getValue(),
 			header: () => <span className='flex items-center'>ID</span>,
 		}),
-		columnHelper.accessor("name", {
-			cell: (info) => info.getValue(),
-			header: () => <span className='flex items-center'>Name</span>,
-		}),
-		columnHelper.accessor("email", {
-			cell: (info) => info.getValue(),
-			header: () => <span className='flex items-center'>Email</span>,
-		}),
-		columnHelper.accessor("contactNo", {
-			cell: (info) => info.getValue(),
-			header: () => <span className='flex items-center'>Contact No</span>,
-		}),
-		columnHelper.display({
-			id: "actions",
-			header: () => <span className='flex items-center'>Actions</span>,
-			cell: ({ row }) => (
-				<div className='flex space-x-2 justify-start'>
-					<Link
-						to={`/staff/profile/${row.original.id}`}
-						className='text-blue-500 hover:text-blue-700'
-						aria-label='View'>
-						<Eye className='w-5 h-5' />
-					</Link>
-					<Link
-						to={`/staff/${row.original.id}`}
-						className='text-green-500 hover:text-green-700'
-						aria-label='Edit'>
-						<Pencil className='w-5 h-5' />
-					</Link>
-					<button
-						onClick={() => handleDelete(row.original.id)} // Updated function call
-						className='text-red-500 hover:text-red-700'
-						aria-label='Delete'>
-						<Trash2 className='w-5 h-5' />
-					</button>
-				</div>
-			),
-		}),
-	];
+    columnHelper.accessor("name", {
+      cell: (info) => info.getValue(),
+      header: () => <span className="flex items-center">Name</span>,
+    }),
+    columnHelper.accessor("email", {
+      cell: (info) => info.getValue(),
+      header: () => <span className="flex items-center">Email</span>,
+    }),
+    columnHelper.accessor("contactNo", {
+      cell: (info) => info.getValue(),
+      header: () => <span className="flex items-center">Contact No</span>,
+    }),
+    columnHelper.display({
+      id: "actions",
+      header: () => <span className="flex items-center">Actions</span>,
+      cell: ({ row }) => (
+        <div className="flex space-x-2 justify-start">
+          <Link
+            to={`/staff/profile/${row.original.id}`}
+            className="text-blue-500 hover:text-blue-700"
+            aria-label="View"
+          >
+            <Eye className="w-5 h-5" />
+          </Link>
+          <Link
+            to={`/staff/${row.original.id}`}
+            className="text-green-500 hover:text-green-700"
+            aria-label="Edit"
+          >
+            <Pencil className="w-5 h-5" />
+          </Link>
+          <button
+            onClick={() => handleDelete(row.original.id)}
+            className="text-red-500 hover:text-red-700"
+            aria-label="Delete"
+          >
+            <Trash2 className="w-5 h-5" />
+          </button>
+        </div>
+      ),
+    }),
+  ];
 
   const [sorting, setSorting] = useState();
   const [globalFilter, setGlobalFilter] = useState();

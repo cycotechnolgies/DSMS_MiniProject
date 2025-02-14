@@ -2,7 +2,9 @@ const express = require("express");
 const {
   addPayment,
   getPayments,
-  getPaymentByPayId
+  getPaymentById,
+  updatePayment,
+  deletePayment,
 } = require("../controller/payController");
 const multer = require("multer");
 const path = require("path");
@@ -21,8 +23,10 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 // Route to add a user
-router.post("/add",  upload.single("slip"), addPayment);
+router.post("/add", upload.single("slip"), addPayment);
 router.get("/get-all", getPayments);
-router.get("/get-pay/:payId", getPayments);
+router.get("/get-pay/:id", getPaymentById);
+router.put("/update-pay/:id", upload.single("slip"), updatePayment);
+router.delete("/del-pay/:id", deletePayment);
 
 module.exports = router;
