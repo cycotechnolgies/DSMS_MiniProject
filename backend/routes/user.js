@@ -2,6 +2,7 @@ const express = require("express");
 const {
   addUser,
   getStaffUsers,
+  getStudents,
   getUser,
   editUser,
   deleteUser,
@@ -29,6 +30,8 @@ const upload = multer({ storage });
 router.post("/add", addUser);
 
 router.get("/staff", getStaffUsers);
+
+router.get("/students", getStudents);
 
 router.get("/get-user/:id", getUser);
 

@@ -75,7 +75,7 @@ function AddStudent() {
 					data,
 				);
 				toast.success(response.data.message || "Staff updated successfully");
-				navigate("/staff");
+				navigate("/students");
 			} else {
 				// Add staff logic
 				if (!validator.isEmail(data.email)) {
@@ -100,7 +100,7 @@ function AddStudent() {
 					data,
 				);
 				toast.success(response.data.message || "Staff added successfully");
-				navigate("/staff");
+				navigate("/students");
 			}
 		} catch (error) {
 			const errorMessage =
@@ -336,10 +336,6 @@ function AddStudent() {
 												<input
 													type={showPassword ? "text" : "password"}
 													{...register("password", {
-														validate: (value) => {
-															validator.isStrongPassword(value, "default") ||
-																"use Strong Password with 8 Characters";
-														},
 														required: "Password is required",
 													})}
 													className='w-full p-2 border border-gray-300 rounded placeholder:italic'
@@ -367,10 +363,6 @@ function AddStudent() {
 												<input
 													type={showConfirmPassword ? "text" : "password"}
 													{...register("confirmPassword", {
-														validate: (value) => {
-															validator.isStrongPassword(value, "default") ||
-																"use Strong Password with 8 Characters";
-														},
 														required: "Confirm password is required",
 													})}
 													className='w-full p-2 border border-gray-300 rounded placeholder:italic'

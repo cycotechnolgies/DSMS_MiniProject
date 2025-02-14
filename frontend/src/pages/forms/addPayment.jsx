@@ -22,53 +22,6 @@ const AddPayment = () => {
 
       const onSubmit = async (data) => {
 				setIsLoading(true);
-				try {
-					if (id) {
-						// Edit staff logic
-						const response = await axios.put(
-							`http://localhost:4000/api/user/edit-user/${id}`,
-							data,
-						);
-						toast.success(
-							response.data.message || "Staff updated successfully",
-						);
-						navigate("/staff");
-					} else {
-						// Add staff logic
-						if (!validator.isEmail(data.email)) {
-							setError("email", { message: "Invalid email format" });
-							return;
-						}
-
-						if (data.password !== data.confirmPassword) {
-							setError("confirmPassword", {
-								message: "Passwords do not match",
-							});
-							return;
-						}
-
-						if (!validator.isMobilePhone(data.contactNo, "si-LK")) {
-							setError("contactNo", {
-								message: "Invalid Sri Lankan contact number",
-							});
-							return;
-						}
-
-						const response = await axios.post(
-							"http://localhost:4000/api/user/add",
-							data,
-						);
-						toast.success(response.data.message || "Staff added successfully");
-						navigate("/staff");
-					}
-				} catch (error) {
-					const errorMessage =
-						error.response?.data?.message ||
-						"An error occurred during the operation";
-					toast.error(errorMessage);
-				} finally {
-					setIsLoading(false);
-				}
 			};
 
 	return (
@@ -93,16 +46,11 @@ const AddPayment = () => {
 									</label>
 									<input
 										type='text'
-										{...register("stu_id", {
-											validate: (value) => {
-												return (
-													validator.isNumeric(value) || "Input numbers only"
-												);
-											},
+										{...register("Stu_id", {
 											required: "Student ID is required",
 										})}
 										className='w-full p-2 border border-gray-300 rounded placeholder:italic'
-										placeholder='0055'
+										placeholder='USR-567'
 									/>
 									{errors.stu_id && (
 										<p className='text-red-500 text-sm mt-1'>

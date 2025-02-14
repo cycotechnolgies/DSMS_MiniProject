@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
-import ProfilePic from "../images/profiledefault.jpg";
-import { PhoneCall, House, ImagePlus, ImageUp } from "lucide-react";
+import ProfilePic from "../../images/profiledefault.jpg";
+import { PhoneCall, House, ImagePlus, ImageUp, IdCard } from "lucide-react";
 
 const StaffProfile = () => {
 	const [isLoading, setIsLoading] = useState(false);
@@ -17,7 +17,8 @@ const StaffProfile = () => {
 	const [name, setName] = useState("");
 	const [address, setAddress] = useState("");
 	const [phone, setPhone] = useState("");
-	const [profileImg, setProfileImg] = useState(ProfilePic); // Default to ProfilePic
+	const [userId, setUserId] = useState("");
+	const [profileImg, setProfileImg] = useState(ProfilePic);
 
 	useEffect(() => {
 		const fetchStaffData = async () => {
@@ -35,6 +36,7 @@ const StaffProfile = () => {
 				setName(`${staff.firstName} ${staff.lastName}`);
 				setPhone(staff.contactNo);
 				setAddress(staff.address);
+				setUserId(staff.userId);
 				setProfileImg(
 					staff.profilePic?.trim() ? `http://localhost:4000${staff.profilePic}` : ProfilePic);
 			} catch (err) {
@@ -114,6 +116,9 @@ const StaffProfile = () => {
 							</h1>
 							<h1 className='text-2xl font-bold'>{name}</h1>
 							<div className='flex gap-2 items-center text-gray-600 italic'>
+								<IdCard size={20} /> {userId}
+							</div>
+							<div className='flex gap-2 items-center text-gray-600 italic'>
 								<House size={20} /> {address}
 							</div>
 							<div className='flex gap-2 items-center text-gray-600 italic'>
@@ -150,7 +155,6 @@ const StaffProfile = () => {
 						</button>
 					</div>
 				</div>
-				
 			</div>
 		</>
 	);

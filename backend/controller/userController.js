@@ -22,6 +22,16 @@ const getStaffUsers = async (req, res) => {
   }
 };
 
+const getStudents = async (req, res) => {
+  try {
+    const students = await User.find({ userType: "Student" });
+    res.status(200).json(students);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};
+
+
 const getUser = async (req, res) => {
   try {
     const fetchUser = await User.findById(req.params.id);
@@ -56,7 +66,7 @@ const deleteUser = async (req, res) => {
 
 const updateProfilePic = async (req, res) => {
   try {
-    const userId = req.params.id;
+    const obj_Id = req.params.id;
 
     if (!req.file) {
       return res.status(400).json({ message: "No file uploaded!" });
@@ -65,18 +75,18 @@ const updateProfilePic = async (req, res) => {
     const imageUrl = `/images/${req.file.filename}`;
 
     const updatedUser = await User.findByIdAndUpdate(
-      userId,
+      obj_Id,
       { profilePic: imageUrl },
       { new: true }
     );
 
     if (!updatedUser) {
-      return res.status(404).json({ message: "User not found! ", userId });
+      return res.status(404).json({ message: "User not found! ", obj_Id });
     }
 
     res.json({
       message: "Profile picture updated successfully!",
-      userId,
+      obj_Id,
       imageUrl,
       user: updatedUser,
     });
@@ -90,4 +100,4 @@ const updateProfilePic = async (req, res) => {
 
 
 
-module.exports = { addUser, getStaffUsers, getUser, editUser, deleteUser, updateProfilePic };
+module.exports = { addUser, getStaffUsers, getStudents, getUser, editUser, deleteUser, updateProfilePic };

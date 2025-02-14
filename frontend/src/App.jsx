@@ -19,7 +19,6 @@ import Login from './pages/Login';
 import Exams from './pages/Exams';
 import Renewal from "./pages/Renewal";
 import Signup from './pages/Signup';
-import StaffProfile from './pages/StaffProfile';
 import PageNotFound from "./pages/PageNotFound";
 
 //Forms
@@ -32,6 +31,7 @@ import AddClass from './pages/forms/addClass';
 
 //Views
 import PaaymentView from './pages/viwes/PaymentView';
+import StaffProfile from './pages/viwes/StaffProfile';
 
 
 function App() {

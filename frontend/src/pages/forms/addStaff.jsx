@@ -284,6 +284,27 @@ function AddStaff() {
 										</p>
 									)}
 								</div>
+								{/* Branch */}
+								<div>
+									<label className='block text-gray-700 font-medium mb-1'>
+										Branch <span className='text-red-600 font-bold'>*</span>
+									</label>
+									<select
+										{...register("branch", {
+											required: "Branch is required",
+										})}
+										className='w-full p-2 border border-gray-300 rounded'>
+										<option value=''>Select a Branch</option>
+										<option value='Colombo'>Colombo</option>
+										<option value='Gampaha'>Gampaha</option>
+										<option value='galle'>Galle</option>
+									</select>
+									{errors.branch && (
+										<p className='text-red-500 text-sm mt-1'>
+											{errors.branch.message}
+										</p>
+									)}
+								</div>
 
 								{/* User Type */}
 								<div>
@@ -318,7 +339,7 @@ function AddStaff() {
 												<input
 													type={showPassword ? "text" : "password"}
 													{...register("password", {
-														required: "Password is required"
+														required: "Password is required",
 													})}
 													className='w-full p-2 border border-gray-300 rounded placeholder:italic'
 													placeholder='Enter password'
@@ -345,7 +366,6 @@ function AddStaff() {
 												<input
 													type={showConfirmPassword ? "text" : "password"}
 													{...register("confirmPassword", {
-														
 														required: "Confirm password is required",
 													})}
 													className='w-full p-2 border border-gray-300 rounded placeholder:italic'

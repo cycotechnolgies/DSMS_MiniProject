@@ -71,6 +71,10 @@ const StudentTable = ({ students, onEdit, onDelete }) => {
 			cell: (info) => info.getValue(),
 			header: () => <span className='flex items-center'>Email</span>,
 		}),
+		columnHelper.accessor("contactNo", {
+			cell: (info) => info.getValue(),
+			header: () => <span className='flex items-center'>Contact No.</span>,
+		}),
 		//action buttons ( this is a default column for this table dont change it) - Commented by CYCO
 		columnHelper.display({
 			id: "actions",
@@ -78,12 +82,11 @@ const StudentTable = ({ students, onEdit, onDelete }) => {
 			cell: ({ row }) => (
 				<div className='flex space-x-2 justify-start'>
 					<Link
-            to={`/staff/profile/${row.original.id}`}
-            className="text-blue-500 hover:text-blue-700"
-            aria-label="View"
-          >
-            <Eye className="w-5 h-5" />
-          </Link>
+						to={`/student/profile/${row.original.id}`}
+						className='text-blue-500 hover:text-blue-700'
+						aria-label='View'>
+						<Eye className='w-5 h-5' />
+					</Link>
 					<Link
 						to={`/student/${row.original.id}`}
 						className='text-green-500 hover:text-green-700'
@@ -91,12 +94,11 @@ const StudentTable = ({ students, onEdit, onDelete }) => {
 						<Pencil className='w-5 h-5' />
 					</Link>
 					<button
-            onClick={() => handleDelete(row.original.id)} // Updated function call
-            className="text-red-500 hover:text-red-700"
-            aria-label="Delete"
-          >
-            <Trash2 className="w-5 h-5" />
-          </button>
+						onClick={() => handleDelete(row.original.id)} // Updated function call
+						className='text-red-500 hover:text-red-700'
+						aria-label='Delete'>
+						<Trash2 className='w-5 h-5' />
+					</button>
 				</div>
 			),
 		}),

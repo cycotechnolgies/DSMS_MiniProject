@@ -1,10 +1,46 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react"; 
 import StudentTable from "../components/StudentTable";
 import { Link } from "react-router-dom";
 import studentData from "../data/sample.json";
 
 function Student() {
-	const[students, setStudents] = useState(studentData);
+	const [students, setStudents] = useState([]);
+	const [loading, setLoading] = useState(true);
+	const [error, setError] = useState("");
+
+	useEffect(() => {
+		const fetchStudentData = async () => {
+			try {
+				const response = await fetch("http://localhost:4000/api/user/students");
+				if (!response.ok) {
+					throw new Error("Failed to fetch student data");
+				}
+				const data = await response.json();
+
+				// Transform data to fit table structure
+				const formattedData = data.map((student) => ({
+					id: student.userId,
+					name: `${student.firstName} ${student.lastName}`,
+					email: student.email,
+					contactNo: student.contactNo,
+				}));
+
+				setStudents(formattedData);
+			} catch (err) {
+				setError(err.message);
+			} finally {
+				setLoading(false);
+			}
+		};
+
+		fetchStudentData();
+	}, []);
+
+	if (loading)
+		return <div className='text-center mt-4'>Loading student data...</div>;
+	if (error)
+		return <div className='text-center text-red-500 mt-4'>Error: {error}</div>;
+
 
 	return (
 		<>

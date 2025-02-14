@@ -18,85 +18,10 @@ function AddMedical() {
     formState: { errors },
   } = useForm();
   
-  useEffect(() => {
-    const fetchStaffDetails = async () => {
-      if (id) {
-        setIsLoading(true);
-        try {
-          const response = await axios.get(
-            `http://localhost:4000/api/user/get-user/${id}`
-          );
-          const staff = response.data;
-          if (staff.birthday) {
-            const formattedDate = new Date(staff.birthday)
-              .toISOString()
-              .split("T")[0];
-            setValue("birthday", formattedDate);
-          }
-
-          // Set other fields
-          for (const key in staff) {
-            if (key !== "birthday") {
-              setValue(key, staff[key]);
-            }
-          }
-        } catch (error) {
-          console.error("Error fetching staff details:", error);
-          toast.error("Failed to load staff details");
-        } finally {
-          setIsLoading(false);
-        }
-      }
-    };
-
-    fetchStaffDetails();
-  }, [id, setValue]);
 
   const onSubmit = async (data) => {
     setIsLoading(true);
-    try {
-      if (id) {
-        // Edit staff logic
-        const response = await axios.put(
-          `http://localhost:4000/api/user/edit-user/${id}`,
-          data
-        );
-        toast.success(response.data.message || "Staff updated successfully");
-        navigate("/staff");
-      } else {
-        // Add staff logic
-        if (!validator.isEmail(data.email)) {
-          setError("email", { message: "Invalid email format" });
-          return;
-        }
-
-        if (data.password !== data.confirmPassword) {
-          setError("confirmPassword", { message: "Passwords do not match" });
-          return;
-        }
-
-        if (!validator.isMobilePhone(data.contactNo, "si-LK")) {
-          setError("contactNo", {
-            message: "Invalid Sri Lankan contact number",
-          });
-          return;
-        }
-
-        const response = await axios.post(
-          "http://localhost:4000/api/user/add",
-          data
-        );
-        toast.success(response.data.message || "Staff added successfully");
-        navigate("/staff");
-      }
-    } catch (error) {
-      const errorMessage =
-        error.response?.data?.message ||
-        "An error occurred during the operation";
-      toast.error(errorMessage);
-    } finally {
-      setIsLoading(false);
-    }
+    
   };
 
   return (
