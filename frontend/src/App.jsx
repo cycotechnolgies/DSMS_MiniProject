@@ -1,70 +1,197 @@
-import React, { useEffect } from "react";
-import { Routes, Route, Navigate, useLocation } from "react-router-dom";
+import './App.css';
+import { useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
 
-import "./css/style.css";
-import "./charts/ChartjsConfig";
+// Layout
+import RootLayout from './layouts/RootLayout';
 
-import Dashboard from "./pages/Dashboard";
-import Students from "./pages/Students";
-import Staff from "./pages/Staff";
-import Payments from "./pages/Payments";
-import Schedules from "./pages/Schedule";
-import Exams from "./pages/Exams";
-import Medical from "./pages/Medical";
+//Protected Route for login
+import ProtectedRoute from './components/ProtectedRoute';
+
+//Pages
+import Dashboard from './pages/Dashboard';
+import Payment from './pages/Payment';
+import Staff from './pages/Staff';
+import Student from './pages/Student';
+import Schedule from './pages/Schedule';
+import Medical from './pages/medical';
+import Login from './pages/Login';
+import Exams from './pages/Exams';
 import Renewal from "./pages/Renewal";
-import StudentTable from "./partials/StudentTable";
-import Login from "./pages/Login";
-import HomePage from "./pages/HomePage";
-import AddStaff from "./pages/forms/addStaff";
-import Profiles from "./pages/Profile";
+import Signup from './pages/Signup';
+import PageNotFound from "./pages/PageNotFound";
+import QuizPage from './pages/QuizPage';
 
-import Quiz from "./components/Quiz/Quiz";
+//Forms
+import AddStaff from './pages/forms/addStaff'
+import AddStudent from './pages/forms/addStudent';
+import AddPayment from "./pages/forms/addPayment";
+import AddMedical from "./pages/forms/addMedical";
+import AddRenewal from './pages/forms/addrenewal';
+import AddClass from './pages/forms/addClass';
 
-import { Toaster } from "react-hot-toast";
+//Views
+import PaaymentView from './pages/viwes/PaymentView';
+import StaffProfile from './pages/viwes/StaffProfile';
+
 
 function App() {
-  const location = useLocation();
-
-  useEffect(() => {
-    document.querySelector("html").style.scrollBehavior = "auto";
-    window.scroll({ top: 0 });
-    document.querySelector("html").style.scrollBehavior = "";
-  }, [location.pathname]);
-
-  const isAuthenticated = localStorage.getItem("isAuthenticated") === "true";
+  const [user, setUser] = useState(null); // Replace with actual user authentication logic
 
   return (
-    <>
-      <Toaster />
-      <Routes>
-        {/* <Route exact path="/login" element={<Navigate to="/login" replace />} />
-        <Route
-          exact
-          path="/login"
-          element={isAuthenticated ? <Dashboard /> : <Navigate to="/" />}
-        /> */}
+		<>
+			<Routes>
+				<Route
+					path='/login'
+					element={<Login />}
+				/>
+				<Route
+					path='/signup'
+					element={<Signup />}
+				/>
+				<Route
+					path='/*'
+					element={
+						<ProtectedRoute user={user}>
+							<RootLayout>
+								<Routes>
+									<Route
+										path='/'
+										element={<Dashboard />}
+									/>
+									<Route
+										path='/students'
+										element={<Student />}
+									/>
+									<Route
+										path='/payments'
+										element={<Payment />}
+									/>
+									<Route
+										path='/staff'
+										element={<Staff />}
+									/>
+									<Route
+										path='/medicals'
+										element={<Medical />}
+									/>
+									<Route
+										path='/renew'
+										element={<Renewal />}
+									/>
+									<Route
+										path='/class'
+										element={<Schedule />}
+									/>
+									<Route
+										path='/exams'
+										element={<Exams />}
+									/>
 
-        <Route exact path="/" element={<Dashboard />} />
-        <Route exact path="/home" element={<HomePage />} />
-        <Route exact path="/login" element={<Login />} />
-        <Route exact path="/students" element={<Students />} />
-        <Route exact path="/table" element={<StudentTable />} />
-        <Route exact path="/staff" element={<Staff />} />
-        <Route exact path="/exams" element={<Exams />} />
-        <Route exact path="/Payments" element={<Payments />} />
-        <Route exact path="/medical" element={<Medical />} />
-        <Route exact path="/renew" element={<Renewal />} />
-        <Route exact path="/class" element={<Schedules />} />
-        {/* other routes */}
-        <Route exact path="/staff/enroll" element={<AddStaff />} />
+									<Route
+										path='/quiz'
+										element={<QuizPage />}
+									/>
 
-        <Route exact path="/quiz" element={<Quiz />} />
-        <Route exact path="/profile" element={<Profiles />} />
+									{/* 404 page */}
+									<Route
+										path='*'
+										element={<PageNotFound />}
+									/>
 
-        <Route path="/edit-staff/:id" element={<AddStaff />} />
-      </Routes>
-    </>
-  );
+									{/* staff sub Routes */}
+									<Route
+										path='/staff/enroll'
+										element={<AddStaff />}
+									/>
+									<Route
+										path='/staff/:id'
+										element={<AddStaff />}
+									/>
+									<Route
+										path='/staff/profile/:id'
+										element={<StaffProfile />}
+									/>
+
+									{/* student sub Routes */}
+									<Route
+										path='/student/enroll'
+										element={<AddStudent />}
+									/>
+									<Route
+										path='/student/:id'
+										element={<AddStudent />}
+									/>
+									{/* <Route
+										path='/student/profile/:id'
+										element={<StudentProfile />}
+									/> */}
+
+									{/* payment sub Routes */}
+
+									<Route
+										path='/pay/new'
+										element={<AddPayment />}
+									/>
+									<Route
+										path='/pay/:id'
+										element={<AddPayment />}
+									/>
+									<Route
+										path='/pay/details/:id'
+										element={<PaaymentView />}
+									/>
+
+									{/* medical sub Routes */}
+									<Route
+										path='/medi/new'
+										element={<AddMedical />}
+									/>
+									<Route
+										path='/medi/:id'
+										element={<AddMedical />}
+									/>
+									{/* <Route
+										path='/pay/details/:id'
+										element={<AddMedical />}
+									/> */}
+
+									{/* renew sub Routes */}
+									<Route
+										path='/renew/new'
+										element={<AddRenewal />}
+									/>
+									<Route
+										path='/renew/:id'
+										element={<AddRenewal />}
+									/>
+									{/* <Route
+										path='/pay/details/:id'
+										element={<AddRenewal />}
+									/> */}
+
+									{/* Training sub Routes */}
+									<Route
+										path='/class/new'
+										element={<AddClass />}
+									/>
+									<Route
+										path='/class/:id'
+										element={<AddClass />}
+									/>
+
+									{/* <Route
+										path='/pay/details/:id'
+										element={<AddClass />}
+									/> */}
+								</Routes>
+							</RootLayout>
+						</ProtectedRoute>
+					}
+				/>
+			</Routes>
+		</>
+	);
 }
 
 export default App;

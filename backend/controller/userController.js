@@ -1,4 +1,5 @@
 const User = require("../models/userModel");
+const path = require("path");
 
 const addUser = async (req, res) => {
   try {
@@ -20,6 +21,16 @@ const getStaffUsers = async (req, res) => {
     res.status(500).json({ message: err.message });
   }
 };
+
+const getStudents = async (req, res) => {
+  try {
+    const students = await User.find({ userType: "Student" });
+    res.status(200).json(students);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};
+
 
 const getUser = async (req, res) => {
   try {
@@ -53,4 +64,40 @@ const deleteUser = async (req, res) => {
   }
 };
 
-module.exports = { addUser, getStaffUsers, getUser, editUser, deleteUser };
+const updateProfilePic = async (req, res) => {
+  try {
+    const obj_Id = req.params.id;
+
+    if (!req.file) {
+      return res.status(400).json({ message: "No file uploaded!" });
+    }
+
+    const imageUrl = `/images/${req.file.filename}`;
+
+    const updatedUser = await User.findByIdAndUpdate(
+      obj_Id,
+      { profilePic: imageUrl },
+      { new: true }
+    );
+
+    if (!updatedUser) {
+      return res.status(404).json({ message: "User not found! ", obj_Id });
+    }
+
+    res.json({
+      message: "Profile picture updated successfully!",
+      obj_Id,
+      imageUrl,
+      user: updatedUser,
+    });
+  } catch (error) {
+    res.status(500).json({
+      message: "Error updating profile picture!",
+      error: error.message,
+    });
+  }
+};
+
+
+
+module.exports = { addUser, getStaffUsers, getStudents, getUser, editUser, deleteUser, updateProfilePic };
