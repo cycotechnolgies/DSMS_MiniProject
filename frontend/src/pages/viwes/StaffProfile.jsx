@@ -51,8 +51,8 @@ const StaffProfile = () => {
 	const handleImageChange = (e) => {
 		const file = e.target.files[0];
 		if (file) {
-			setImageName(file.name); // Update image name
-			setSelectedImage(URL.createObjectURL(file)); // Preview selected image
+			setImageName(file.name); 
+			setSelectedImage(URL.createObjectURL(file));
 			setFile(file);
 		}
 	};

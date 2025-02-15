@@ -2,6 +2,8 @@ const mongoose = require("mongoose");
 const Payment = require("../models/paymodle");
 const User = mongoose.model("User");
 const path = require("path");
+const fs = require("fs");
+
 
 // Create a new payment
 const addPayment = async (req, res) => {
@@ -55,6 +57,7 @@ const getPaymentById = async (req, res) => {
   }
 };
 
+//update payment
 const updatePayment = async (req, res) => {
   try {
     const updatedPayment = await Payment.findByIdAndUpdate(req.params.id, req.body, { new: true });
@@ -65,14 +68,42 @@ const updatePayment = async (req, res) => {
   }
 };
 
+// Function to delete slip file
+const deleteSlipFile = (filePath) => {
+    const fullPath = path.join(__dirname, "..", "public",filePath);
+    console.log("Full path:", fullPath);
+    if (fs.existsSync(fullPath)) {
+        fs.unlink(fullPath, (err) => {
+            if (err) {
+                console.error("Error deleting file:", err);
+            } else {
+                console.log("Slip file deleted:", filePath);
+            }
+        });
+    }
+};
+
+//delete payment
 const deletePayment = async (req, res) => {
-  try {
-    const deletedPayment = await Payment.findByIdAndDelete(req.params.id);
-    if (!deletedPayment) return res.status(404).json({ message: "Payment not found" });
-    res.json({ message: "Payment deleted" });
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
+    try {
+        const { id } = req.params;
+        const payment = await Payment.findById(id);
+
+        if (!payment) {
+            return res.status(404).json({ message: "Payment not found" });
+        }
+
+        // Remove the slip file if it exists
+        if (payment.slip) {
+            deleteSlipFile(payment.slip);
+        }
+
+        await Payment.findByIdAndDelete(id);
+        res.json({ message: "Payment deleted successfully" });
+    } catch (error) {
+        console.error("Error deleting payment:", error);
+        res.status(500).json({ message: "Internal Server Error" });
+    }
 };
 
 module.exports = { addPayment, getPayments, getPaymentById, updatePayment, deletePayment };
