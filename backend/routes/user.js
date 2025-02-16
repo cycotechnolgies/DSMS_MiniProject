@@ -7,6 +7,8 @@ const {
   editUser,
   deleteUser,
   updateProfilePic,
+  getAllInstructors,
+  searchStudents,
 } = require("../controller/userController");
 const multer = require("multer");
 const path = require("path");
@@ -40,5 +42,9 @@ router.put("/edit-user/:id", editUser);
 router.put("/edit-profilePic/:id",upload.single("profilePic"), updateProfilePic);
 
 router.delete("/del-user/:id", deleteUser);
+
+router.get("/instructors", getAllInstructors);
+
+router.get("/students/search", searchStudents);
 
 module.exports = router;

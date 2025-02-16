@@ -98,6 +98,35 @@ const updateProfilePic = async (req, res) => {
   }
 };
 
+// Fetch all instructors
+const getAllInstructors = async (req, res) => {
+    try {
+        const instructors = await User.find({ userType: "instructor" }).select("fullName");
+        res.status(200).json(instructors);
+    } catch (error) {
+        res.status(500).json({ message: "Failed to fetch instructors", error: error.message });
+    }
+};
 
+const searchStudents = async (req, res) => {
+    try {
+        const { terms } = req.query;
+        if (!terms) {
+            return res.status(400).json({ message: "Please provide a search query" });
+        }
 
-module.exports = { addUser, getStaffUsers, getStudents, getUser, editUser, deleteUser, updateProfilePic };
+        const students = await User.find({
+            userType: { $regex: /^student$/i }, 
+            $or: [
+                { fullName: { $regex: terms, $options: "i" } }, 
+                { userId: { $regex: terms, $options: "i" } }   
+            ]
+        }).select("fullName userId");
+
+        res.status(200).json(students);
+    } catch (error) {
+        res.status(500).json({ message: "Failed to search students", error: error.message });
+    }
+};
+
+module.exports = { addUser, getStaffUsers, getStudents, getAllInstructors, getUser, editUser, deleteUser, updateProfilePic, searchStudents };

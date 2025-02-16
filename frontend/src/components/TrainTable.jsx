@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
 //used tanstack table library for make tables - Commented by CYCO
 import {
@@ -22,29 +22,69 @@ import {
   Search,
   Trash2,
 } from "lucide-react";
+import Swal from "sweetalert2";
+import axios from "axios";
 
-const TrainTable = ({ Schedules, onEdit, onDelete }) => {
+const TrainTable = ({ Schedules }) => {
   //fuction given by tanstack table to create columns in table - Commented by CYCO
   const columnHelper = createColumnHelper();
+  const [schedules, setSchedules] = useState(Schedules);
+
+    const handleDelete = (del_id) => {
+			Swal.fire({
+				title: "Are you sure?",
+				text: "Do you want to delete this Class? This action cannot be undone.",
+				icon: "warning",
+				showCancelButton: true,
+				confirmButtonText: "Yes, delete it!",
+				cancelButtonText: "Cancel",
+			}).then((result) => {
+				if (result.isConfirmed) {
+					axios
+						.delete(`http://localhost:4000/api/class/del/${del_id}`)
+						.then(() => {
+							setSchedules(
+								schedules.filter((schedule) => schedule.id !== del_id),
+							);
+							Swal.fire(
+								"Deleted!",
+								"The Class has been deleted.",
+								"success",
+							).then(() => window.location.reload());
+						})
+						.catch(() =>
+							Swal.fire(
+								"Error",
+								"Failed to delete the staff member!",
+								"error",
+							).then(() => window.location.reload()),
+						);
+				}
+			});
+		};
 
   //column accessors - Commented by CYCO
   const columns = [
 		//write accesor for each column you need to display on table - Commented by CYCO
-		columnHelper.accessor("id", {
+		columnHelper.accessor("classid", {
 			cell: (info) => info.getValue(),
 			header: () => <span className='flex items-center'>ID</span>,
 		}),
-		columnHelper.accessor("type", {
+		columnHelper.accessor("name", {
 			cell: (info) => info.getValue(),
-			header: () => <span className='flex items-center'>Type</span>,
+			header: () => <span className='flex items-center'>Name</span>,
 		}),
 		columnHelper.accessor("class_date", {
 			cell: (info) => info.getValue(),
 			header: () => <span className='flex items-center'>Date</span>,
 		}),
-		columnHelper.accessor("time", {
+		columnHelper.accessor("class_time", {
 			cell: (info) => info.getValue(),
 			header: () => <span className='flex items-center'>Time</span>,
+		}),
+		columnHelper.accessor("count", {
+			cell: (info) => info.getValue(),
+			header: () => <span className='flex items-center'>Stundets</span>,
 		}),
 		columnHelper.display({
 			id: "actions",

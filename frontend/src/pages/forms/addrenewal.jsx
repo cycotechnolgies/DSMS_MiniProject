@@ -19,85 +19,71 @@ function AddRenewal() {
   } = useForm();
 
   useEffect(() => {
-    const fetchStaffDetails = async () => {
-      if (id) {
-        setIsLoading(true);
-        try {
-          const response = await axios.get(
-            `http://localhost:4000/api/user/get-user/${id}`
-          );
-          const staff = response.data;
-          if (staff.birthday) {
-            const formattedDate = new Date(staff.birthday)
-              .toISOString()
-              .split("T")[0];
-            setValue("birthday", formattedDate);
-          }
+		if (id) {
+			axios
+				.get(`http://localhost:4000/api/renewal/get-renewal/${id}`)
+				.then((response) => {
+					const data = response.data;
+					console.log(data);
 
-          // Set other fields
-          for (const key in staff) {
-            if (key !== "birthday") {
-              setValue(key, staff[key]);
-            }
-          }
-        } catch (error) {
-          console.error("Error fetching staff details:", error);
-          toast.error("Failed to load staff details");
-        } finally {
-          setIsLoading(false);
-        }
-      }
-    };
+					const formattedExpDate = data.expDate
+						? new Date(data.expDate).toISOString().split("T")[0]
+						: "";
 
-    fetchStaffDetails();
-  }, [id, setValue]);
+					reset({
+						fullName: data.fullName,
+						nic: data.nic,
+						contactNo: data.contactNo,
+						whatsappNo: data.whatsappNo,
+						address: data.address,
+						branch: data.branch,
+						LicenceType: data.LicenceType,
+						vehiClass: data.vehiClass,
+						bracode: data.bracode,
+						expDate: formattedExpDate,
+						renewState: data.renewState || "",
+						collector: data.collector || "",
+					});
+				})
+				.catch((error) => {
+					console.error(error);
+					toast.error("An error occurred while fetching the renewal data.");
+				});
+		}
+	}, [id, reset]);
+
 
   const onSubmit = async (data) => {
-    setIsLoading(true);
-    try {
-      if (id) {
-        // Edit staff logic
-        const response = await axios.put(
-          `http://localhost:4000/api/user/edit-user/${id}`,
-          data
-        );
-        toast.success(response.data.message || "Staff updated successfully");
-        navigate("/staff");
-      } else {
-        // Add staff logic
-        if (!validator.isEmail(data.email)) {
-          setError("email", { message: "Invalid email format" });
-          return;
-        }
+		setIsLoading(true);
+		console.log("formData", data);
+		try {
+			if (id) {
+				// Update existing record
+				const response = await axios.put(
+					`http://localhost:4000/api/renewal/edit/${id}`,
+					data,
+					{ headers: { "Content-Type": "application/json" } },
+				);
+				console.log(response);
+				toast.success("Renewal Request updated successfully!");
+			} else {
+				// Create new record
+				const response = await axios.post(
+					"http://localhost:4000/api/renewal/add",
+					data,
+				);
+				console.log(response);
+				toast.success("Renewal Request added successfully!");
+			}
 
-        if (data.password !== data.confirmPassword) {
-          setError("confirmPassword", { message: "Passwords do not match" });
-          return;
-        }
-
-        if (!validator.isMobilePhone(data.contactNo, "si-LK")) {
-          setError("contactNo", {
-            message: "Invalid Sri Lankan contact number",
-          });
-          return;
-        }
-
-        const response = await axios.post(
-          "http://localhost:4000/api/user/add",
-          data
-        );
-        toast.success(response.data.message || "Staff added successfully");
-        navigate("/staff");
-      }
-    } catch (error) {
-      const errorMessage =
-        error.response?.data?.message ||
-        "An error occurred during the operation";
-      toast.error(errorMessage);
-    } finally {
-      setIsLoading(false);
-    }
-  };
+			navigate("/renew");
+		} catch (error) {
+			console.error(error);
+			toast.error("An error occurred while submitting the form.");
+		} finally {
+			setIsLoading(false);
+		}
+	};
 
   return (
 		<div className='flex h-screen overflow-hidden'>
@@ -143,9 +129,6 @@ function AddRenewal() {
 										type='text'
 										{...register("nic", {
 											required: "NIC number is required",
-											validate: (value) =>
-												validator.isIdentityCard(value, "LK") ||
-												"Invalid Identity Card Number",
 										})}
 										className='w-full p-2 border border-gray-300 rounded placeholder:italic'
 										placeholder='Enter NIC number'
@@ -276,8 +259,8 @@ function AddRenewal() {
 										})}
 										className='w-full p-2 border border-gray-300 rounded'>
 										<option value=''>Select Vehical Class</option>
-										<option value='Light Vehical'>Light Vehical</option>
-										<option value='Heavy Vehical'>Heavy Vehical</option>
+										<option value='Light Vehicle'>Light Vehicle</option>
+										<option value='Heavy Vehicle'>Heavy Vehicle</option>
 									</select>
 									{errors.vehiClass && (
 										<p className='text-red-500 text-sm mt-1'>
@@ -298,6 +281,7 @@ function AddRenewal() {
 										})}
 										className='w-full p-2 border border-gray-300 rounded placeholder:italic'
 										placeholder='Bracode is Requierd'
+										maxLength={15}
 									/>
 									{errors.bracode && (
 										<p className='text-red-500 text-sm mt-1'>
@@ -339,6 +323,7 @@ function AddRenewal() {
 												})}
 												className='w-full p-2 border border-gray-300 rounded'>
 												<option value=''>Select Statues</option>
+												<option value='Pending'>Pending</option>
 												<option value='Document Collected'>
 													Document Collected
 												</option>
@@ -358,7 +343,6 @@ function AddRenewal() {
 										<div>
 											<label className='block text-gray-700 font-medium mb-1'>
 												Collected By{" "}
-												
 											</label>
 											<input
 												type='text'

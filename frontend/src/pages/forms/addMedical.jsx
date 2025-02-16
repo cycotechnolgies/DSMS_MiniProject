@@ -1,30 +1,102 @@
 import React, { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, useSearchParams } from "react-router-dom";
 import validator from "validator";
 import toast, { Toaster } from "react-hot-toast";
 import axios from "axios";
 import { useForm } from "react-hook-form";
 
 function AddMedical() {
-  const [isLoading, setIsLoading] = useState(false);
-  const { id } = useParams();
-  const navigate = useNavigate();
-  const {
-    register,
-    handleSubmit,
-    setError,
-    reset,
-    setValue,
-    formState: { errors },
-  } = useForm();
-  
+	const [isLoading, setIsLoading] = useState(false);
+	const { id } = useParams();
+	const navigate = useNavigate();
+	const [searchParams] = useSearchParams();
+	const role = searchParams.get("role");
+	const {
+		register,
+		handleSubmit,
+		setError,
+		reset,
+		setValue,
+		formState: { errors },
+	} = useForm();
 
-  const onSubmit = async (data) => {
-    setIsLoading(true);
-    
-  };
+	useEffect(() => {
+		if(id){
+			axios.get(`http://localhost:4000/api/medi/get-medi/${id}`)
+			.then((response) => {
+				const data = response.data.data;
+				console.log(data);
 
-  return (
+				const formattedDate = data.AppointmentDate
+					? new Date(data.AppointmentDate).toISOString().split("T")[0]
+					: "";
+
+				const formattedTime = data.AppointmentTime
+					? data.AppointmentTime.substring(0, 5) 
+					: "";
+
+				const formattedReqDate = data.req_date
+					? new Date(data.req_date).toISOString().split("T")[0]
+					: "";
+				
+				
+				reset({
+					firstName: data.firstName,
+					lastName: data.lastName,
+					fullName: data.fullName,
+					birthday: data.birthday,
+					nic: data.nic,
+					gender: data.gender,
+					contactNo: data.contactNo,
+					whatsappNo: data.whatsappNo,
+					address: data.address,
+					vehiClass: data.vehiClass,
+					institute: data.institute,
+					req_date: formattedReqDate,
+					status: data.status,
+					AppointmentDate: formattedDate,
+					AppointmentTime: formattedTime,
+				});
+			})
+			.catch((error) => {
+				console.error(error);
+				toast.error("An error occurred while fetching the data.");
+			});
+		}
+	}, [id, reset]);
+
+
+
+	const onSubmit = async (data) => {
+		setIsLoading(true);
+
+		try {
+			if (id) {
+				// Update existing record
+				const response = await axios.put(
+					`http://localhost:4000/api/medi/update/${id}`,
+					data,
+				);
+				toast.success("Medical record updated successfully!");
+			} else {
+				// Create new record
+				const response = await axios.post(
+					"http://localhost:4000/api/medi/add",
+					data,
+				);
+				toast.success("Medical record added successfully!");
+			}
+
+			navigate("/medicals");
+		} catch (error) {
+			console.error(error);
+			toast.error("An error occurred while submitting the form.");
+		} finally {
+			setIsLoading(false);
+		}
+	};
+
+	return (
 		<div className='flex h-screen overflow-hidden'>
 			{/* Content area */}
 			<div className='relative flex flex-col flex-1 overflow-y-auto overflow-x-hidden'>
@@ -287,6 +359,60 @@ function AddMedical() {
 										</p>
 									)}
 								</div>
+								{id && role === "branch" && (
+									<>
+										{/* Request Date */}
+										<div>
+											<label className='block text-gray-700 font-medium mb-1'>
+												Request Date
+											</label>
+											<input
+												type='date'
+												{...register("req_date")}
+												className='w-full p-2 border border-gray-300 rounded'
+												disabled
+											/>
+										</div>
+
+										{/* Status */}
+										<div>
+											<label className='block text-gray-700 font-medium mb-1'>
+												Status
+											</label>
+											<select
+												{...register("status")}
+												className='w-full p-2 border border-gray-300 rounded'>
+												<option value='Pending'>Pending</option>
+												<option value='Approved'>Approved</option>
+												<option value='Rejected'>Rejected</option>
+											</select>
+										</div>
+
+										{/* Appointment Date */}
+										<div>
+											<label className='block text-gray-700 font-medium mb-1'>
+												Appointment Date
+											</label>
+											<input
+												type='date'
+												{...register("AppointmentDate")}
+												className='w-full p-2 border border-gray-300 rounded'
+											/>
+										</div>
+
+										{/* Appointment Time */}
+										<div>
+											<label className='block text-gray-700 font-medium mb-1'>
+												Appointment Time
+											</label>
+											<input
+												type='time'
+												{...register("AppointmentTime")}
+												className='w-full p-2 border border-gray-300 rounded'
+											/>
+										</div>
+									</>
+								)}
 							</div>
 
 							{/* Buttons */}

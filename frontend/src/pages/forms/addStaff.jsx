@@ -40,6 +40,7 @@ function AddStaff() {
             `http://localhost:4000/api/user/get-user/${id}`
           );
           const staff = response.data;
+		  console.log(staff);
           if (staff.birthday) {
             const formattedDate = new Date(staff.birthday)
               .toISOString()

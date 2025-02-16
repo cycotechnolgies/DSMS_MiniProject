@@ -1,10 +1,49 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { Link } from "react-router-dom";
 import classData from "../data/class.json";
 import TrainTable from "../components/TrainTable";
 
 const Schedule = () => {
-	const[Schedules, setSchedules] = useState(classData);
+	const [Schedules, setSchedules] = useState([]);
+	const [loading, setLoading] = useState(true);
+		const [error, setError] = useState("");
+	
+		useEffect(() => {
+			const fetchClassData = async () => {
+				try {
+					const response = await fetch("http://localhost:4000/api/class/get");
+					if (!response.ok) {
+						throw new Error("Failed to fetch Class data");
+					}
+					const data = await response.json();
+	
+					// Transform data to fit table structure
+					const formattedData = data.map((schedule) => ({
+						id: schedule._id.$oid || schedule._id,
+						classid: schedule.classId,
+						name: schedule.className,
+						class_date: schedule.classDate,
+						class_time: schedule.classTime,
+						count: schedule.studentCount,
+					}));
+	
+					setSchedules(formattedData); 
+				} catch (err) {
+					setError(err.message);
+				} finally {
+					setLoading(false);
+				}
+			};
+	
+			fetchClassData();
+		}, []);
+	
+		if (loading)
+			return <div className='text-center mt-4'>Loading Class data...</div>;
+		if (error)
+			return <div className='text-center text-red-500 mt-4'>Error: {error}</div>;
+	
+
 	return (
 		<>
 			<div className='flex h-screen overflow-hidden'>
