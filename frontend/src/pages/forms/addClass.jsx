@@ -10,6 +10,8 @@ function AddClass() {
 	const [selectedStudents, setSelectedStudents] = useState([]);
 	const [searchTerm, setSearchTerm] = useState("");
 	const [searchResults, setSearchResults] = useState([]);
+	const[uptdateRemove, setUpdateRemove] = useState([]);
+	const [assignStudent, setAssignStudent] = useState([]);
 
 	const { id } = useParams();
 	const navigate = useNavigate();
@@ -18,11 +20,11 @@ function AddClass() {
 		register,
 		handleSubmit,
 		setValue,
+		watch,
 		reset,
 		formState: { errors },
 	} = useForm();
 
-	// Fetch class details if editing
 	useEffect(() => {
 		if (id) {
 			const fetchClassDetails = async () => {
@@ -31,21 +33,29 @@ function AddClass() {
 						`http://localhost:4000/api/class/get/${id}`,
 					);
 					const classData = response.data;
-					console.log(response);
+					console.log("Fetched class data:", classData);
 
+					// Normalize students data
+					const normalizedStudents = classData.students.map((student) => ({
+						_id: student.studentId._id,
+						fullName: student.studentId.fullName,
+						userId: student.studentId.userId,
+					}));
+
+					console.log("normalized students",normalizedStudents)
+
+					setSelectedStudents(normalizedStudents || []);
 					reset(classData);
+					setValue("instructor", classData.instructor._id || "");
 
-					setSelectedStudents(classData.students || []);
-					setInstructors(classData.instructors || []);
-
-					console.log(selectedStudents);
+					console.log("Normalized students:", normalizedStudents);
 				} catch (error) {
 					toast.error("Failed to load class details");
 				}
 			};
 			fetchClassDetails();
 		}
-	}, [id, reset]);
+	}, [id, reset, setValue]);
 
 	// Fetch instructors from the backend
 	useEffect(() => {
@@ -55,7 +65,7 @@ function AddClass() {
 					"http://localhost:4000/api/user/instructors",
 				);
 				setInstructors(response.data);
-				console.log(response.data);
+				console.log("instructors", response.data);
 			} catch (error) {
 				console.error("Failed to fetch instructors", error);
 			}
@@ -63,25 +73,6 @@ function AddClass() {
 
 		fetchInstructors();
 	}, []);
-
-	// Fetch class details if editing
-	useEffect(() => {
-		if (id) {
-			const fetchClassDetails = async () => {
-				try {
-					const response = await axios.get(
-						`http://localhost:4000/api/class/${id}`,
-					);
-					const classData = response.data;
-					reset(classData);
-					setSelectedStudents(classData.students || []);
-				} catch (error) {
-					toast.error("Failed to load class details");
-				}
-			};
-			fetchClassDetails();
-		}
-	}, [id, reset]);
 
 	// Handle student search
 	const handleSearch = async (e) => {
@@ -107,46 +98,63 @@ function AddClass() {
 
 	// Remove student from the selected list
 	const removeStudent = (studentId) => {
-		setSelectedStudents(selectedStudents.filter((s) => s._id !== studentId));
-	};
-
-	// Handle form submission
-	const onSubmit = async (data) => {
-		setIsLoading(true);
-		try {
-			const formData = {
-				instructor: data.instructor,
-				students: selectedStudents.map((student) => ({
-					studentId: student._id,
-				})),
-				...data,
-			};
-
-			console.log(formData);
-
-			if (id) {
-				// Update class (schedule)
-				const response = await axios.put(
-					`http://localhost:4000/api/class/edit/${id}`,
-					formData,
-				);
-				toast.success(response.data.message || "Class updated successfully");
-			} else {
-				// Create new class (schedule)
-				const response = await axios.post(
-					"http://localhost:4000/api/class/add",
-					formData,
-				);
-				toast.success(response.data.message || "Schedule created successfully");
-			}
-
-			navigate("/class"); 
-		} catch (error) {
-			toast.error(error.response?.data?.message || "An error occurred");
-		} finally {
-			setIsLoading(false);
+		if (!studentId) {
+			console.error("Error: studentId is undefined or null", studentId);
+			return;
 		}
+
+		setSelectedStudents(
+			(prevStudents) =>
+				prevStudents.filter((s) => String(s._id) !== String(studentId)),
+		);
+		setUpdateRemove(String(studentId));
 	};
+
+	console.log("Updated students list:", selectedStudents);
+
+	const handlesubmit = async (data) => {
+    setIsLoading(true);
+    try {
+        console.log("Form Data:", data);
+
+        // Ensure correct student object structure
+        const formData = {
+            ...data,
+            instructor: data.instructor,
+            students: selectedStudents.map(student => ({
+                studentId: student._id || student.studentId._id,
+                score: student.score || 0
+            }))
+        };
+
+        console.log("Form Data being sent:", formData);
+
+        if (id) {
+            // Update class (schedule)
+            const response = await axios.put(
+                `http://localhost:4000/api/class/edit/${id}`,
+                formData
+            );
+            toast.success(response.data.message || "Class updated successfully");
+        } else {
+            // Create new class (schedule)
+            const response = await axios.post(
+                "http://localhost:4000/api/class/add",
+                formData
+            );
+            toast.success(response.data.message || "Schedule created successfully");
+        }
+
+        navigate("/class");
+    } catch (error) {
+        console.error("Error response from backend:", error);
+        toast.error(error.response?.data?.message || "An error occurred");
+    } finally {
+        setIsLoading(false);
+    }
+};
+
+
 
 	return (
 		<div className='flex h-screen overflow-hidden'>
@@ -158,7 +166,7 @@ function AddClass() {
 						</h1>
 
 						<form
-							onSubmit={handleSubmit(onSubmit)}
+							onSubmit={handleSubmit(handlesubmit)}
 							noValidate
 							className='space-y-4'>
 							<div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
@@ -220,7 +228,8 @@ function AddClass() {
 										{...register("instructor", {
 											required: "Instructor is required",
 										})}
-										className='w-full p-2 border border-gray-300 rounded'>
+										className='w-full p-2 border border-gray-300 rounded'
+										value={watch("instructor")}>
 										<option value=''>Select Instructor</option>
 										{instructors.map((instructor) => (
 											<option
@@ -304,12 +313,13 @@ function AddClass() {
 							<ul>
 								{selectedStudents.map((student) => (
 									<li
-										key={student._id}
+										key={student._id} 
 										className='flex justify-between border p-2 mt-2'>
 										<span>{student.userId}</span>
 										<span>{student.fullName}</span>
 										<button
-											onClick={() => removeStudent(student._id)}
+											type='button'
+											onClick={() => removeStudent(student._id)} 
 											className='text-red-600'>
 											Remove
 										</button>
@@ -317,13 +327,25 @@ function AddClass() {
 								))}
 							</ul>
 
-							{/* Submit Button */}
-							<button
-								type='submit'
-								disabled={isLoading}
-								className='bg-green-600 text-white py-2 px-4 rounded'>
-								{isLoading ? "Submitting..." : "Submit"}
-							</button>
+							{/* Buttons */}
+							<div className='flex justify-end items-center gap-4'>
+								<button
+									type='button'
+									onClick={() => reset()}
+									className='bg-gray-500 text-white py-2 px-4 rounded hover:bg-gray-600'>
+									Reset
+								</button>
+								<button
+									type='submit'
+									disabled={isLoading}
+									className={`${
+										isLoading
+											? "bg-gray-400"
+											: "bg-green-600 hover:bg-green-700"
+									} text-white py-2 px-4 rounded`}>
+									{isLoading ? "Submitting..." : "Submit"}
+								</button>
+							</div>
 						</form>
 						<Toaster />
 					</div>

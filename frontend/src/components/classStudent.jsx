@@ -17,6 +17,7 @@ import {
   ChevronRight,
   ChevronsLeft,
   ChevronsRight,
+  Edit,
   Eye,
   Pencil,
   Search,
@@ -25,48 +26,86 @@ import {
 import Swal from "sweetalert2";
 import axios from "axios";
 
-const TrainTable = ({ Schedules }) => {
+const ClassStuTable = ({ studentData, ScheduleId }) => {
   //fuction given by tanstack table to create columns in table - Commented by CYCO
   const columnHelper = createColumnHelper();
-  const [schedules, setSchedules] = useState(Schedules);
+  const [students, setStudents] = useState(studentData);
+  const scheduleId = ScheduleId
 
-    const handleDelete = (del_id) => {
-			Swal.fire({
-				title: "Are you sure?",
-				text: "Do you want to delete this Class? This action cannot be undone.",
-				icon: "warning",
+    const handleUpdate = async (stu_id) => {
+			console.log("Updating studentID:", stu_id);
+
+			// Generate options for the score selection (1-10)
+			const scoreOptions = Array.from({ length: 10 }, (_, i) => i + 1)
+				.map((num) => `<option value="${num}">${num}</option>`)
+				.join("");
+
+			// Show SweetAlert2 with a select dropdown
+			const { value: newScore } = await Swal.fire({
+				title: "Update Student Score",
+				html: `
+      <select id="scoreSelect" class="swal2-select">
+        ${scoreOptions}
+      </select>
+    `,
 				showCancelButton: true,
-				confirmButtonText: "Yes, delete it!",
+				confirmButtonText: "Update",
 				cancelButtonText: "Cancel",
-			}).then((result) => {
-				if (result.isConfirmed) {
-					axios
-						.delete(`http://localhost:4000/api/class/del/${del_id}`)
-						.then(() => {
-							setSchedules(
-								schedules.filter((schedule) => schedule.id !== del_id),
-							);
-							Swal.fire(
-								"Deleted!",
-								"The Class has been deleted.",
-								"success",
-							).then(() => window.location.reload());
-						})
-						.catch(() =>
-							Swal.fire(
-								"Error",
-								"Failed to delete the staff member!",
-								"error",
-							).then(() => window.location.reload()),
-						);
-				}
+				preConfirm: () => {
+					const selectedValue = document.getElementById("scoreSelect").value;
+					return selectedValue ? Number(selectedValue) : null;
+				},
 			});
+
+			if (newScore !== null) {
+				try {
+					const response = await axios.put(
+						`http://localhost:4000/api/class/score/${scheduleId}/${stu_id}`,
+						{
+							score: newScore,
+						},
+					);
+
+					console.log("API Response:", response.data);
+
+					// Check if the API response indicates success
+					if (response.data?.success) {
+						Swal.fire({
+							icon: "success",
+							title: "Score Updated",
+							text: `Student's score has been updated to ${newScore}`,
+							confirmButtonText: "OK",
+						}).then(() => {
+							window.location.reload();
+						});
+					} else {
+						Swal.fire({
+							icon: "error",
+							title: "Update Failed",
+							text: response.data.message || "Failed to update score.",
+						}).then(() => {
+							window.location.reload();
+						});
+					}
+				} catch (error) {
+					console.error("Error updating score:", error);
+					Swal.fire({
+						icon: "error",
+						title: "Error",
+						text: "An error occurred while updating the score.",
+					}).then(() => {
+						window.location.reload();
+					});
+				}
+			}
 		};
+
+
 
   //column accessors - Commented by CYCO
   const columns = [
 		//write accesor for each column you need to display on table - Commented by CYCO
-		columnHelper.accessor("classid", {
+		columnHelper.accessor("uid", {
 			cell: (info) => info.getValue(),
 			header: () => <span className='flex items-center'>ID</span>,
 		}),
@@ -74,48 +113,28 @@ const TrainTable = ({ Schedules }) => {
 			cell: (info) => info.getValue(),
 			header: () => <span className='flex items-center'>Name</span>,
 		}),
-		columnHelper.accessor("class_date", {
+		columnHelper.accessor("score", {
 			cell: (info) => info.getValue(),
-			header: () => <span className='flex items-center'>Date</span>,
-		}),
-		columnHelper.accessor("class_time", {
-			cell: (info) => info.getValue(),
-			header: () => <span className='flex items-center'>Time</span>,
-		}),
-		columnHelper.accessor("count", {
-			cell: (info) => info.getValue(),
-			header: () => <span className='flex items-center'>Stundets</span>,
+			header: () => <span className='flex items-center'>Score</span>,
 		}),
 		columnHelper.display({
 			id: "actions",
 			header: () => <span className='flex items-center'>Actions</span>,
 			cell: ({ row }) => (
 				<div className='flex space-x-2 justify-start'>
-					<Link
-						to={`/class/view/${row.original.id}`}
-						className='text-blue-500 hover:text-blue-700'
-						aria-label='View'>
-						<Eye className='w-5 h-5' />
-					</Link>
-					<Link
-						to={`/class/${row.original.id}`}
-						className='text-green-500 hover:text-green-700'
-						aria-label='Edit'>
-						<Pencil className='w-5 h-5' />
-					</Link>
 					<button
-						onClick={() => handleDelete(row.original.id)} // Updated function call
-						className='text-red-500 hover:text-red-700'
+						onClick={() => handleUpdate(row.original.id)}
+						className='text-green-500 hover:text-green-700'
 						aria-label='Delete'>
-						<Trash2 className='w-5 h-5' />
+						<Edit  className='w-5 h-5' />
 					</button>
 				</div>
 			),
 		}),
 	];
 
-  if (!Schedules || Schedules.length === 0) {
-    return <div>No Schedules available</div>;
+  if (!studentData || studentData.length === 0) {
+    return <div>No studentData available</div>;
   }
 
   //States - Commented by CYCO
@@ -124,7 +143,7 @@ const TrainTable = ({ Schedules }) => {
 
   //table model - Commented by CYCO
   const table = useReactTable({
-    data: Schedules, //payment is the data set pass from payment page - Commented by CYCO
+    data: studentData, //payment is the data set pass from payment page - Commented by CYCO
     columns,
     getCoreRowModel: getCoreRowModel(),
 
@@ -158,7 +177,7 @@ const TrainTable = ({ Schedules }) => {
             className="bg-white border  border-gray-400 rounded-lg  my-4 mx-4 w-1/2 p-2"
             value={globalFilter ?? ""}
             onChange={(e) => setGlobalFilter(e.target.value)}
-            placeholder="Search Schedules"
+            placeholder="Search studentData"
           />
         </div>
       <div className="overflow-x-auto bg-white  shadow-md rounded-md">
@@ -279,4 +298,4 @@ const TrainTable = ({ Schedules }) => {
   );
 };
 
-export default TrainTable;
+export default ClassStuTable;

@@ -39,17 +39,13 @@ const getAllClass = async (req, res) => {
       }
     ]);
 
-    if (classes.length === 0) {
-      return res.status(404).json({ message: "No classes found" });
-    }
+    
     res.status(200).json(classes);
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: "Error fetching classes", error: error.message });
   }
 };
-
-
 
 const getSchedule = async (req, res) => {
   try {
@@ -72,12 +68,25 @@ const getSchedule = async (req, res) => {
 const updateSchedule = async (req, res) => {
     try {
         const { id } = req.params;
-        const updatedSchedule = await Schedule.findByIdAndUpdate(id, req.body, { new: true });
+
+        // Ensure students are stored with { studentId: _id }
+        const updatedData = {
+            ...req.body,
+            students: req.body.students.map(student => ({
+                studentId: student.studentId || student._id, 
+                score: student.score || 0
+            }))
+        };
+
+        const updatedSchedule = await Schedule.findByIdAndUpdate(id, updatedData, { new: true });
+
         res.json({ message: 'Schedule updated successfully', updatedSchedule });
     } catch (error) {
         res.status(500).json({ message: 'Error updating schedule', error });
     }
 };
+
+
 
 const deleteSchedule = async (req, res) => {
     try {
@@ -162,22 +171,22 @@ const updateScore = async (req, res) => {
 
     // Check if student exists
     const studentExists = await User.findById(studentId);
-    if (!studentExists) return res.status(404).json({ message: "Student not found" });
+    if (!studentExists) return res.status(404).json({success: false, message: "Student not found" });
 
     // Check if schedule exists
     const schedule = await Schedule.findById(scheduleId);
-    if (!schedule) return res.status(404).json({ message: "Schedule not found" });
+    if (!schedule) return res.status(404).json({success: false, message: "Schedule not found" });
 
     // Find student in the schedule
     const student = schedule.students.find(s => s.studentId.toString() === studentId);
-    if (!student) return res.status(404).json({ message: "Student not found in this schedule" });
+    if (!student) return res.status(404).json({success: false, message: "Student not found in this schedule" });
 
     student.score = score;
     await schedule.save();
 
-    res.json({ message: "Student score updated", schedule });
+    res.json({success: true, message: "Student score updated", schedule });
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    res.status(500).json({success: false, message: error.message });
   }
 };
 

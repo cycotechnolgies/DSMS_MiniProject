@@ -33,6 +33,7 @@ import AddClass from './pages/forms/addClass';
 //Views
 import PaaymentView from './pages/viwes/PaymentView';
 import StaffProfile from './pages/viwes/StaffProfile';
+import ClassView from './pages/viwes/classview';
 
 
 function App() {
@@ -180,10 +181,10 @@ function App() {
 										element={<AddClass />}
 									/>
 
-									{/* <Route
-										path='/pay/details/:id'
-										element={<AddClass />}
-									/> */}
+									<Route
+										path='/class/view/:id'
+										element={<ClassView />}
+									/>
 								</Routes>
 							</RootLayout>
 						</ProtectedRoute>
