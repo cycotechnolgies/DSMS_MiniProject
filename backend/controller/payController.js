@@ -106,4 +106,30 @@ const deletePayment = async (req, res) => {
     }
 };
 
-module.exports = { addPayment, getPayments, getPaymentById, updatePayment, deletePayment };
+const getDailyPayments = async (req, res) => {
+  try {
+    const dailyPayments = await Payment.aggregate([
+      {
+        $set: { status: { $trim: { input: "$status" } } } // Trim spaces in "status"
+      },
+      {
+        $match: { status: "Paid" } // Only include successful payments
+      },
+      {
+        $group: {
+          _id: { $dateToString: { format: "%Y-%m-%d", date: "$createdAt" } }, // Group by date
+          totalAmount: { $sum: "$amount" } // Sum all paid amounts per day
+        }
+      },
+      { $sort: { _id: 1 } } // Sort by date (ascending)
+    ]);
+
+    res.json(dailyPayments);
+  } catch (error) {
+    console.error("Error fetching daily payments:", error);
+    res.status(500).json({ message: "Error fetching payment data", error: error.message });
+  }
+};
+
+
+module.exports = { addPayment, getPayments, getPaymentById, updatePayment, deletePayment, getDailyPayments };

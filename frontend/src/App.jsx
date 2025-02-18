@@ -20,7 +20,8 @@ import Exams from './pages/Exams';
 import Renewal from "./pages/Renewal";
 import Signup from './pages/Signup';
 import PageNotFound from "./pages/PageNotFound";
-import QuizPage from './pages/QuizPage';
+// import QuizPage from './pages/QuizPage';
+import QuizPage from "./components/Quiz/Quiz/Home";
 
 //Forms
 import AddStaff from './pages/forms/addStaff'
@@ -29,11 +30,15 @@ import AddPayment from "./pages/forms/addPayment";
 import AddMedical from "./pages/forms/addMedical";
 import AddRenewal from './pages/forms/addrenewal';
 import AddClass from './pages/forms/addClass';
+import AddExam from './pages/forms/addExam';
 
 //Views
 import PaaymentView from './pages/viwes/PaymentView';
 import StaffProfile from './pages/viwes/StaffProfile';
 import ClassView from './pages/viwes/classview';
+import ExamView from './pages/viwes/examView';
+import MedicalView from "./pages/viwes/MedicalView";
+import StudentView from "./pages/viwes/StudentProfile";
 
 
 function App() {
@@ -123,10 +128,10 @@ function App() {
 										path='/student/:id'
 										element={<AddStudent />}
 									/>
-									{/* <Route
+									<Route
 										path='/student/profile/:id'
-										element={<StudentProfile />}
-									/> */}
+										element={<StudentView />}
+									/>
 
 									{/* payment sub Routes */}
 
@@ -152,10 +157,10 @@ function App() {
 										path='/medi/:id'
 										element={<AddMedical />}
 									/>
-									{/* <Route
-										path='/pay/details/:id'
-										element={<AddMedical />}
-									/> */}
+									<Route
+										path='/medi/details/:id'
+										element={<MedicalView />}
+									/>
 
 									{/* renew sub Routes */}
 									<Route
@@ -184,6 +189,20 @@ function App() {
 									<Route
 										path='/class/view/:id'
 										element={<ClassView />}
+									/>
+									{/* Exams sub Routes */}
+									<Route
+										path='/exams/new'
+										element={<AddExam />}
+									/>
+									<Route
+										path='/exams/:id'
+										element={<AddExam />}
+									/>
+
+									<Route
+										path='/exams/view/:id'
+										element={<ExamView />}
 									/>
 								</Routes>
 							</RootLayout>

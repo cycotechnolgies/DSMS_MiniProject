@@ -2,6 +2,7 @@ import React from 'react';
 import DashboardCard01 from "../partials/DashboardCard01";
 import DashboardCard02 from "../partials/DashboardCard02";
 import DashboardCard03 from "../partials/DashboardCard03";
+import DailyPaymentsChart from "../components/charts/paymentChart"
 
 const Dashboard = () => {
   return (
@@ -23,6 +24,9 @@ const Dashboard = () => {
 			</div>
 
 			{/* Calendar */}
+			<div>
+				<DailyPaymentsChart />
+			</div>
 			
 		</div>
 	);

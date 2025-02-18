@@ -11,6 +11,8 @@ const payRoutes = require("./routes/pay");
 const mediRoutes = require("./routes/medical");
 const renewRoute = require("./routes/renewal");
 const classRoute = require("./routes/class");
+const examRoute = require("./routes/exam");
+const quizRoute = require("./routes/quiz");
 const path = require("path");
 
 //express app variable
@@ -41,6 +43,8 @@ app.use("/api/pay", payRoutes);
 app.use("/api/medi", mediRoutes);
 app.use("/api/renewal", renewRoute);
 app.use("/api/class", classRoute);
+app.use("/api/exam", examRoute);
+app.use("/api/quiz", quizRoute);
 app.use("/images", express.static(path.join(__dirname, "public/images")));
 app.use("/slips", express.static(path.join(__dirname, "public/slips")));
 

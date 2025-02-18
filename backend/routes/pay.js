@@ -5,6 +5,7 @@ const {
   getPaymentById,
   updatePayment,
   deletePayment,
+  getDailyPayments,
 } = require("../controller/payController");
 const multer = require("multer");
 const path = require("path");
@@ -28,5 +29,6 @@ router.get("/get-all", getPayments);
 router.get("/get-pay/:id", getPaymentById);
 router.put("/update-pay/:id", upload.single("slip"), updatePayment);
 router.delete("/del-pay/:id", deletePayment);
+router.get("/daily-payments", getDailyPayments);
 
 module.exports = router;

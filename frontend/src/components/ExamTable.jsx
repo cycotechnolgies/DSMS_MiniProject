@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
 //used tanstack table library for make tables - Commented by CYCO
 import {
@@ -23,14 +23,55 @@ import {
   Trash2,
 } from "lucide-react";
 
-const ExamTable = ({ Exams, onEdit, onDelete }) => {
+import Swal from "sweetalert2";
+import axios from "axios";
+
+const ExamTable = ({ Exams}) => {
   //fuction given by tanstack table to create columns in table - Commented by CYCO
   const columnHelper = createColumnHelper();
+  const [exams, setExams] = useState(Exams);
+
+  const handleDelete = (del_id) => {
+		Swal.fire({
+			title: "Are you sure?",
+			text: "Do you want to delete this Exam? This action cannot be undone.",
+			icon: "warning",
+			showCancelButton: true,
+			confirmButtonText: "Yes, delete it!",
+			cancelButtonText: "Cancel",
+		}).then((result) => {
+			if (result.isConfirmed) {
+				axios
+					.delete(`http://localhost:4000/api/exam/del/${del_id}`)
+					.then((response) => {
+            console.log("Backend Response:", response);
+						if (response.data.success) {
+							// Update the schedules list
+							setExams(exams.filter((exam) => exam.id !== del_id));
+							// Show success popup and reload after closing
+							Swal.fire(
+								"Deleted!",
+								"The Exam has been deleted.",
+								"success",
+							).then(() => window.location.reload());
+						} else {
+							// Handle error response from backend
+							Swal.fire("Error", "Failed to delete the Exam!", "error");
+						}
+					})
+					.catch(() => {
+						// Handle error when the delete request itself fails
+						Swal.fire("Error", "Failed to delete the Exam!", "error");
+					});
+			}
+		});
+	};
+
 
   //column accessors - Commented by CYCO
   const columns = [
 		//write accesor for each column you need to display on table - Commented by CYCO
-		columnHelper.accessor("id", {
+		columnHelper.accessor("examid", {
 			cell: (info) => info.getValue(),
 			header: () => <span className='flex items-center'>ID</span>,
 		}),
@@ -42,7 +83,7 @@ const ExamTable = ({ Exams, onEdit, onDelete }) => {
 			cell: (info) => info.getValue(),
 			header: () => <span className='flex items-center'>Date</span>,
 		}),
-		columnHelper.accessor("time", {
+		columnHelper.accessor("exam_time", {
 			cell: (info) => info.getValue(),
 			header: () => <span className='flex items-center'>Time</span>,
 		}),
@@ -52,7 +93,7 @@ const ExamTable = ({ Exams, onEdit, onDelete }) => {
 			cell: ({ row }) => (
 				<div className='flex space-x-2 justify-start'>
 					<Link
-						to={`/exams/details/${row.original.id}`}
+						to={`/exams/view/${row.original.id}`}
 						className='text-blue-500 hover:text-blue-700'
 						aria-label='View'>
 						<Eye className='w-5 h-5' />

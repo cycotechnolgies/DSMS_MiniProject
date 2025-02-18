@@ -55,7 +55,7 @@ const TrainTable = ({ Schedules }) => {
 						.catch(() =>
 							Swal.fire(
 								"Error",
-								"Failed to delete the staff member!",
+								"Failed to delete the Class!",
 								"error",
 							).then(() => window.location.reload()),
 						);
