@@ -31,8 +31,12 @@ import AddRenewal from './pages/forms/addrenewal';
 import AddClass from './pages/forms/addClass';
 
 //Views
+
 import PaaymentView from './pages/viwes/PaymentView';
+import MedicalView from './pages/viwes/MedicalView';
+
 import StaffProfile from './pages/viwes/StaffProfile';
+import StudentProfile from './pages/viwes/StudentProfile';
 
 
 function App() {
@@ -122,6 +126,10 @@ function App() {
 										path='/student/:id'
 										element={<AddStudent />}
 									/>
+									<Route
+										path='/student/profile/:id'
+										element={<StudentProfile />}
+									/>
 									{/* <Route
 										path='/student/profile/:id'
 										element={<StudentProfile />}
@@ -150,6 +158,11 @@ function App() {
 									<Route
 										path='/medi/:id'
 										element={<AddMedical />}
+									/>
+
+									<Route
+										path='/medi/details/:id'
+										element={<MedicalView />}
 									/>
 									{/* <Route
 										path='/pay/details/:id'
