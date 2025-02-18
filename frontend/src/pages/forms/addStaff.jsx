@@ -320,7 +320,6 @@ function AddStaff() {
 										<option value=''>Select User Type</option>
 										<option value='staff'>Staff</option>
 										<option value='instructor'>Instructor</option>
-										<option value='sales'>Sales</option>
 									</select>
 									{errors.userType && (
 										<p className='text-red-500 text-sm mt-1'>

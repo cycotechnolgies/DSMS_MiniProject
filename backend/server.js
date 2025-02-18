@@ -13,6 +13,7 @@ const renewRoute = require("./routes/renewal");
 const classRoute = require("./routes/class");
 const examRoute = require("./routes/exam");
 const quizRoute = require("./routes/quiz");
+const authRoutes = require("./routes/auth");
 const path = require("path");
 
 //express app variable
@@ -37,6 +38,7 @@ app.use((req, res, next) => {
 
 
 //routes
+app.use("/api/auth", authRoutes);
 app.use("/api/events", eventRoutes);
 app.use("/api/user", userRoutes);
 app.use("/api/pay", payRoutes);

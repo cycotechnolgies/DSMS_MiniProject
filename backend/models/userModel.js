@@ -25,7 +25,7 @@ const userSchema = new mongoose.Schema(
     course: { type: String, default: null },
     training: { type: String, default: null },
     profilePic: { type: String, default: null },
-    userType: String,
+    userType: {type:String, require:true, enum: ["Student", "instructor", "staff"]},
   },
   { collection: "users" }
 );
