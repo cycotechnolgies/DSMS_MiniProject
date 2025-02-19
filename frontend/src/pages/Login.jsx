@@ -44,13 +44,12 @@ const Login = ({ setUser, navigateBasedOnRole }) => {
 				const { token, userType } = response.data;
 
 				localStorage.setItem("token", token);
-				 // Storing role in localStorage
+				localStorage.setItem("role", userType); // Storing role in localStorage
 
 				toast.success("Login successful!");
 
 				// Decode the token to get the user info (optional, depending on your backend response)
 				const decodedToken = jwtDecode(token);
-				localStorage.setItem("role", decodedToken.userType);
 				console.log(decodedToken); // You can check the contents of the decoded token
 
 				// Set the user role in state

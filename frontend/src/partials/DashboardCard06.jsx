@@ -16,7 +16,7 @@ function DashboardCard06() {
 					</header>
 					<div className='flex items-start'>
 						<div className='text-3xl font-bold text-gray-800 dark:text-gray-100 mr-2'>
-							25
+							2500
 						</div>
 					</div>
 				</div>

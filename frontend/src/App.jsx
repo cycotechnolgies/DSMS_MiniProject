@@ -40,11 +40,12 @@ import ClassView from "./pages/viwes/classview";
 import ExamView from "./pages/viwes/examView";
 import MedicalView from "./pages/viwes/MedicalView";
 import StudentView from "./pages/viwes/StudentProfile";
+import RenewalView from "./pages/viwes/RenewalView";
 
 function App() {
 	const [user, setUser] = useState({
-		isAuthenticated: false, // Initially, user is not authenticated
-		role: "", // Role will be set after login
+		isAuthenticated: false, 
+		role: "", 
 	});
 
 	const navigate = useNavigate();
@@ -52,10 +53,11 @@ function App() {
 	// Check if token exists and set user state
 	useEffect(() => {
 		const token = localStorage.getItem("token");
+		
 		if (token) {
-			// For now assuming the role is saved in localStorage or from backend
-			const role = localStorage.getItem("role") || "guest"; // You may want to get it from API
+			const role = localStorage.getItem("role") || "guest"; 
 			setUser({ isAuthenticated: true, role });
+			console.log("role",role)
 		}
 	}, []);
 
@@ -217,6 +219,10 @@ function App() {
 									<Route
 										path='/renew/:id'
 										element={<AddRenewal />}
+									/>
+									<Route
+										path='/renew/view/:id'
+										element={<RenewalView />}
 									/>
 
 									{/* Training sub Routes */}

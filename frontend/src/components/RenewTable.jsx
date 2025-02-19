@@ -88,7 +88,7 @@ const RenewTable = ({ Renews }) => {
 			cell: ({ row }) => (
 				<div className='flex space-x-2 justify-start'>
 					<Link
-						to={`/renew/details/${row.original.id}`}
+						to={`/renew/view/${row.original.id}`}
 						className='text-blue-500 hover:text-blue-700'
 						aria-label='View'>
 						<Eye className='w-5 h-5' />
