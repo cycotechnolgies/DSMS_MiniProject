@@ -1,79 +1,100 @@
-import React, { useState } from "react";
+import React from "react";
+import { useForm } from "react-hook-form";
+import validator from "validator";
 import loginImg from "../images/login.gif";
-import validator from "validator"; // Import the validator library
+import axios from "axios";
+import { toast } from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
+import {jwtDecode} from "jwt-decode"; // Make sure to import jwt-decode
 
-const Login = () => {
-	const [username, setUsername] = useState("");
-	const [password, setPassword] = useState("");
-	const [rememberMe, setRememberMe] = useState(false);
-	const [errors, setErrors] = useState({}); // State to hold errors
+const validateEmail = (email) => validator.isEmail(email);
+const validatePassword = (password) => validator.isLength(password, { min: 6 });
 
-	const handleLoginSubmit = (e) => {
-		e.preventDefault();
+const Login = ({ setUser, navigateBasedOnRole }) => {
+	const {
+		register,
+		handleSubmit,
+		formState: { errors },
+		setError,
+	} = useForm();
 
-		// Clear previous errors
-		setErrors({});
+	const navigate = useNavigate();
 
-		// Validation logic
-		let formIsValid = true;
-		let errors = {};
-
-		// Validate username (non-empty and email format)
-		if (!username || !validator.isEmail(username)) {
-			formIsValid = false;
-			errors.username = "Please enter a valid email address.";
+	const onSubmit = async (data) => {
+		if (!validateEmail(data.email)) {
+			setError("email", { type: "auto", message: "Invalid email format" });
+			return;
 		}
-
-		// Validate password (non-empty)
-		if (!password || password.length < 6) {
-			formIsValid = false;
-			errors.password = "Password must be at least 6 characters long.";
-		}
-
-		if (!formIsValid) {
-			setErrors(errors);
+		if (!validatePassword(data.password)) {
+			setError("password", {
+				type: "auto",
+				message: "Password must be at least 6 characters long",
+			});
 			return;
 		}
 
-		// Handle login logic here if form is valid
-		console.log("Logging in with:", { username, password, rememberMe });
+		try {
+			const response = await axios.post(
+				"http://localhost:4000/api/auth/login",
+				data,
+			);
+
+			if (response.status === 200) {
+				// Save token and role to localStorage
+				const { token, userType } = response.data;
+
+				localStorage.setItem("token", token);
+				 // Storing role in localStorage
+
+				toast.success("Login successful!");
+
+				// Decode the token to get the user info (optional, depending on your backend response)
+				const decodedToken = jwtDecode(token);
+				localStorage.setItem("role", decodedToken.userType);
+				console.log(decodedToken); // You can check the contents of the decoded token
+
+				// Set the user role in state
+				setUser({ isAuthenticated: true, role: userType });
+
+				// Navigate based on role
+				navigateBasedOnRole(decodedToken.userType); // Use the role for navigation
+			}
+		} catch (error) {
+			toast.error(
+				error.response?.data?.message || "Login failed, please try again.",
+			);
+		}
 	};
 
 	return (
 		<div className='bg-gray-100 flex justify-center items-center h-screen'>
-			{/* Left: Image */}
 			<div className='w-1/2 h-screen hidden lg:block'>
 				<img
 					src={loginImg}
-					alt='Placeholder Image'
+					alt='Login'
 					className='object-cover w-full h-full'
 				/>
 			</div>
-			{/* Right: Login Form */}
 			<div className='lg:p-36 md:p-52 sm:20 p-8 w-full lg:w-1/2'>
 				<h1 className='text-3xl text-center font-semibold mb-4'>Login</h1>
-				<form onSubmit={handleLoginSubmit}>
-					{/* Username Input */}
+				<form onSubmit={handleSubmit(onSubmit)}>
 					<div className='mb-4'>
 						<label
-							htmlFor='username'
+							htmlFor='email'
 							className='block text-gray-600'>
-							Username
+							Email
 						</label>
 						<input
 							type='text'
-							id='username'
-							name='username'
+							id='email'
+							{...register("email")}
 							className='w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500'
-							value={username}
-							onChange={(e) => setUsername(e.target.value)}
 							autoComplete='off'
 						/>
-						{errors.username && (
-							<p className='text-red-500 text-sm'>{errors.username}</p>
+						{errors.email && (
+							<p className='text-red-500 text-sm'>{errors.email.message}</p>
 						)}
 					</div>
-					{/* Password Input */}
 					<div className='mb-4'>
 						<label
 							htmlFor='password'
@@ -83,25 +104,20 @@ const Login = () => {
 						<input
 							type='password'
 							id='password'
-							name='password'
+							{...register("password")}
 							className='w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500'
-							value={password}
-							onChange={(e) => setPassword(e.target.value)}
 							autoComplete='off'
 						/>
 						{errors.password && (
-							<p className='text-red-500 text-sm'>{errors.password}</p>
+							<p className='text-red-500 text-sm'>{errors.password.message}</p>
 						)}
 					</div>
-
-					{/* Login Button */}
 					<button
 						type='submit'
 						className='bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-md py-2 px-4 w-full'>
 						Login
 					</button>
 				</form>
-				{/* Sign up Link */}
 				<div className='mt-6 text-blue-500 text-center'>
 					<a
 						href='/signup'

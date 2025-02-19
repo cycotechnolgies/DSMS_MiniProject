@@ -66,9 +66,6 @@ const Payment = () => {
 									className='px-4 py-2 rounded-md bg-green-600 font-semibold text-white hover:bg-green-800'>
 									New Payment
 								</button>
-								<button className='px-4 py-2 rounded-md bg-blue-600 font-semibold text-white hover:bg-blue-800'>
-									<Link to='/pay/online'>Pay Online</Link>
-								</button>
 							</div>
 						</div>
 						{/* Pass the fetched Payments to the table */}

@@ -1,16 +1,19 @@
-const authenticate = require("./authMiddleware"); // JWT validation
-const { userType } = require("../models/userModel");
+const jwt = require("jsonwebtoken");
 
-const authorize = (...roles) => {
-  return (req, res, next) => {
-    const { userType } = req.user; // `req.user` comes from the `authenticate` middleware
+const authenticateUser = (req, res, next) => {
+    const token = req.header("Authorization")?.split(" ")[1];
 
-    if (!roles.includes(userType)) {
-      return res.status(403).json({ message: "Access denied. You do not have the correct role." });
+    if (!token) {
+        return res.status(401).json({ message: "Access denied. No token provided." });
     }
 
-    next();
-  };
+    try {
+        const decoded = jwt.verify(token, process.env.JWT_SECRET);
+        req.user = decoded; // Attach user info to request
+        next();
+    } catch (error) {
+        res.status(401).json({ message: "Invalid token" });
+    }
 };
 
-module.exports = authorize;
+module.exports = authenticateUser;

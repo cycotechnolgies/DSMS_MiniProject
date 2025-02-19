@@ -1,106 +1,49 @@
-import React from "react";
+import React, { useEffect } from "react";
+import "aos/dist/aos.css"; // Import AOS styles
+import AOS from "aos";
+import "flowbite";
+import M1 from "../../images/m1.jpg";
+import M2 from "../../images/m2.jpg";
+import M3 from "../../images/m3.jpg";
+import M4 from "../../images/p1.jpg";
+import M5 from "../../images/logo.png";
+
+const images = [M1, M2, M3, M4, M5, M1, M2, M3, M4, M5, M1, M2];
 
 const Gallery = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Ensures animations run smoothly
+      easing: "ease-in-out",
+      once: true, // Runs only once per scroll
+    });
+    AOS.refresh(); // Ensures animations trigger correctly
+  }, []);
+
   return (
-    <>
-      <div id="gallery" class="relative w-full" data-carousel="slide">
-        {/* <!-- Carousel wrapper --> */}
-        <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
-          {/* <!-- Item 1 --> */}
-          <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img
-              src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg"
-              class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              alt=""
-            />
-          </div>
-          {/* <!-- Item 2 --> */}
-          <div
-            class="hidden duration-700 ease-in-out"
-            data-carousel-item="active"
-          >
-            <img
-              src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg"
-              class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              alt=""
-            />
-          </div>
-          {/* <!-- Item 3 --> */}
-          <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img
-              src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg"
-              class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              alt=""
-            />
-          </div>
-          {/* <!-- Item 4 --> */}
-          <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img
-              src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg"
-              class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              alt=""
-            />
-          </div>
-
-          <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img
-              src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg"
-              class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              alt=""
-            />
-          </div>
-        </div>
-
-        <button
-          type="button"
-          class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-          data-carousel-prev
-        >
-          <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-            <svg
-              class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 6 10"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M5 1 1 5l4 4"
-              />
-            </svg>
-            <span class="sr-only">Previous</span>
-          </span>
-        </button>
-        <button
-          type="button"
-          class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-          data-carousel-next
-        >
-          <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-            <svg
-              class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 6 10"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="m1 9 4-4-4-4"
-              />
-            </svg>
-            <span class="sr-only">Next</span>
-          </span>
-        </button>
+    <div className="p-6">
+      {/* Animated Heading Wrapper */}
+      <div className="flex justify-center" data-aos="fade-down">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-8">
+          This is our Gallery
+        </h2>
       </div>
-    </>
+
+      {/* Gallery Grid */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {images.map((image, index) => (
+          <div key={index} className="grid gap-4">
+            <div data-aos="fade-up">
+              <img
+                className="h-auto max-w-full rounded-lg transition-transform transform hover:scale-110 shadow-lg hover:shadow-2xl duration-300 cursor-pointer"
+                src={image}
+                alt={`Gallery Image ${index + 1}`}
+              />
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 };
 
