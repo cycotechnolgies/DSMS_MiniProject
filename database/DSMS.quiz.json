@@ -1,0 +1,80 @@
+[{
+  "_id": {
+    "$oid": "67b4bfbe229a8201afd63542"
+  },
+  "userId": {
+    "$oid": "67af33aa62d21fed09339d31"
+  },
+  "totalQuestions": 10,
+  "correctAnswers": 3,
+  "incorrectAnswers": 7,
+  "skippedAnswers": 0,
+  "timestamp": {
+    "$date": "2025-02-18T17:13:34.053Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67b4c400fd437680a8991f86"
+  },
+  "userId": {
+    "$oid": "67af33aa62d21fed09339d31"
+  },
+  "totalQuestions": 10,
+  "correctAnswers": 6,
+  "incorrectAnswers": 4,
+  "skippedAnswers": 0,
+  "timestamp": {
+    "$date": "2025-02-18T17:31:44.438Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67b4c4bffd437680a8991f90"
+  },
+  "userId": {
+    "$oid": "67af33aa62d21fed09339d31"
+  },
+  "totalQuestions": 10,
+  "correctAnswers": 3,
+  "incorrectAnswers": 7,
+  "skippedAnswers": 0,
+  "timestamp": {
+    "$date": "2025-02-18T17:34:55.053Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67b4c5e0fd437680a8991f9c"
+  },
+  "userId": {
+    "$oid": "67af33aa62d21fed09339d31"
+  },
+  "totalQuestions": 10,
+  "correctAnswers": 4,
+  "incorrectAnswers": 6,
+  "skippedAnswers": 0,
+  "timestamp": {
+    "$date": "2025-02-18T17:39:44.802Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67b4c96218bf51cc1b2d7aff"
+  },
+  "userId": {
+    "$oid": "67af33aa62d21fed09339d31"
+  },
+  "totalQuestions": 10,
+  "correctAnswers": 5,
+  "incorrectAnswers": 5,
+  "skippedAnswers": 0,
+  "timestamp": {
+    "$date": "2025-02-18T17:54:42.827Z"
+  },
+  "__v": 0
+}]

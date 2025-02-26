@@ -1,0 +1,76 @@
+[{
+  "_id": {
+    "$oid": "67b19346b73541a2f6ca8e8a"
+  },
+  "fullName": "John Doe",
+  "nic": "200012345678",
+  "contactNo": "0712345678",
+  "whatsappNo": "0712345678",
+  "address": "123 Main Street, Colombo",
+  "branch": "Colombo",
+  "LicenceType": "L Permit",
+  "vehiClass": "Light Vehicle",
+  "bracode": "1234567890",
+  "expDate": "2025-12-31",
+  "renewState": "Pending",
+  "collector": "",
+  "RenewId": "LR-8203",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67b1936ab73541a2f6ca8e8c"
+  },
+  "fullName": "marry Doe",
+  "nic": "200012345578",
+  "contactNo": "0712345678",
+  "whatsappNo": "0712345678",
+  "address": "123 Main Street, Colombo",
+  "branch": "Colombo",
+  "LicenceType": "L Permit",
+  "vehiClass": "Light Vehicle",
+  "bracode": "1234567490",
+  "expDate": "2025-11-31",
+  "renewState": "Send To DMV",
+  "collector": "Saman Kumara",
+  "RenewId": "LR-7421",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67b1d97c800373203d9cf759"
+  },
+  "fullName": "John Doe",
+  "nic": "200312345678",
+  "contactNo": "0712345678",
+  "whatsappNo": "0712345678",
+  "address": "123 Main Street, Colombo",
+  "branch": "Colombo",
+  "LicenceType": "L Permit",
+  "vehiClass": "Light Vehicle",
+  "bracode": "1234567890",
+  "expDate": "2025-12-31",
+  "renewState": "Pending",
+  "collector": null,
+  "RenewId": "LR-7472",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67b1db0b800373203d9cf75f"
+  },
+  "fullName": "Shammi Nethupul",
+  "nic": "200145212222",
+  "contactNo": "0755225214",
+  "whatsappNo": "0786996666",
+  "address": "123, Main Street, Colombo",
+  "branch": "Colombo",
+  "LicenceType": "Temporary",
+  "vehiClass": "Light Vehicle",
+  "bracode": "56567s778s8as",
+  "expDate": "2025-02-18",
+  "renewState": "Document Collected",
+  "collector": "",
+  "RenewId": "LR-9686",
+  "__v": 0
+}]

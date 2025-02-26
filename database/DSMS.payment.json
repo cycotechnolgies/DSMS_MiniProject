@@ -1,0 +1,51 @@
+[{
+  "_id": {
+    "$oid": "67b07475138daa2782c4e147"
+  },
+  "userId": "USR-4884",
+  "branch": "Colombo",
+  "amount": 23000,
+  "reason": "Course fee",
+  "status": "Paid",
+  "description": "First installment",
+  "slip": "/slips/1739617396945.png",
+  "createdAt": {
+    "$date": "2025-02-15T11:03:17.051Z"
+  },
+  "payId": "PAY-3271",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67b4cb7aea5515a99db9cee8"
+  },
+  "userId": "USR-4884",
+  "branch": "Colombo",
+  "amount": 15070,
+  "reason": "Registration fee",
+  "status": "Paid",
+  "description": "",
+  "slip": null,
+  "createdAt": {
+    "$date": "2025-02-18T18:03:38.709Z"
+  },
+  "payId": "PAY-6894",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67b55e88134e9d6b252ce910"
+  },
+  "userId": "USR-4884",
+  "branch": "Colombo",
+  "amount": 1500,
+  "reason": "Registration fee",
+  "status": "Paid",
+  "description": "",
+  "slip": null,
+  "createdAt": {
+    "$date": "2025-02-19T04:31:04.590Z"
+  },
+  "payId": "PAY-5900",
+  "__v": 0
+}]

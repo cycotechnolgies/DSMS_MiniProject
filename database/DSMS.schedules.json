@@ -1,0 +1,35 @@
+[{
+  "_id": {
+    "$oid": "67b3fabe4c680cf6a6df8c22"
+  },
+  "className": "test2",
+  "branch": "Colombo",
+  "vehiClass": "Light Vehicle",
+  "classDate": "2025-02-26",
+  "classTime": "09:43",
+  "instructor": {
+    "$oid": "67af1be76e26e4fd44708c3c"
+  },
+  "students": [
+    {
+      "studentId": {
+        "$oid": "67b232f355ffe8086c126195"
+      },
+      "score": 5,
+      "_id": {
+        "$oid": "67b3fb3e4c680cf6a6df8c5f"
+      }
+    },
+    {
+      "studentId": {
+        "$oid": "67af33aa62d21fed09339d31"
+      },
+      "score": 0,
+      "_id": {
+        "$oid": "67b3fb3e4c680cf6a6df8c60"
+      }
+    }
+  ],
+  "classId": "TCL-1101",
+  "__v": 0
+}]

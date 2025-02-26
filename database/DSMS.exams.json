@@ -1,0 +1,42 @@
+[{
+  "_id": {
+    "$oid": "67b49ec29e0085f08e522869"
+  },
+  "examName": "Exam01",
+  "branch": "Colombo",
+  "vehiClass": "Light Vehicle",
+  "examDate": "2025-02-19",
+  "examTime": "20:22",
+  "examType": "Trial",
+  "students": [
+    {
+      "studentId": {
+        "$oid": "67af33aa62d21fed09339d31"
+      },
+      "result": "N/A",
+      "_id": {
+        "$oid": "67b56c58134e9d6b252cea91"
+      }
+    },
+    {
+      "studentId": {
+        "$oid": "67b232f355ffe8086c126195"
+      },
+      "result": "N/A",
+      "_id": {
+        "$oid": "67b56c58134e9d6b252cea92"
+      }
+    },
+    {
+      "studentId": {
+        "$oid": "67b530287480b3e2a81ff9e4"
+      },
+      "result": "N/A",
+      "_id": {
+        "$oid": "67b56c58134e9d6b252cea93"
+      }
+    }
+  ],
+  "examId": "EXM-4771",
+  "__v": 0
+}]
